@@ -1,0 +1,69 @@
+<template>
+  <b-container fluid>
+    <b-row>
+      <b-col offset-md="2">
+        <h1>Profile</h1>
+        <hr class="my-4" />
+      </b-col>
+    </b-row>
+
+    <b-row align-h="center">
+      <b-col cols="6" md="2" class="my-4">
+        <b-img-lazy
+          thumbnail
+          rounded="circle"
+          src="https://avatars.githubusercontent.com/u/72570079?v=4"
+          alt="Image 1"
+        >
+        </b-img-lazy>
+      </b-col>
+      <b-col cols="12" md="10">
+        <b-tabs content-class="mt-3" card id="app">
+          <Info />
+          <b-tab title="Tab 2">
+            <b-list-group>
+              <b-list-group-item>Contents of TAB 2</b-list-group-item>
+            </b-list-group>
+          </b-tab>
+          <b-tab title="Tab 3" lazy>
+            <b-list-group>
+              <b-list-group-item>Contents of TAB 3</b-list-group-item>
+            </b-list-group>
+          </b-tab>
+        </b-tabs>
+      </b-col>
+    </b-row>
+    <GithubChart/>
+  </b-container>
+</template>
+
+<script>
+import GithubChart from './GithubChart'
+import Info from './Info'
+
+
+export default {
+  name: 'Profile',
+  components: { GithubChart, Info },
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
