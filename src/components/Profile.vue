@@ -2,7 +2,7 @@
   <b-container fluid>
     <b-row>
       <b-col offset-md="2">
-        <h1>Profile</h1>
+        <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
         <hr class="my-4" />
       </b-col>
     </b-row>
