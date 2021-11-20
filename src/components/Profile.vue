@@ -13,23 +13,14 @@
           thumbnail
           rounded="circle"
           src="https://avatars.githubusercontent.com/u/72570079?v=4"
-          alt="Image 1"
-        >
+          alt="Image 1">
         </b-img-lazy>
       </b-col>
       <b-col cols="12" md="10">
-        <b-tabs content-class="mt-3" card id="app">
-          <Info />
-          <b-tab title="Tab 2">
-            <b-list-group>
-              <b-list-group-item>Contents of TAB 2</b-list-group-item>
-            </b-list-group>
-          </b-tab>
-          <b-tab title="Tab 3" lazy>
-            <b-list-group>
-              <b-list-group-item>Contents of TAB 3</b-list-group-item>
-            </b-list-group>
-          </b-tab>
+        <b-tabs content-class="mt-3" card>
+          <Info/>
+          <Experience/>
+          <Competence/>
         </b-tabs>
       </b-col>
     </b-row>
@@ -40,14 +31,12 @@
 <script>
 import GithubChart from './GithubChart'
 import Info from './Info'
-
+import Experience from './Experience'
+import Competence from './Competence'
 
 export default {
   name: 'Profile',
-  components: { GithubChart, Info },
-  props: {
-    msg: String
-  }
+  components: { GithubChart, Info, Experience, Competence }
 }
 </script>
 
@@ -55,14 +44,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

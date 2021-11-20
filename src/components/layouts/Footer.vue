@@ -1,26 +1,23 @@
 <template>
-  <footer class="footer footer-basic bg-light shadow-sm" type="dark" variant="dark">
-    <div class="social">
-      <a href="https://www.instagram.com/hama99o/" class="btn-light btn-outline-info" target="_blank">
+  <footer class="footer footer-basic bg-light shadow-sm d-flex justify-content-center" type="dark" variant="dark">
+    <div class="social my-3">
+      <a href="https://www.instagram.com/hama99o/" class="btn-light btn-outline-info mx-2" target="_blank">
         <i class="icon ion-social-instagram"></i>
       </a>
-      <a href="https://github.com/Hama99o" class="btn-light btn-outline-info" target="_blank">
+      <a href="https://github.com/Hama99o" class="btn-light btn-outline-info mx-2" target="_blank">
         <i class="fa fa-github" aria-hidden="true"></i>
       </a>
-      <a href="https://twitter.com/hama99o1" class="btn-light btn-outline-info" target="_blank">
+      <a href="https://twitter.com/hama99o1" class="btn-light btn-outline-info mx-2" target="_blank">
         <i class="icon ion-social-twitter"></i>
       </a>
-      <a href="https://www.facebook.com/Hmmshl/" class="btn-light btn-outline-info" target="_blank">
+      <a href="https://www.facebook.com/Hmmshl/" class="btn-light btn-outline-info mx-2" target="_blank">
         <i class="icon ion-social-facebook"></i>
       </a>
+      <a href="https://www.linkedin.com/in/hammayoun-safi-2916581bb/" class="btn-light btn-outline-info mx-2" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <p class="copyright text-dark mt-3 d-flex align-items-center justify-content-center">Hama99o © 2021</p>
     </div>
-    <ul class="list-inline">
-      <li class="list-inline-item text-light"><a href="#">Services</a></li>
-      <li class="list-inline-item text-light"><a href="#">About</a></li>
-      <li class="list-inline-item text-light"><a href="#">Terms</a></li>
-      <li class="list-inline-item text-light"><a href="#">Privacy Policy</a></li>
-    </ul>
-    <p class="copyright text-light">Hama99o © 2021</p>
   </footer>
 </template>
 
@@ -32,44 +29,6 @@ export default {
 
 <style scoped>
 
-.footer {
-  flex-shrink: 0;
-  padding: 20px;
-}
-
-.footer-basic {
-  padding:20px 0;
-  color:#4b4c4d;
-}
-
-.footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
-}
-
-.footer-basic li {
-  padding:0 10px;
-}
-
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
-
-.footer-basic ul a:hover {
-  opacity:1;
-}
-
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
-}
-
 .footer-basic .social > a {
   font-size:24px;
   width:40px;
@@ -79,20 +38,7 @@ export default {
   text-align:center;
   border-radius:50%;
   border:1px solid #ccc;
-  margin:0 8px;
   color:inherit;
   opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
 }
 </style>
