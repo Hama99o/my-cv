@@ -9,7 +9,6 @@
 import Profile from './components/Profile.vue'
 import Footer from './components/layouts/Footer'
 
-
 export default {
   name: 'App',
   components: { Profile, Footer }
