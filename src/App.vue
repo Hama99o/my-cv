@@ -1,6 +1,5 @@
 <template>
   <div id="app"  class="d-flex flex-column">
-    <Navbar/>
     <Profile/>
     <Footer/>
   </div>
