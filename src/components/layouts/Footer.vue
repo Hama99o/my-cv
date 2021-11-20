@@ -13,6 +13,9 @@
       <a href="https://www.facebook.com/Hmmshl/" class="btn-light btn-outline-info" target="_blank">
         <i class="icon ion-social-facebook"></i>
       </a>
+      <a href="https://www.linkedin.com/in/hammayoun-safi-2916581bb/" class="btn-light btn-outline-info" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
     </div>
     <ul class="list-inline">
       <li class="list-inline-item text-light"><a href="#">Services</a></li>
