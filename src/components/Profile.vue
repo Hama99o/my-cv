@@ -21,11 +21,6 @@
           <Info/>
           <Experience/>
           <Competence/>
-          <b-tab title="Tab 3" lazy>
-            <b-list-group>
-              <b-list-group-item>Contents of TAB 3</b-list-group-item>
-            </b-list-group>
-          </b-tab>
         </b-tabs>
       </b-col>
     </b-row>
@@ -41,7 +36,7 @@ import Competence from './Competence'
 
 export default {
   name: 'Profile',
-  components: { GithubChart, Info, Experience, Competence}
+  components: { GithubChart, Info, Experience, Competence }
 }
 </script>
 
