@@ -18,12 +18,9 @@
       </b-col>
       <b-col cols="12" md="10">
         <b-tabs content-class="mt-3" card>
-          <Info />
-          <b-tab title="Tab 2">
-            <b-list-group>
-              <b-list-group-item>Contents of TAB 2</b-list-group-item>
-            </b-list-group>
-          </b-tab>
+          <Info/>
+          <Experience/>
+          <Competence/>
           <b-tab title="Tab 3" lazy>
             <b-list-group>
               <b-list-group-item>Contents of TAB 3</b-list-group-item>
@@ -39,10 +36,12 @@
 <script>
 import GithubChart from './GithubChart'
 import Info from './Info'
+import Experience from './Experience'
+import Competence from './Competence'
 
 export default {
   name: 'Profile',
-  components: { GithubChart, Info }
+  components: { GithubChart, Info, Experience, Competence}
 }
 </script>
 
