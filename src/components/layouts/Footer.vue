@@ -23,7 +23,7 @@
       <li class="list-inline-item text-light"><a href="#">Terms</a></li>
       <li class="list-inline-item text-light"><a href="#">Privacy Policy</a></li>
     </ul>
-    <p class="copyright text-light">Hama99o © 2021</p>
+    <p class="copyright text-dark">Hama99o © 2021</p>
   </footer>
 </template>
 
