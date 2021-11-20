@@ -41,7 +41,6 @@
 import GithubChart from './GithubChart'
 import Info from './Info'
 
-
 export default {
   name: 'Profile',
   components: { GithubChart, Info },
