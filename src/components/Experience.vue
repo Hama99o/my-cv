@@ -7,8 +7,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'Experience ',
+  name: 'Experience',
   methods: {
   }
 }
