@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-content-center">
-    <a @click="Redirect" class="btn">
+    <a @click="RedirectToGithub" class="btn">
       <img src="http://ghchart.rshah.org/Hama99o" />
     </a>
   </div>
@@ -10,7 +10,7 @@
 export default {
   name: 'GithubChart',
   methods: {
-    Redirect() {
+    RedirectToGithub() {
       window.open("https://github.com/Hama99o", '_blank')
     }
   }
@@ -18,5 +18,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

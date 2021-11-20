@@ -13,12 +13,11 @@
           thumbnail
           rounded="circle"
           src="https://avatars.githubusercontent.com/u/72570079?v=4"
-          alt="Image 1"
-        >
+          alt="Image 1">
         </b-img-lazy>
       </b-col>
       <b-col cols="12" md="10">
-        <b-tabs content-class="mt-3" card id="app">
+        <b-tabs content-class="mt-3" card>
           <Info />
           <b-tab title="Tab 2">
             <b-list-group>
@@ -43,10 +42,7 @@ import Info from './Info'
 
 export default {
   name: 'Profile',
-  components: { GithubChart, Info },
-  props: {
-    msg: String
-  }
+  components: { GithubChart, Info }
 }
 </script>
 
