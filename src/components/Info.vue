@@ -8,7 +8,7 @@
 import Editor from './Editor'
 
 export default {
-  name: 'GithubChart',
+  name: 'Info',
   components: { Editor },
   methods: {
   }
