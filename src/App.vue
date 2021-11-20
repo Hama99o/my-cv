@@ -1,5 +1,5 @@
 <template>
-  <div id="app"  class="d-flex flex-column">
+  <div id="app" class="d-flex flex-column">
     <Profile/>
     <Footer/>
   </div>
