@@ -13,14 +13,14 @@
           thumbnail
           rounded="circle"
           src="https://avatars.githubusercontent.com/u/72570079?v=4"
-          alt="Image 1">
+          alt="github-photo">
         </b-img-lazy>
       </b-col>
       <b-col cols="12" md="10">
-        <b-tabs content-class="mt-3" card>
-          <Info/>
-          <Experience/>
-          <Competence/>
+        <b-tabs content-class="mt-3" v-model="tabIndex" card>
+          <b-tab title="Info" :title-link-class="linkClass(0)">  <Info/></b-tab>
+          <b-tab title="Experience" :title-link-class="linkClass(1)"><Experience/></b-tab>
+          <b-tab title="Competence" :title-link-class="linkClass(2)"><Competence/></b-tab>
         </b-tabs>
       </b-col>
     </b-row>
@@ -36,7 +36,22 @@ import Competence from './Competence'
 
 export default {
   name: 'Profile',
-  components: { GithubChart, Info, Experience, Competence }
+  components: { GithubChart, Info, Experience, Competence },
+  data() {
+    return {
+      tabIndex: 0
+    }
+  },
+  methods: {
+    linkClass(idx) {
+      console.log(idx)
+      if (this.tabIndex === idx) {
+        return ['bg-primary', 'text-light']
+      } else {
+        return ['bg-light', 'text-dark']
+      }
+    }
+  }
 }
 </script>
 
