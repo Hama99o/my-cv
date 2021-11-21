@@ -8,7 +8,7 @@
 import Editor from './Editor'
 
 export default {
-  name: 'Info',
+  name: 'PersonalProfile',
   components: { Editor },
   methods: {
   }

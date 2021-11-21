@@ -18,7 +18,7 @@
       </b-col>
       <b-col cols="12" md="10">
         <b-tabs content-class="mt-3" v-model="tabIndex" card>
-          <b-tab title="Info" :title-link-class="linkClass(0)">  <Info/></b-tab>
+          <b-tab title="Personal Profile" :title-link-class="linkClass(0)">  <personal-profile/></b-tab>
           <b-tab title="Experience" :title-link-class="linkClass(1)"><Experience/></b-tab>
           <b-tab title="Competence" :title-link-class="linkClass(2)"><Competence/></b-tab>
         </b-tabs>
@@ -30,13 +30,13 @@
 
 <script>
 import GithubChart from './GithubChart'
-import Info from './Info'
+import PersonalProfile from './PersonalProfile'
 import Experience from './Experience'
 import Competence from './Competence'
 
 export default {
-  name: 'Profile',
-  components: { GithubChart, Info, Experience, Competence },
+  name: 'Portfolio',
+  components: { GithubChart, PersonalProfile, Experience, Competence },
   data() {
     return {
       tabIndex: 0
