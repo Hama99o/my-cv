@@ -6,7 +6,7 @@
       <br> <span v-html="rootText" class="pink"></span> I come from <span class="orange">'Afghanistan'</span>
       <br> <span v-html="rootText" class="pink"></span> I lived in <span class="orange">'Sweden'</span> and <span class="orange">'Italy'</span> for several years.
       <br> <span v-html="rootText" class="pink"></span> I live in <span class="orange"> 'France'</span> since August 2019
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">my_hobbies</span> = <span class="orange">[Music, Travel, Snowboarding, swimming ]</span>
+      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">my_hobbies</span> = <span class="orange">[coding, travel, snowboarding, swimming]</span>
       <br> <span v-html="rootText" class="pink"></span> Strange cowboy moves
       <br> <span v-html="rootText" class="pink"></span> Finished <span class="pink">'do-the-moves'</span> after 12 s
       <br> <span class="blue">? </span> Would you like to stop dancing soon as the song is ending? <span class="orange">Yes</span>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'Editor',
+  name: 'Console',
   data: function () {
      return {
      }

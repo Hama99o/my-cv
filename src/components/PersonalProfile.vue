@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Editor/>
+    <Console/>
   </div>
 </template>
 
 <script>
-import Editor from './Editor'
+import Console from './Console'
 
 export default {
   name: 'PersonalProfile',
-  components: { Editor },
+  components: { Console },
   methods: {
   }
 }
