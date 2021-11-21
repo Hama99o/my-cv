@@ -2,11 +2,12 @@
   <div class="console">
     <div class="top"> <span class="options">⦿ ○ ○</span> <span class="title">Hama99o - Web developer </span></div>
     <div class="text">
-      <span v-html="rootText" class="pink"></span> My name is <span class="orange">'Hammayoun Safi'</span> I am <span class="pink">'25'</span> years old..
-      <br> <span v-html="rootText" class="pink"></span> I come from <span class="orange">'Afghanistan'</span>
-      <br> <span v-html="rootText" class="pink"></span> I lived in <span class="orange">'Sweden'</span> and <span class="orange">'Italy'</span> for several years.
-      <br> <span v-html="rootText" class="pink"></span> I live in <span class="orange"> 'France'</span> since August 2019
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">my_hobbies</span> = <span class="orange">[coding, travel, snowboarding, swimming]</span>
+      <span v-html="rootText" class="pink"></span> <span class="text-success">my_name, my_age </span> <span class="text-primary">= </span> <span class="orange">'Hammayoun Safi',</span> <span class="text-warning">{{myAge}}</span>
+      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">from </span> <span class="text-primary">= </span> <span class="orange">'Afghanistan'</span>
+      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">lived </span> <span class="text-primary">= </span> <span class="orange">['Sweden', 'Italy']</span>
+      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">living </span> <span class="text-primary">= </span> <span class="orange"> 'Malakoff, France'</span>
+      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['pashto', 'french' 'english', 'swedish', 'urdu', 'hindi', 'persian']</span>
+      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">[coding, travel, hiking, snowboarding, swimming, cycling]</span>
       <br> <span v-html="rootText" class="pink"></span> Strange cowboy moves
       <br> <span v-html="rootText" class="pink"></span> Finished <span class="pink">'do-the-moves'</span> after 12 s
       <br> <span class="blue">? </span> Would you like to stop dancing soon as the song is ending? <span class="orange">Yes</span>
@@ -20,15 +21,18 @@
 <script>
 export default {
   name: 'Console',
-  data: function () {
+  data () {
      return {
      }
    },
   methods: {
   },
   computed: {
-    rootText() {
+    rootText () {
       return `root@hama99o:~#`
+    },
+    myAge () {
+      return Math.abs(new Date( Date.now()).getUTCFullYear() - 1995)
     }
   }
 }
