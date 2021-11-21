@@ -3,10 +3,10 @@
     <div class="top"> <span class="options">⦿ ○ ○</span> <span class="title">Hama99o - Web developer </span></div>
     <div class="tabs"> </div>
     <div class="text">
-      <br>[06:23:55] My name is <span class="pink">'Hammayoun Safi'</span> I am <span class="pink">'25'</span> years old...
-      <br>[06:26:23] I come from <span class="pink">'Afghanistan'</span>
-      <br>[06:24:55] I lived in <span class="pink">'Sweden'</span> and <span class="pink">'Italy'</span> for several years.....
-      <br>[06:25:00] I live in <span class="blue"> 'France'</span> since August 2019
+      <br>[06:23:55] My name is <span class="orange">'Hammayoun Safi'</span> I am <span class="pink">'25'</span> years old...
+      <br>[06:26:23] I come from <span class="orange">'Afghanistan'</span>
+      <br>[06:24:55] I lived in <span class="orange">'Sweden'</span> and <span class="pink">'Italy'</span> for several years.....
+      <br>[06:25:00] I live in <span class="orange"> 'France'</span> since August 2019
       <br> [06:25:02] <span class="orange">Eh, sexy lady 오-오-오-오 오빤 강남스타일</span>
       <br> [06:25:06] Strange cowboy moves
       <br>[06:24:55] Finished <span class="pink">'do-the-moves'</span> after 12 s
