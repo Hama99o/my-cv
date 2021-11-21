@@ -44,7 +44,6 @@ export default {
   },
   methods: {
     linkClass(idx) {
-      console.log(idx)
       if (this.tabIndex === idx) {
         return ['bg-primary', 'text-light']
       } else {
