@@ -1,17 +1,17 @@
 <template>
   <div id="app" class="d-flex flex-column">
-    <Profile/>
+    <Portfolio/>
     <Footer/>
   </div>
 </template>
 
 <script>
-import Profile from './components/Profile.vue'
+import Portfolio from './components/Portfolio.vue'
 import Footer from './components/layouts/Footer'
 
 export default {
   name: 'App',
-  components: { Profile, Footer }
+  components: { Portfolio, Footer }
 }
 </script>
 

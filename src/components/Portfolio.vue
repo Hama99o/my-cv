@@ -35,7 +35,7 @@ import Experience from './Experience'
 import Competence from './Competence'
 
 export default {
-  name: 'Profile',
+  name: 'Portfolio',
   components: { GithubChart, Info, Experience, Competence },
   data() {
     return {
