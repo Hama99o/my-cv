@@ -1,9 +1,9 @@
 <template>
-  <b-tab title="Experience" lazy>
+  <div>
     <b-list-group>
       <b-list-group-item>Experience</b-list-group-item>
     </b-list-group>
-  </b-tab>
+  </div>
 </template>
 
 <script>
