@@ -1,7 +1,7 @@
 <template>
-  <b-tab title="Info" active>
+  <div>
     <Editor/>
-  </b-tab>
+  </div>
 </template>
 
 <script>
