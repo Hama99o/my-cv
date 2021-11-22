@@ -24,7 +24,6 @@ export default {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   background-color: #fff;
-  border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;

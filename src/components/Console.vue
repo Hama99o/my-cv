@@ -10,7 +10,7 @@
       <br> 2.5.7 :004 > <span class="text-success">living </span> <span class="text-primary">= </span> <span class="orange"> 'Malakoff, France'</span>
       <br> 2.5.7 :005 > <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['pashto', 'french' 'english', 'swedish', 'urdu', 'hindi', 'persian']</span>
       <br> 2.5.7 :006 > <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">[coding, travel, hiking, snowboarding, swimming, cycling]</span>
-      <br> 2.5.7 :007 > <span class="blinking"> | </span>
+      <br> 2.5.7 :007 > <input type="text" class="text-success console-input" autofocus>
     </div>
   </div>
 </template>
@@ -71,15 +71,9 @@ export default {
   }
 }
 
-.blinking{
-    animation:blinkingText 1.2s infinite;
+.console-input {
+  background-color: #02072F;
+  border:0;
+  outline: none;
 }
-@keyframes blinkingText{
-    0%{     color: white;    }
-    49%{    color: white; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
-}
-
 </style>

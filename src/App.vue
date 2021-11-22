@@ -28,13 +28,8 @@ export default {
   min-height: 100vh;
 }
 
-body {
-  background: lightgray;
-  font-family: monospace;
-}
-
 .nightmode {
-  background: #000;
+  background: #292b2c;
   color: #eee;
 }
 </style>
