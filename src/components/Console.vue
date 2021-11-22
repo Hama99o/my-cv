@@ -2,19 +2,16 @@
   <div class="console">
     <div class="top"> <span class="options">⦿ ○ ○</span> <span class="title">Hama99o - Web developer </span></div>
     <div class="text">
-      <span v-html="rootText" class="pink"></span> <span class="text-success">my_name, my_age </span> <span class="text-primary">= </span> <span class="orange">'Hammayoun Safi',</span> <span class="text-warning">{{myAge}}</span>
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">from </span> <span class="text-primary">= </span> <span class="orange">'Afghanistan'</span>
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">lived </span> <span class="text-primary">= </span> <span class="orange">['Sweden', 'Italy']</span>
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">living </span> <span class="text-primary">= </span> <span class="orange"> 'Malakoff, France'</span>
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['pashto', 'french' 'english', 'swedish', 'urdu', 'hindi', 'persian']</span>
-      <br> <span v-html="rootText" class="pink"></span> <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">[coding, travel, hiking, snowboarding, swimming, cycling]</span>
-      <br> <span v-html="rootText" class="pink"></span> Strange cowboy moves
-      <br> <span v-html="rootText" class="pink"></span> Finished <span class="pink">'do-the-moves'</span> after 12 s
-      <br> <span class="blue">? </span> Would you like to stop dancing soon as the song is ending? <span class="orange">Yes</span>
-      <br> <span v-html="rootText" class="pink"></span> Danced <span class="blue">234</span> steps, <span class="blue">234</span> passes, <span class="blue">0</span> failures: <span class="pink">SUCCESS </span>
-      <br> <span v-html="rootText" class="pink"></span> sudo <span class="pink"> dance-gangnam-style.exe</span>
+      <span class="pink">root@hama99o:~$ </span> rails c
+      <br> Running via Spring preloader in process 50056 Loading development environment (Rails 6.1.4) irb: warn: can't alias context from irb_context.
+      <br> 2.5.7 :001 > <span class="text-success">my_name, my_age </span> <span class="text-primary">= </span> <span class="orange">'Hammayoun Safi',</span> <span class="text-warning">{{myAge}}</span>
+      <br> 2.5.7 :002 > <span class="text-success">from </span> <span class="text-primary">= </span> <span class="orange">'Afghanistan'</span>
+      <br> 2.5.7 :003 > <span class="text-success">lived </span> <span class="text-primary">= </span> <span class="orange">['Sweden', 'Italy']</span>
+      <br> 2.5.7 :004 > <span class="text-success">living </span> <span class="text-primary">= </span> <span class="orange"> 'Malakoff, France'</span>
+      <br> 2.5.7 :005 > <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['pashto', 'french' 'english', 'swedish', 'urdu', 'hindi', 'persian']</span>
+      <br> 2.5.7 :006 > <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">[coding, travel, hiking, snowboarding, swimming, cycling]</span>
+      <br> 2.5.7 :001 > <span class="blinking"> | </span>
     </div>
-  <div v-html="rootText"></div>
   </div>
 </template>
 
@@ -29,7 +26,7 @@ export default {
   },
   computed: {
     rootText () {
-      return `root@hama99o:~#`
+      return `root@hama99o:~$`
     },
     myAge () {
       return Math.abs(new Date( Date.now()).getUTCFullYear() - 1995)
@@ -72,6 +69,17 @@ export default {
     font-size: 14px;
     padding: 0.25rem;
   }
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: white;    }
+    49%{    color: white; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
 }
 
 </style>
