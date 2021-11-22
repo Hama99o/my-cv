@@ -20,7 +20,7 @@
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
             <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/></b-tab>
             <b-tab title="Experience" :title-link-class="linkClassForTabs(1)"> <experience/></b-tab>
-            <b-tab title="Competence" :title-link-class="linkClassForTabs(2)"> <competence/></b-tab>
+            <b-tab title="Skill" :title-link-class="linkClassForTabs(2)"> <competence/></b-tab>
           </b-tabs>
         </b-col>
       </b-row>
