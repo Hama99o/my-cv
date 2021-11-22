@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-list-group>
-      <b-list-group-item>Competence</b-list-group-item>
+      <b-list-group-item>Skill</b-list-group-item>
     </b-list-group>
   </div>
 </template>
