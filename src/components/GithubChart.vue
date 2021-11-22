@@ -1,7 +1,7 @@
 <template>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center my-3">
     <a @click="RedirectToGithub" class="btn">
-      <img :src="toggleChart()"/>
+      <img :src="toggleChart()" class="img-responsive"/>
     </a>
   </div>
 </template>
@@ -26,4 +26,8 @@ export default {
 </script>
 
 <style scoped>
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
 </style>
