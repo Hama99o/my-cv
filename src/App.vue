@@ -14,27 +14,27 @@ export default {
 </script>
 
 <style>
-html, body, #app {
-  height: 100%;
-}
 
 #app {
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
 }
+
 .portfolio-container {
   position: relative;
   min-height: 100vh;
 }
+
 body {
   background: lightgray;
   font-family: monospace;
 }
+
 .nightmode {
   background: #000;
   color: #eee;
 }
-
 </style>
