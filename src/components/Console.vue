@@ -75,5 +75,6 @@ export default {
   background-color: #02072F;
   border:0;
   outline: none;
+  max-width: 100%;
 }
 </style>
