@@ -25,7 +25,7 @@
         </b-col>
       </b-row>
     </b-container>
-    <GithubChart/>
+    <GithubChart :nightmode="nightmode"/>
   </div>
 </template>
 
