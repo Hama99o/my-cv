@@ -15,18 +15,18 @@
           rounded="circle"
           src="https://avatars.githubusercontent.com/u/72570079?v=4"
           alt="github-photo">
-        </b-img-lazy>
-      </b-col>
-      <b-col cols="12" md="10">
-        <b-tabs content-class="mt-3" v-model="tabIndex" card>
-          <b-tab title="Personal Profile" :title-link-class="linkClass(0)">  <personal-profile/></b-tab>
-          <b-tab title="Experience" :title-link-class="linkClass(1)"><Experience/></b-tab>
-          <b-tab title="Competence" :title-link-class="linkClass(2)"><Competence/></b-tab>
-        </b-tabs>
-      </b-col>
-    </b-row>
+          </b-img-lazy>
+        </b-col>
+        <b-col cols="12" md="10">
+          <b-tabs content-class="mt-3" v-model="tabIndex" card>
+            <b-tab title="Personal Profile" :title-link-class="linkClass(0)">  <personal-profile/></b-tab>
+            <b-tab title="Experience" :title-link-class="linkClass(1)"><Experience/></b-tab>
+            <b-tab title="Competence" :title-link-class="linkClass(2)"><Competence/></b-tab>
+          </b-tabs>
+        </b-col>
+      </b-row>
+    </b-container>
     <GithubChart/>
-  </b-container>
   </div>
 </template>
 
