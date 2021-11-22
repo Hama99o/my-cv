@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-content-center">
     <a @click="RedirectToGithub" class="btn">
-      <img src="http://ghchart.rshah.org/Hama99o"/>
+      <img src="https://ghchart.rshah.org/Hama99o"/>
     </a>
   </div>
 </template>
