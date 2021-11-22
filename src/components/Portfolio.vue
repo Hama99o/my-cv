@@ -4,8 +4,8 @@
       <b-row>
         <b-col offset-md="2">
           <span @click="theme">
-            <span v-if="!nightmode" class="btn">🌙</span>
-            <span v-else class="btn">☀️</span>
+            <span v-if="!nightmode" class="btn moon-or-sun">🌙</span>
+            <span v-else class="btn moon-or-sun">☀️</span>
           </span>
           <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
           <hr class="my-4" />
@@ -82,6 +82,9 @@ li {
 
 a {
   color: #42b983;
+}
+.moon-or-sun {
+  font-size: 50px;
 }
 
 </style>
