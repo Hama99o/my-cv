@@ -1,17 +1,15 @@
 <template>
   <div id="app" class="d-flex flex-column">
     <Portfolio/>
-    <Footer/>
   </div>
 </template>
 
 <script>
 import Portfolio from './components/Portfolio.vue'
-import Footer from './components/layouts/Footer'
 
 export default {
   name: 'App',
-  components: { Portfolio, Footer }
+  components: { Portfolio }
 }
 </script>
 
@@ -25,5 +23,9 @@ html, body, #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+}
+.portfolio-container {
+  position: relative;
+  min-height: 100vh;
 }
 </style>
