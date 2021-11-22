@@ -18,9 +18,9 @@
         </b-col>
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
-            <b-tab title="Personal Profile" :title-link-class="linkClass(0)"> <personal-profile/></b-tab>
-            <b-tab title="Experience" :title-link-class="linkClass(1)"> <experience/></b-tab>
-            <b-tab title="Competence" :title-link-class="linkClass(2)"> <competence/></b-tab>
+            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/></b-tab>
+            <b-tab title="Experience" :title-link-class="linkClassForTabs(1)"> <experience/></b-tab>
+            <b-tab title="Competence" :title-link-class="linkClassForTabs(2)"> <competence/></b-tab>
           </b-tabs>
         </b-col>
       </b-row>
@@ -46,12 +46,14 @@ export default {
     }
   },
   methods: {
-    linkClass(idx) {
-      if (this.tabIndex === idx) {
-        return ['bg-primary', 'text-light']
+    linkClassForTabs(idx) {
+      const linkClass = []
+      if (!this.nightmode) {
+        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('bg-white', 'text-dark')
       } else {
-        return ['bg-light', 'text-dark']
+        this.tabIndex === idx ? linkClass.push('bg-white', 'text-dark') : linkClass.push('bg-dark', 'text-white' )
       }
+      return linkClass
     },
     theme() {
       let b = document.querySelector("body");
