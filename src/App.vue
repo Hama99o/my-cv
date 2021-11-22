@@ -1,6 +1,10 @@
 <template>
   <div id="app" class="d-flex flex-column">
-    <Portfolio/>
+    <span @click="theme">
+      <span v-if="!nightmode" class="btn">🌙</span>
+      <span v-else class="btn">☀️</span>
+    </span>
+    <Portfolio :nightmode="nightmode"/>
   </div>
 </template>
 
@@ -9,7 +13,20 @@ import Portfolio from './components/Portfolio.vue'
 
 export default {
   name: 'App',
-  components: { Portfolio }
+  components: { Portfolio },
+  data() {
+    return {
+      nightmode: false
+    }
+  },
+  methods: {
+    theme() {
+      let b = document.querySelector("body");
+      b.classList.toggle("nightmode");
+      b.classList.toggle("neww");
+      this.nightmode = !this.nightmode;
+    }
+  }
 }
 </script>
 
@@ -28,4 +45,13 @@ html, body, #app {
   position: relative;
   min-height: 100vh;
 }
+body {
+  background: lightgray;
+  font-family: monospace;
+}
+.nightmode {
+  background: #000;
+  color: #eee;
+}
+
 </style>
