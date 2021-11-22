@@ -10,7 +10,7 @@
       <br> 2.5.7 :004 > <span class="text-success">living </span> <span class="text-primary">= </span> <span class="orange"> 'Malakoff, France'</span>
       <br> 2.5.7 :005 > <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['pashto', 'french' 'english', 'swedish', 'urdu', 'hindi', 'persian']</span>
       <br> 2.5.7 :006 > <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">[coding, travel, hiking, snowboarding, swimming, cycling]</span>
-      <br> 2.5.7 :001 > <span class="blinking"> | </span>
+      <br> 2.5.7 :007 > <span class="blinking"> | </span>
     </div>
   </div>
 </template>
@@ -49,7 +49,7 @@ export default {
   border: 1px solid #444;
   border-radius: 3px;
   margin: 2rem;
-  background-color: black;
+  background-color: #02072F;
 
   box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.75);
   .top {
