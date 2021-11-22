@@ -10,12 +10,7 @@
 
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
-          <b-img-lazy
-          thumbnail
-          rounded="circle"
-          src="https://avatars.githubusercontent.com/u/72570079?v=4"
-          alt="github-photo">
-          </b-img-lazy>
+          <GithubPhoto />
         </b-col>
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
@@ -32,13 +27,14 @@
 
 <script>
 import GithubChart from './GithubChart'
+import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
 import Experience from './Experience'
 import Competence from './Competence'
 
 export default {
   name: 'Portfolio',
-  components: { GithubChart, PersonalProfile, Experience, Competence },
+  components: { GithubChart, GithubPhoto, PersonalProfile, Experience, Competence },
   data() {
     return {
       tabIndex: 0
