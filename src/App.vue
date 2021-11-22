@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="d-flex flex-column">
-    <Portfolio :nightmode="nightmode"/>
+    <Portfolio/>
   </div>
 </template>
 
