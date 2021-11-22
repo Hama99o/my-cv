@@ -1,7 +1,7 @@
 <template>
   <div class="console">
-    <div class="top"> <span class="options">⦿ ○ ○</span> <span class="title">Hama99o - Web developer </span></div>
-    <div class="text">
+    <div class="top" @click="toggleConsole"> <span class="options">⦿ ○ ○</span> <span class="title">Hama99o - Web developer </span></div>
+    <div v-if="open" class="text">
       <span class="pink">root@hama99o:~$ </span> rails c
       <br> 2.5.7 :001 > <span class="text-success">my_name, my_age </span> <span class="text-primary">= </span> <span class="orange">'Hammayoun Safi',</span> <span class="text-warning">{{myAge}}</span>
       <br> 2.5.7 :002 > <span class="text-success">from </span> <span class="text-primary">= </span> <span class="orange">'Afghanistan'</span>
@@ -19,9 +19,17 @@ export default {
   name: 'Console',
   data () {
      return {
+       open: false
      }
    },
   methods: {
+    toggleConsole ()  {
+      if (this.open) {
+        this.open = false
+      } else {
+        this.open = true
+      }
+    }
   },
   computed: {
     rootText () {
@@ -52,6 +60,7 @@ export default {
 
   box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.75);
   .top {
+    cursor: pointer;
     background: #333;
     color: #666;
     text-align: center;
