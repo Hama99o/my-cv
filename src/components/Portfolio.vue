@@ -3,6 +3,10 @@
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
+          <span @click="theme">
+            <span v-if="!nightmode" class="btn">🌙</span>
+            <span v-else class="btn">☀️</span>
+          </span>
           <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
           <hr class="my-4" />
         </b-col>
@@ -37,7 +41,8 @@ export default {
   components: { GithubChart, GithubPhoto, PersonalProfile, Experience, Competence },
   data() {
     return {
-      tabIndex: 0
+      tabIndex: 0,
+      nightmode: false
     }
   },
   methods: {
@@ -47,6 +52,12 @@ export default {
       } else {
         return ['bg-light', 'text-dark']
       }
+    },
+    theme() {
+      let b = document.querySelector("body");
+      b.classList.toggle("nightmode");
+      b.classList.toggle("neww");
+      this.nightmode = !this.nightmode;
     }
   }
 }
