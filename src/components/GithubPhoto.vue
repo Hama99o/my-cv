@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <b-img-lazy
-    thumbnail
-    rounded="circle"
-    src="https://avatars.githubusercontent.com/u/72570079?v=4"
-    alt="github-photo">
-  </b-img-lazy>
+  <div class="zoom-effect-container">
+    <div class="image-card">
+      <b-img-lazy
+      thumbnail
+      rounded="circle"
+      src="https://avatars.githubusercontent.com/u/72570079?v=4"
+      alt="github-photo">
+    </b-img-lazy>
+    </div>
   </div>
 </template>
 
@@ -19,4 +21,13 @@ export default {
 </script>
 
 <style scoped>
+.image-card img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.zoom-effect-container:hover .image-card img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
 </style>
