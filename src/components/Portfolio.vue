@@ -1,15 +1,16 @@
 <template>
-  <b-container fluid>
-    <b-row>
-      <b-col offset-md="2">
-        <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
-        <hr class="my-4" />
-      </b-col>
-    </b-row>
+  <div class="portfolio-container">
+    <b-container fluid>
+      <b-row>
+        <b-col offset-md="2">
+          <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
+          <hr class="my-4" />
+        </b-col>
+      </b-row>
 
-    <b-row align-h="center">
-      <b-col cols="6" md="2" class="my-4">
-        <b-img-lazy
+      <b-row align-h="center">
+        <b-col cols="6" md="2" class="my-4">
+          <b-img-lazy
           thumbnail
           rounded="circle"
           src="https://avatars.githubusercontent.com/u/72570079?v=4"
@@ -26,6 +27,7 @@
     </b-row>
     <GithubChart/>
   </b-container>
+  </div>
 </template>
 
 <script>
@@ -71,5 +73,10 @@ li {
 
 a {
   color: #42b983;
+}
+
+.portfolio-container {
+  position: relative;
+  min-height: 100vh;
 }
 </style>
