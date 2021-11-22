@@ -56,9 +56,8 @@ export default {
       return linkClass
     },
     theme() {
-      let b = document.querySelector("body");
-      b.classList.toggle("nightmode");
-      b.classList.toggle("neww");
+      let body = document.querySelector("body");
+      body.classList.toggle("nightmode");
       this.nightmode = !this.nightmode;
     }
   }
