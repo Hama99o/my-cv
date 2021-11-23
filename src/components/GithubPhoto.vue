@@ -8,6 +8,9 @@
         alt="github-photo">
       </b-img-lazy>
     </div>
+    <h4 class="d-flex justify-content-center text-align-center my-3">
+      <code :class="textClass()">Hammayoun Safi</code>
+    </h4>
   </div>
 </template>
 
@@ -15,7 +18,11 @@
 
 export default {
   name: 'GithubPhoto',
+  props: ['nightmode'],
   methods: {
+    textClass () {
+      return this.nightmode ? 'text-white' : 'text-dark'
+    }
   }
 }
 </script>
@@ -28,7 +35,6 @@ export default {
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
-  margin-left: 10px;
 }
 
 .zoom-effect-container:hover .image-card img {
