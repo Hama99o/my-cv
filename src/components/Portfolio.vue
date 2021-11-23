@@ -4,7 +4,7 @@
       <b-row>
         <b-col offset-md="2">
           <span @click="theme">
-            <span v-if="!nightmode" class="btn moon-or-sun">🌙</span>
+            <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
             <span v-else class="btn moon-or-sun">☀️</span>
           </span>
           <hr class="my-4" />
@@ -61,14 +61,14 @@ export default {
     }
   },
   computed:  {
-    nightmode () {
+    hasNightMood () {
       return this.$store.state.hasNightMood
     }
   },
   methods: {
     linkClassForTabs(idx) {
       const linkClass = []
-      if (!this.nightmode) {
+      if (!this.hasNightMood) {
         this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('text-dark')
       } else {
         this.tabIndex === idx ? linkClass.push('text-dark', 'border-0') : linkClass.push('bg-dark', 'text-white', 'border-0' )
