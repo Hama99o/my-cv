@@ -9,7 +9,7 @@
       </b-img-lazy>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
-      <code :class="toggleTextColorForNightMood">Hammayoun Safi</code>
+      <code :class="toggleWhiteTextColorForNightMood">Hammayoun Safi</code>
     </h4>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
   methods: {
   },
   computed:  {
-    ...mapGetters(['toggleTextColorForNightMood'])
+    ...mapGetters(['toggleWhiteTextColorForNightMood'])
   }
 }
 </script>
