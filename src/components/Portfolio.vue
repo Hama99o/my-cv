@@ -16,7 +16,7 @@
         </b-col>
 
         <b-col cols="12" md="10">
-          <b-tabs content-class="mt-3" v-model="tabIndex" >
+          <b-tabs pills content-class="mt-3" v-model="tabIndex" >
             <b-tab :title-link-class="linkClassForTabs(0)">
               <template #title>
                 <code> Personal Profile </code>
@@ -71,7 +71,7 @@ export default {
       if (!this.hasNightMood) {
         this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('text-dark')
       } else {
-        this.tabIndex === idx ? linkClass.push('text-dark', 'border-0') : linkClass.push('bg-dark', 'text-white', 'border-0' )
+        this.tabIndex === idx ? linkClass.push('text-dark', 'bg-white') : linkClass.push('bg-dark', 'text-white')
       }
       return linkClass
     },
