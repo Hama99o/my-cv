@@ -9,20 +9,20 @@
       </b-img-lazy>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
-      <code :class="textClass()">Hammayoun Safi</code>
+      <code :class="toggleWhiteTextColorForNightMood">Hammayoun Safi</code>
     </h4>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'GithubPhoto',
-  props: ['nightmode'],
   methods: {
-    textClass () {
-      return this.nightmode ? 'text-white' : 'text-dark'
-    }
+  },
+  computed:  {
+    ...mapGetters(['toggleWhiteTextColorForNightMood'])
   }
 }
 </script>

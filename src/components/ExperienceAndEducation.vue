@@ -2,22 +2,22 @@
   <div>
     <b-list-group>
       <section id="conference-timeline">
-       <div class="timeline-start" :class="bgnightmodeClass()">Start</div>
-       <div class="conference-center-line" :class="bgnightmodeClass()"></div>
+       <div class="timeline-start" :class="toggleWhitebgAndDarkTextClass">Start</div>
+       <div class="conference-center-line" :class="toggleWhitebgAndDarkTextClass"></div>
        <div class="conference-timeline-content">
          <div class="timeline-article">
            <div class="content-left-container">
-             <div class="content-left rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
+             <div class="content-left rounded" :class="toggleSameTextColorAndBgClass">
+               <p :class="toggleDarkTextColorForNightMood">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
              </div>
            </div>
            <div class="content-right-container">
-             <div class="content-right rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">High school diploma from Milat school</p>
+             <div class="content-right rounded" :class="toggleSameTextColorAndBgClass">
+               <p :class="toggleDarkTextColorForNightMood">High school diploma from Milat school</p>
 
              </div>
            </div>
-           <div class="meta-start-year" :class="bgnightmodeClass()">
+           <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
              <span class="start-year">2010</span>
              <span class="end-year">2015</span>
            </div>
@@ -27,16 +27,16 @@
        <div class="conference-timeline-content">
          <div class="timeline-article">
            <div class="content-left-container">
-             <div class="content-left rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">Tourist guide in Älvkungen Tourist boat: reception of tourist groups, guide and piloting of the boat. Vendor at Holmgardcykel, seller specializing in cycling</p>
+             <div class="content-left rounded" :class="toggleSameTextColorAndBgClass">
+               <p :class="toggleDarkTextColorForNightMood">Tourist guide in Älvkungen Tourist boat: reception of tourist groups, guide and piloting of the boat. Vendor at Holmgardcykel, seller specializing in cycling</p>
              </div>
            </div>
            <div class="content-right-container">
-             <div class="content-right rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">Learning Swedish and web development at balder high school </p>
+             <div class="content-right rounded" :class="toggleSameTextColorAndBgClass">
+               <p :class="toggleDarkTextColorForNightMood">Learning Swedish and web development at balder high school </p>
              </div>
            </div>
-           <div class="meta-start-year" :class="bgnightmodeClass()">
+           <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
              <span class="start-year">2015</span>
              <span class="end-year">2019</span>
            </div>
@@ -46,16 +46,16 @@
       <div class="conference-timeline-content">
         <div class="timeline-article">
           <div class="content-left-container">
-            <div class="content-left rounded" :class="textAndBgSameClass()">
-              <p :class="textClass()">Volunteer interpreter within the Scarabée association</p>
+            <div class="content-left rounded" :class="toggleSameTextColorAndBgClass">
+              <p :class="toggleDarkTextColorForNightMood">Volunteer interpreter within the Scarabée association</p>
             </div>
           </div>
           <div class="content-right-container">
-            <div class="content-right rounded" :class="textAndBgSameClass()">
-              <p :class="textClass()">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
+            <div class="content-right rounded" :class="toggleSameTextColorAndBgClass">
+              <p :class="toggleDarkTextColorForNightMood">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
             </div>
           </div>
-          <div class="meta-start-year" :class="bgnightmodeClass()">
+          <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
             <span class="start-year">2019</span>
             <span class="end-year">2020</span>
           </div>
@@ -65,40 +65,32 @@
       <div class="conference-timeline-content">
         <div class="timeline-article">
           <div class="content-left-container">
-            <div class="content-left rounded" :class="textAndBgSameClass()">
-              <p :class="textClass()">Work at jam as a junior web developer</p>
+            <div class="content-left rounded" :class="toggleSameTextColorAndBgClass">
+              <p :class="toggleDarkTextColorForNightMood">Work at jam as a junior web developer</p>
             </div>
           </div>
-          <div class="meta-start-year" :class="bgnightmodeClass()">
+          <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
             <span class="start-year">2020 </span>
             <span class="end-year">Now</span>
           </div>
         </div>
       </div>
-       <div class="timeline-end" :class="bgnightmodeClass()">End</div>
+       <div class="timeline-end" :class="toggleWhitebgAndDarkTextClass">End</div>
       </section>
     </b-list-group>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'ExperienceAndEducation',
-  props: ['nightmode'],
   methods: {
-    bgnightmodeClass () {
-      return this.nightmode ? 'bg-white  text-dark' : 'bg-dark text-white'
-    },
-    textAndBgClass () {
-      return this.nightmode ? 'bg-white text-white' : 'bg-dark text-dark'
-    },
-    textClass () {
-      return this.nightmode ? 'text-dark' : 'text-white'
-    },
-    textAndBgSameClass () {
-      return this.nightmode ? 'bg-white text-white' : 'bg-dark text-dark'
-    }
+  },
+  computed:  {
+    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleDarkTextColorForNightMood', 'toggleSameTextColorAndBgClass'])
+
   }
 }
 </script>

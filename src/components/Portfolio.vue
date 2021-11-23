@@ -4,16 +4,15 @@
       <b-row>
         <b-col offset-md="2">
           <span @click="theme">
-            <span v-if="!nightmode" class="btn moon-or-sun">🌙</span>
+            <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
             <span v-else class="btn moon-or-sun">☀️</span>
           </span>
           <hr class="my-4" />
         </b-col>
       </b-row>
-
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
-          <github-photo :nightmode="nightmode"/>
+          <github-photo/>
         </b-col>
 
         <b-col cols="12" md="10">
@@ -23,21 +22,21 @@
                 <code> Personal Profile </code>
               </template>
               <personal-profile/>
-              <github-chart :nightmode="nightmode"/>
+              <github-chart/>
             </b-tab>
 
             <b-tab :title-link-class="linkClassForTabs(1)">
               <template #title>
                 <code> Experience and Education </code>
               </template>
-              <experience-and-education :nightmode="nightmode"/>
+              <experience-and-education/>
             </b-tab>
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
               <template #title>
                 <code> Contact </code>
               </template>
-              <contact :nightmode="nightmode"/>
+              <contact/>
             </b-tab>
           </b-tabs>
         </b-col>
@@ -58,14 +57,18 @@ export default {
   components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
   data() {
     return {
-      tabIndex: 0,
-      nightmode: false
+      tabIndex: 0
+    }
+  },
+  computed:  {
+    hasNightMood () {
+      return this.$store.state.hasNightMood
     }
   },
   methods: {
     linkClassForTabs(idx) {
       const linkClass = []
-      if (!this.nightmode) {
+      if (!this.hasNightMood) {
         this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('text-dark')
       } else {
         this.tabIndex === idx ? linkClass.push('text-dark', 'border-0') : linkClass.push('bg-dark', 'text-white', 'border-0' )
@@ -75,10 +78,7 @@ export default {
     theme() {
       let body = document.querySelector("body");
       body.classList.toggle("nightmode");
-      this.nightmode = !this.nightmode;
-    },
-    textClass () {
-      return this.nightmode ? 'text-white' : 'text-dark'
+      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     }
   }
 }
