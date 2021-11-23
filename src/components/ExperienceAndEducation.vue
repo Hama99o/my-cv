@@ -8,12 +8,12 @@
          <div class="timeline-article">
            <div class="content-left-container">
              <div class="content-left rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! <span class="article-number">01</span></p>
+               <p :class="textClass()">High school diploma from Milat school <span class="article-number">01</span></p>
              </div>
            </div>
            <div class="content-right-container">
              <div class="content-right rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. <span class="article-number">02</span></p>
+               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. <span class="article-number">02</span></p>
              </div>
            </div>
            <div class="meta-date" :class="bgnightmodeClass()">
