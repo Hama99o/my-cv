@@ -22,7 +22,59 @@
            </div>
          </div>
        </div>
-       <div class="timeline-end" :class="bgnightmodeClass()">Continue</div>
+
+       <div class="conference-timeline-content">
+         <div class="timeline-article">
+           <div class="content-left-container">
+             <div class="content-left rounded" :class="textAndBgSameClass()">
+               <p :class="textClass()">Tourist guide in Älvkungen Tourist boat: reception of tourist groups, guide and piloting of the boat. Vendor at Holmgardcykel, seller specializing in cycling</p>
+             </div>
+           </div>
+           <div class="content-right-container">
+             <div class="content-right rounded" :class="textAndBgSameClass()">
+               <p :class="textClass()">Learning Swedish and web development at balder high school </p>
+             </div>
+           </div>
+           <div class="meta-date" :class="bgnightmodeClass()">
+             <span class="date">2015</span>
+             <span class="month">2019</span>
+           </div>
+         </div>
+       </div>
+
+      <div class="conference-timeline-content">
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left rounded" :class="textAndBgSameClass()">
+              <p :class="textClass()">Volunteer interpreter within the Scarabée association</p>
+            </div>
+          </div>
+          <div class="content-right-container">
+            <div class="content-right rounded" :class="textAndBgSameClass()">
+              <p :class="textClass()">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
+            </div>
+          </div>
+          <div class="meta-date" :class="bgnightmodeClass()">
+            <span class="date">2019</span>
+            <span class="month">2020</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conference-timeline-content">
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left rounded" :class="textAndBgSameClass()">
+              <p :class="textClass()">Work at jam as a junior web developer</p>
+            </div>
+          </div>
+          <div class="meta-date" :class="bgnightmodeClass()">
+            <span class="date">2020 </span>
+            <span class="month">Now</span>
+          </div>
+        </div>
+      </div>
+       <div class="timeline-end" :class="bgnightmodeClass()">End</div>
       </section>
     </b-list-group>
   </div>
@@ -81,7 +133,7 @@ export default {
 }
 #conference-timeline .conference-timeline-content {
   padding-top: 67px;
-  padding-bottom: 67px;
+  padding-bottom: 27px;
 }
 .timeline-article {
   width: 100%;
