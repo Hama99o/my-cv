@@ -23,7 +23,7 @@
           <b-tabs content-class="mt-3" v-model="tabIndex" >
             <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)">
               <personal-profile/>
-              <GithubChart :nightmode="nightmode"/>
+              <github-chart :nightmode="nightmode"/>
             </b-tab>
 
             <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)">
