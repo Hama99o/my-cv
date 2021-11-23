@@ -16,9 +16,9 @@
                <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
              </div>
            </div>
-           <div class="meta-date" :class="bgnightmodeClass()">
-             <span class="date">2010</span>
-             <span class="month">2015</span>
+           <div class="meta-start-year" :class="bgnightmodeClass()">
+             <span class="start-year">2010</span>
+             <span class="end-year">2015</span>
            </div>
          </div>
        </div>
@@ -35,9 +35,9 @@
                <p :class="textClass()">Learning Swedish and web development at balder high school </p>
              </div>
            </div>
-           <div class="meta-date" :class="bgnightmodeClass()">
-             <span class="date">2015</span>
-             <span class="month">2019</span>
+           <div class="meta-start-year" :class="bgnightmodeClass()">
+             <span class="start-year">2015</span>
+             <span class="end-year">2019</span>
            </div>
          </div>
        </div>
@@ -54,9 +54,9 @@
               <p :class="textClass()">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
             </div>
           </div>
-          <div class="meta-date" :class="bgnightmodeClass()">
-            <span class="date">2019</span>
-            <span class="month">2020</span>
+          <div class="meta-start-year" :class="bgnightmodeClass()">
+            <span class="start-year">2019</span>
+            <span class="end-year">2020</span>
           </div>
         </div>
       </div>
@@ -68,9 +68,9 @@
               <p :class="textClass()">Work at jam as a junior web developer</p>
             </div>
           </div>
-          <div class="meta-date" :class="bgnightmodeClass()">
-            <span class="date">2020 </span>
-            <span class="month">Now</span>
+          <div class="meta-start-year" :class="bgnightmodeClass()">
+            <span class="start-year">2020 </span>
+            <span class="end-year">Now</span>
           </div>
         </div>
       </div>
@@ -186,7 +186,7 @@ export default {
   content: "\f0d9";
   left: -8px;
 }
-.timeline-article .meta-date {
+.timeline-article .meta-start-year {
   position: absolute;
   top: 0;
   left: 50%;
@@ -195,17 +195,17 @@ export default {
   margin-left: -31px;
   border-radius: 100%;
 }
-.timeline-article .meta-date .date,
-.timeline-article .meta-date .month {
+.timeline-article .meta-start-year .start-year,
+.timeline-article .meta-start-year .end-year {
   display: block;
   text-align: center;
   font-weight: 900;
 }
-.timeline-article .meta-date .date {
+.timeline-article .meta-start-year .start-year {
   font-size: 18px;
   line-height: 40px;
 }
-.timeline-article .meta-date .month {
+.timeline-article .meta-start-year .end-year {
   font-size: 18px;
   line-height: 5px;
 }
@@ -221,7 +221,7 @@ export default {
     margin-left: 0;
     left: 50px;
   }
-  .timeline-article .meta-date {
+  .timeline-article .meta-start-year {
     margin-left: 0;
     left: 20px;
   }
