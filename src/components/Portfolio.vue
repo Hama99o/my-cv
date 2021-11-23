@@ -16,7 +16,7 @@
         </b-col>
 
         <b-col cols="12" md="10">
-          <b-tabs pills content-class="mt-3" v-model="tabIndex" >
+          <b-tabs pills content-class="mt-3" v-model="tabIndex">
             <b-tab :title-link-class="linkClassForTabs(0)">
               <template #title>
                 <code> Personal Profile </code>
