@@ -2,8 +2,8 @@
   <div>
     <b-list-group>
       <section id="conference-timeline">
-       <div class="timeline-start" :class="bgnightmodeClass">Start</div>
-       <div class="conference-center-line" :class="bgnightmodeClass"></div>
+       <div class="timeline-start" :class="toggleWhitebgAndDarkTextClass">Start</div>
+       <div class="conference-center-line" :class="toggleWhitebgAndDarkTextClass"></div>
        <div class="conference-timeline-content">
          <div class="timeline-article">
            <div class="content-left-container">
@@ -17,7 +17,7 @@
 
              </div>
            </div>
-           <div class="meta-start-year" :class="bgnightmodeClass">
+           <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
              <span class="start-year">2010</span>
              <span class="end-year">2015</span>
            </div>
@@ -36,7 +36,7 @@
                <p :class="toggleDarkTextColorForNightMood">Learning Swedish and web development at balder high school </p>
              </div>
            </div>
-           <div class="meta-start-year" :class="bgnightmodeClass">
+           <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
              <span class="start-year">2015</span>
              <span class="end-year">2019</span>
            </div>
@@ -55,7 +55,7 @@
               <p :class="toggleDarkTextColorForNightMood">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
             </div>
           </div>
-          <div class="meta-start-year" :class="bgnightmodeClass">
+          <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
             <span class="start-year">2019</span>
             <span class="end-year">2020</span>
           </div>
@@ -69,13 +69,13 @@
               <p :class="toggleDarkTextColorForNightMood">Work at jam as a junior web developer</p>
             </div>
           </div>
-          <div class="meta-start-year" :class="bgnightmodeClass">
+          <div class="meta-start-year" :class="toggleWhitebgAndDarkTextClass">
             <span class="start-year">2020 </span>
             <span class="end-year">Now</span>
           </div>
         </div>
       </div>
-       <div class="timeline-end" :class="bgnightmodeClass">End</div>
+       <div class="timeline-end" :class="toggleWhitebgAndDarkTextClass">End</div>
       </section>
     </b-list-group>
   </div>
@@ -89,7 +89,7 @@ export default {
   methods: {
   },
   computed:  {
-    ...mapGetters(['bgnightmodeClass', 'toggleDarkTextColorForNightMood', 'toggleSameTextColorAndBgClass'])
+    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleDarkTextColorForNightMood', 'toggleSameTextColorAndBgClass'])
 
   }
 }
