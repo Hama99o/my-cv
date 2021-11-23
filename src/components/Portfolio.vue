@@ -14,7 +14,7 @@
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
           <github-photo />
-          <h3 class="d-flex justify-content-center text-align-center my-3"><code>Hammayoun Safi</code></h3>
+          <h3 class="d-flex justify-content-center text-align-center my-3"><code :class="textClass()">Hammayoun Safi</code></h3>
         </b-col>
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
@@ -60,7 +60,10 @@ export default {
       let body = document.querySelector("body");
       body.classList.toggle("nightmode");
       this.nightmode = !this.nightmode;
-    }
+    },
+    textClass () {
+      return this.nightmode ? 'text-white' : 'text-dark'
+    },
   }
 }
 </script>
