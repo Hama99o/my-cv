@@ -8,12 +8,12 @@
          <div class="timeline-article">
            <div class="content-left-container">
              <div class="content-left rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">High school diploma from Milat school <span class="article-number">01</span></p>
+               <p :class="textClass()">High school diploma from Milat school</p>
              </div>
            </div>
            <div class="content-right-container">
              <div class="content-right rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. <span class="article-number">02</span></p>
+               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
              </div>
            </div>
            <div class="meta-date" :class="bgnightmodeClass()">
@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style scoped lang="css">
+<style scoped lang="scss">
 #conference-timeline {
   position: relative;
   max-width: 920px;
@@ -95,13 +95,7 @@ export default {
   max-width: 44%;
   width: 100%;
 }
-.timeline-article .timeline-author {
-  display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: right;
-}
+
 .timeline-article .content-left,
 .timeline-article .content-right {
   position: relative;
@@ -111,20 +105,14 @@ export default {
   padding: 27px 25px;
 }
 .timeline-article p {
-  margin: 0 0 0 60px;
+  margin: 0 0 0 20px;
   padding: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   position: relative;
 }
-.timeline-article p span.article-number {
-  position: absolute;
-  font-weight: 300;
-  font-size: 44px;
-  top: 10px;
-  left: -60px;
-}
+
 .timeline-article .content-left-container {
   float: left;
 }
