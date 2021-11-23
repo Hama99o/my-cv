@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-container">
+  <div class="portfolio-container container">
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
@@ -13,25 +13,31 @@
 
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
-          <github-photo />
-          <h3 class="d-flex justify-content-center text-align-center my-3">
-            <code :class="textClass()">Hammayoun Safi</code>
-          </h3>
+          <github-photo :nightmode="nightmode"/>
         </b-col>
 
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" >
-            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)">
+            <b-tab :title-link-class="linkClassForTabs(0)">
+              <template #title>
+                <code> Personal Profile </code>
+              </template>
               <personal-profile/>
-              <GithubChart :nightmode="nightmode"/>
+              <github-chart :nightmode="nightmode"/>
             </b-tab>
 
-            <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)">
+            <b-tab :title-link-class="linkClassForTabs(1)">
+              <template #title>
+                <code> Experience and Education </code>
+              </template>
               <experience-and-education :nightmode="nightmode"/>
             </b-tab>
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
-              <about/>
+              <template #title>
+                <code> Contact </code>
+              </template>
+              <contact :nightmode="nightmode"/>
             </b-tab>
           </b-tabs>
         </b-col>
@@ -45,11 +51,11 @@ import GithubChart from './GithubChart'
 import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
 import ExperienceAndEducation from './ExperienceAndEducation'
-import About from './About'
+import Contact from './Contact'
 
 export default {
   name: 'Portfolio',
-  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, About },
+  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
   data() {
     return {
       tabIndex: 0,
@@ -73,7 +79,7 @@ export default {
     },
     textClass () {
       return this.nightmode ? 'text-white' : 'text-dark'
-    },
+    }
   }
 }
 </script>
@@ -99,6 +105,6 @@ a {
 }
 
 .moon-or-sun {
-  font-size: 50px;
+  font-size: 30px;
 }
 </style>
