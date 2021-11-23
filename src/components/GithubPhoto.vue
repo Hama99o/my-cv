@@ -42,7 +42,7 @@ export default {
 }
 
 @-webkit-keyframes brightness {
-  0%, 100%  { -webkit-filter: brightness(20%); }
+  0%, 100%  { -webkit-filter: brightness(25%); }
   50% { -webkit-filter: brightness(1.2); }
 
 }

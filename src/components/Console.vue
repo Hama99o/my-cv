@@ -19,7 +19,7 @@ export default {
   name: 'Console',
   data () {
      return {
-       open: false
+       open: true
      }
    },
   methods: {

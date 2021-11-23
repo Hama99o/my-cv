@@ -18,14 +18,15 @@
         </b-col>
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
-            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/></b-tab>
-            <b-tab title="Experience" :title-link-class="linkClassForTabs(1)"> <experience/></b-tab>
-            <b-tab title="Skill" :title-link-class="linkClassForTabs(2)"> <competence/></b-tab>
+            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/>
+              <GithubChart :nightmode="nightmode"/>
+            </b-tab>
+            <b-tab title="Experience and Skill" :title-link-class="linkClassForTabs(1)"> <experience :nightmode="nightmode"/></b-tab>
+            <b-tab title="About" :title-link-class="linkClassForTabs(2)"> <about/></b-tab>
           </b-tabs>
         </b-col>
       </b-row>
     </b-container>
-    <GithubChart :nightmode="nightmode"/>
   </div>
 </template>
 
@@ -34,11 +35,11 @@ import GithubChart from './GithubChart'
 import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
 import Experience from './Experience'
-import Competence from './Competence'
+import About from './About'
 
 export default {
   name: 'Portfolio',
-  components: { GithubChart, GithubPhoto, PersonalProfile, Experience, Competence },
+  components: { GithubChart, GithubPhoto, PersonalProfile, Experience, About },
   data() {
     return {
       tabIndex: 0,
@@ -49,9 +50,9 @@ export default {
     linkClassForTabs(idx) {
       const linkClass = []
       if (!this.nightmode) {
-        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('bg-white', 'text-dark')
+        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('text-dark')
       } else {
-        this.tabIndex === idx ? linkClass.push('bg-white', 'text-dark') : linkClass.push('bg-dark', 'text-white' )
+        this.tabIndex === idx ? linkClass.push('text-dark', 'border-0') : linkClass.push('bg-dark', 'text-white', 'border-0' )
       }
       return linkClass
     },
@@ -82,8 +83,8 @@ li {
 a {
   color: #42b983;
 }
+
 .moon-or-sun {
   font-size: 50px;
 }
-
 </style>
