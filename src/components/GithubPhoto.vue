@@ -18,10 +18,14 @@
 
 export default {
   name: 'GithubPhoto',
-  props: ['nightmode'],
   methods: {
     textClass () {
       return this.nightmode ? 'text-white' : 'text-dark'
+    }
+  },
+  computed:  {
+    nightmode () {
+      return this.$store.state.hasNightMood
     }
   }
 }

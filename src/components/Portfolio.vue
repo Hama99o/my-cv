@@ -12,7 +12,7 @@
       </b-row>
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
-          <github-photo :nightmode="nightmode"/>
+          <github-photo/>
         </b-col>
 
         <b-col cols="12" md="10">
@@ -22,7 +22,7 @@
                 <code> Personal Profile </code>
               </template>
               <personal-profile/>
-              <github-chart :nightmode="nightmode"/>
+              <github-chart/>
             </b-tab>
 
             <b-tab :title-link-class="linkClassForTabs(1)">

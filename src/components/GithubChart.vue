@@ -9,7 +9,11 @@
 <script>
 export default {
   name: 'GithubChart',
-  props: ['nightmode'],
+  computed:  {
+    nightmode () {
+      return this.$store.state.hasNightMood
+    }
+  },
   methods: {
     RedirectToGithub() {
       window.open("https://github.com/Hama99o", '_blank')
