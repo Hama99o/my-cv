@@ -14,15 +14,25 @@
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
           <github-photo />
-          <h3 class="d-flex justify-content-center text-align-center my-3"><code :class="textClass()">Hammayoun Safi</code></h3>
+          <h3 class="d-flex justify-content-center text-align-center my-3">
+            <code :class="textClass()">Hammayoun Safi</code>
+          </h3>
         </b-col>
+
         <b-col cols="12" md="10">
-          <b-tabs content-class="mt-3" v-model="tabIndex" card>
-            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/>
+          <b-tabs content-class="mt-3" v-model="tabIndex" >
+            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)">
+              <personal-profile/>
               <GithubChart :nightmode="nightmode"/>
             </b-tab>
-            <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)"> <experience-and-education :nightmode="nightmode"/></b-tab>
-            <b-tab title="About" :title-link-class="linkClassForTabs(2)"> <about/></b-tab>
+
+            <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)">
+              <experience-and-education :nightmode="nightmode"/>
+            </b-tab>
+
+            <b-tab title="About" :title-link-class="linkClassForTabs(2)">
+              <about/>
+            </b-tab>
           </b-tabs>
         </b-col>
       </b-row>
@@ -69,6 +79,7 @@ export default {
 </script>
 
 <style scoped>
+
 h3 {
   margin: 40px 0 0;
 }
