@@ -79,9 +79,6 @@ export default {
       let body = document.querySelector("body");
       body.classList.toggle("nightmode");
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
-    },
-    textClass () {
-      return this.nightmode ? 'text-white' : 'text-dark'
     }
   }
 }
