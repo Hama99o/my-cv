@@ -8,21 +8,73 @@
          <div class="timeline-article">
            <div class="content-left-container">
              <div class="content-left rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! <span class="article-number">01</span></p>
+               <p :class="textClass()">High school diploma from Milat school</p>
              </div>
            </div>
            <div class="content-right-container">
              <div class="content-right rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. <span class="article-number">02</span></p>
+               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
              </div>
            </div>
-           <div class="meta-date" :class="bgnightmodeClass()">
-             <span class="date">2010</span>
-             <span class="month">2015</span>
+           <div class="meta-start-year" :class="bgnightmodeClass()">
+             <span class="start-year">2010</span>
+             <span class="end-year">2015</span>
            </div>
          </div>
        </div>
-       <div class="timeline-end" :class="bgnightmodeClass()">Continue</div>
+
+       <div class="conference-timeline-content">
+         <div class="timeline-article">
+           <div class="content-left-container">
+             <div class="content-left rounded" :class="textAndBgSameClass()">
+               <p :class="textClass()">Tourist guide in Älvkungen Tourist boat: reception of tourist groups, guide and piloting of the boat. Vendor at Holmgardcykel, seller specializing in cycling</p>
+             </div>
+           </div>
+           <div class="content-right-container">
+             <div class="content-right rounded" :class="textAndBgSameClass()">
+               <p :class="textClass()">Learning Swedish and web development at balder high school </p>
+             </div>
+           </div>
+           <div class="meta-start-year" :class="bgnightmodeClass()">
+             <span class="start-year">2015</span>
+             <span class="end-year">2019</span>
+           </div>
+         </div>
+       </div>
+
+      <div class="conference-timeline-content">
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left rounded" :class="textAndBgSameClass()">
+              <p :class="textClass()">Volunteer interpreter within the Scarabée association</p>
+            </div>
+          </div>
+          <div class="content-right-container">
+            <div class="content-right rounded" :class="textAndBgSameClass()">
+              <p :class="textClass()">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
+            </div>
+          </div>
+          <div class="meta-start-year" :class="bgnightmodeClass()">
+            <span class="start-year">2019</span>
+            <span class="end-year">2020</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conference-timeline-content">
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left rounded" :class="textAndBgSameClass()">
+              <p :class="textClass()">Work at jam as a junior web developer</p>
+            </div>
+          </div>
+          <div class="meta-start-year" :class="bgnightmodeClass()">
+            <span class="start-year">2020 </span>
+            <span class="end-year">Now</span>
+          </div>
+        </div>
+      </div>
+       <div class="timeline-end" :class="bgnightmodeClass()">End</div>
       </section>
     </b-list-group>
   </div>
@@ -31,7 +83,7 @@
 <script>
 
 export default {
-  name: 'Experience',
+  name: 'ExperienceAndEducation',
   props: ['nightmode'],
   methods: {
     bgnightmodeClass () {
@@ -50,8 +102,7 @@ export default {
 }
 </script>
 
-<style scoped lang="css">
-/*===== Vertical Timeline =====*/
+<style scoped lang="scss">
 #conference-timeline {
   position: relative;
   max-width: 920px;
@@ -82,7 +133,7 @@ export default {
 }
 #conference-timeline .conference-timeline-content {
   padding-top: 67px;
-  padding-bottom: 67px;
+  padding-bottom: 27px;
 }
 .timeline-article {
   width: 100%;
@@ -96,13 +147,7 @@ export default {
   max-width: 44%;
   width: 100%;
 }
-.timeline-article .timeline-author {
-  display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: right;
-}
+
 .timeline-article .content-left,
 .timeline-article .content-right {
   position: relative;
@@ -112,20 +157,14 @@ export default {
   padding: 27px 25px;
 }
 .timeline-article p {
-  margin: 0 0 0 60px;
+  margin: 0 0 0 20px;
   padding: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   position: relative;
 }
-.timeline-article p span.article-number {
-  position: absolute;
-  font-weight: 300;
-  font-size: 44px;
-  top: 10px;
-  left: -60px;
-}
+
 .timeline-article .content-left-container {
   float: left;
 }
@@ -147,7 +186,7 @@ export default {
   content: "\f0d9";
   left: -8px;
 }
-.timeline-article .meta-date {
+.timeline-article .meta-start-year {
   position: absolute;
   top: 0;
   left: 50%;
@@ -156,17 +195,17 @@ export default {
   margin-left: -31px;
   border-radius: 100%;
 }
-.timeline-article .meta-date .date,
-.timeline-article .meta-date .month {
+.timeline-article .meta-start-year .start-year,
+.timeline-article .meta-start-year .end-year {
   display: block;
   text-align: center;
   font-weight: 900;
 }
-.timeline-article .meta-date .date {
+.timeline-article .meta-start-year .start-year {
   font-size: 18px;
   line-height: 40px;
 }
-.timeline-article .meta-date .month {
+.timeline-article .meta-start-year .end-year {
   font-size: 18px;
   line-height: 5px;
 }
@@ -182,7 +221,7 @@ export default {
     margin-left: 0;
     left: 50px;
   }
-  .timeline-article .meta-date {
+  .timeline-article .meta-start-year {
     margin-left: 0;
     left: 20px;
   }

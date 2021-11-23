@@ -7,7 +7,6 @@
             <span v-if="!nightmode" class="btn moon-or-sun">🌙</span>
             <span v-else class="btn moon-or-sun">☀️</span>
           </span>
-          <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
           <hr class="my-4" />
         </b-col>
       </b-row>
@@ -15,13 +14,14 @@
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
           <github-photo />
+          <h3 class="d-flex justify-content-center text-align-center my-3"><code :class="textClass()">Hammayoun Safi</code></h3>
         </b-col>
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
             <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/>
               <GithubChart :nightmode="nightmode"/>
             </b-tab>
-            <b-tab title="Experience and Skill" :title-link-class="linkClassForTabs(1)"> <experience :nightmode="nightmode"/></b-tab>
+            <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)"> <experience-and-education :nightmode="nightmode"/></b-tab>
             <b-tab title="About" :title-link-class="linkClassForTabs(2)"> <about/></b-tab>
           </b-tabs>
         </b-col>
@@ -34,12 +34,12 @@
 import GithubChart from './GithubChart'
 import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
-import Experience from './Experience'
+import ExperienceAndEducation from './ExperienceAndEducation'
 import About from './About'
 
 export default {
   name: 'Portfolio',
-  components: { GithubChart, GithubPhoto, PersonalProfile, Experience, About },
+  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, About },
   data() {
     return {
       tabIndex: 0,
@@ -60,7 +60,10 @@ export default {
       let body = document.querySelector("body");
       body.classList.toggle("nightmode");
       this.nightmode = !this.nightmode;
-    }
+    },
+    textClass () {
+      return this.nightmode ? 'text-white' : 'text-dark'
+    },
   }
 }
 </script>
