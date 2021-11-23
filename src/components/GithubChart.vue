@@ -7,19 +7,19 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'GithubChart',
   computed:  {
-    nightmode () {
-      return this.$store.state.hasNightMood
-    }
+    ...mapState(['hasNightMood'])
   },
   methods: {
     RedirectToGithub() {
       window.open("https://github.com/Hama99o", '_blank')
     },
     toggleChart () {
-      if (this.nightmode) {
+      if (this.hasNightMood) {
         return "https://ghchart.rshah.org/5A30AF/Hama99o"
       } else {
         return "http://ghchart.rshah.org/873030/Hama99o"
