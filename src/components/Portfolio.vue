@@ -7,7 +7,6 @@
             <span v-if="!nightmode" class="btn moon-or-sun">🌙</span>
             <span v-else class="btn moon-or-sun">☀️</span>
           </span>
-          <h1 class="d-flex justify-content-center text-align-center my-2">Hammayoun Safi</h1>
           <hr class="my-4" />
         </b-col>
       </b-row>
@@ -15,6 +14,7 @@
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
           <github-photo />
+          <h3 class="d-flex justify-content-center text-align-center my-3"><code>Hammayoun Safi</code></h3>
         </b-col>
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" card>
