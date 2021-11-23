@@ -8,12 +8,13 @@
          <div class="timeline-article">
            <div class="content-left-container">
              <div class="content-left rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">High school diploma from Milat school</p>
+               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
              </div>
            </div>
            <div class="content-right-container">
              <div class="content-right rounded" :class="textAndBgSameClass()">
-               <p :class="textClass()">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
+               <p :class="textClass()">High school diploma from Milat school</p>
+
              </div>
            </div>
            <div class="meta-start-year" :class="bgnightmodeClass()">
@@ -132,8 +133,7 @@ export default {
   z-index: -1;
 }
 #conference-timeline .conference-timeline-content {
-  padding-top: 67px;
-  padding-bottom: 27px;
+  padding-top: 5px;
 }
 .timeline-article {
   width: 100%;
