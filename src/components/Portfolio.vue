@@ -21,16 +21,25 @@
 
         <b-col cols="12" md="10">
           <b-tabs content-class="mt-3" v-model="tabIndex" >
-            <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)">
+            <b-tab :title-link-class="linkClassForTabs(0)">
+              <template #title>
+                <code> Personal Profile </code>
+              </template>
               <personal-profile/>
               <github-chart :nightmode="nightmode"/>
             </b-tab>
 
-            <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)">
+            <b-tab :title-link-class="linkClassForTabs(1)">
+              <template #title>
+                <code> Experience and Education </code>
+              </template>
               <experience-and-education :nightmode="nightmode"/>
             </b-tab>
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
+              <template #title>
+                <code> About </code>
+              </template>
               <about/>
             </b-tab>
           </b-tabs>
