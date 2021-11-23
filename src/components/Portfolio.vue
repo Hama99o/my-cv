@@ -21,7 +21,7 @@
             <b-tab title="Personal Profile" :title-link-class="linkClassForTabs(0)"> <personal-profile/>
               <GithubChart :nightmode="nightmode"/>
             </b-tab>
-            <b-tab title="Experience and Skill" :title-link-class="linkClassForTabs(1)"> <experience :nightmode="nightmode"/></b-tab>
+            <b-tab title="Experience and Education" :title-link-class="linkClassForTabs(1)"> <experience-and-education :nightmode="nightmode"/></b-tab>
             <b-tab title="About" :title-link-class="linkClassForTabs(2)"> <about/></b-tab>
           </b-tabs>
         </b-col>
@@ -34,12 +34,12 @@
 import GithubChart from './GithubChart'
 import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
-import Experience from './Experience'
+import ExperienceAndEducation from './ExperienceAndEducation'
 import About from './About'
 
 export default {
   name: 'Portfolio',
-  components: { GithubChart, GithubPhoto, PersonalProfile, Experience, About },
+  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, About },
   data() {
     return {
       tabIndex: 0,

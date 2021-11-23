@@ -31,7 +31,7 @@
 <script>
 
 export default {
-  name: 'Experience',
+  name: 'ExperienceAndEducation',
   props: ['nightmode'],
   methods: {
     bgnightmodeClass () {
@@ -51,7 +51,6 @@ export default {
 </script>
 
 <style scoped lang="css">
-/*===== Vertical Timeline =====*/
 #conference-timeline {
   position: relative;
   max-width: 920px;
