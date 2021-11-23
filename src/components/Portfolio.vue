@@ -10,7 +10,6 @@
           <hr class="my-4" />
         </b-col>
       </b-row>
-
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
           <github-photo :nightmode="nightmode"/>
@@ -30,14 +29,14 @@
               <template #title>
                 <code> Experience and Education </code>
               </template>
-              <experience-and-education :nightmode="nightmode"/>
+              <experience-and-education/>
             </b-tab>
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
               <template #title>
                 <code> Contact </code>
               </template>
-              <contact :nightmode="nightmode"/>
+              <contact/>
             </b-tab>
           </b-tabs>
         </b-col>
@@ -58,8 +57,12 @@ export default {
   components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
   data() {
     return {
-      tabIndex: 0,
-      nightmode: false
+      tabIndex: 0
+    }
+  },
+  computed:  {
+    nightmode () {
+      return this.$store.state.hasNightMood
     }
   },
   methods: {
@@ -75,7 +78,7 @@ export default {
     theme() {
       let body = document.querySelector("body");
       body.classList.toggle("nightmode");
-      this.nightmode = !this.nightmode;
+      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     },
     textClass () {
       return this.nightmode ? 'text-white' : 'text-dark'

@@ -85,7 +85,6 @@
 
 export default {
   name: 'ExperienceAndEducation',
-  props: ['nightmode'],
   methods: {
     bgnightmodeClass () {
       return this.nightmode ? 'bg-white  text-dark' : 'bg-dark text-white'
@@ -98,6 +97,11 @@ export default {
     },
     textAndBgSameClass () {
       return this.nightmode ? 'bg-white text-white' : 'bg-dark text-dark'
+    }
+  },
+  computed:  {
+    nightmode () {
+      return this.$store.state.hasNightMood
     }
   }
 }
