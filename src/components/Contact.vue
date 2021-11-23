@@ -22,7 +22,6 @@
 
 export default {
   name: 'Contact',
-  props: ['nightmode'],
   data () {
     return {
       contact: {
@@ -33,7 +32,11 @@ export default {
       isSending: false
     }
 	},
-
+  computed: {
+    nightmode () {
+      return this.$store.state.hasNightMood
+    }
+  },
 	methods: {
     bgnightmodeClass () {
       return this.nightmode ? 'bg-white  text-dark' : 'bg-dark text-white'
