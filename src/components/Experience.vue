@@ -7,12 +7,12 @@
        <div class="conference-timeline-content">
          <div class="timeline-article">
            <div class="content-left-container">
-             <div class="content-left" :class="textAndBgSameClass()">
+             <div class="content-left rounded" :class="textAndBgSameClass()">
                <p :class="textClass()">When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! <span class="article-number">01</span></p>
              </div>
            </div>
            <div class="content-right-container">
-             <div class="content-right" :class="textAndBgSameClass()">
+             <div class="content-right rounded" :class="textAndBgSameClass()">
                <p :class="textClass()">When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. <span class="article-number">02</span></p>
              </div>
            </div>

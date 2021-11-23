@@ -50,9 +50,9 @@ export default {
     linkClassForTabs(idx) {
       const linkClass = []
       if (!this.nightmode) {
-        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white', '' ) : linkClass.push('bg-white', 'text-dark')
+        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('text-dark')
       } else {
-        this.tabIndex === idx ? linkClass.push('bg-white', 'text-dark', 'border-0') : linkClass.push('bg-dark', 'text-white', 'border-0' )
+        this.tabIndex === idx ? linkClass.push('text-dark', 'border-0') : linkClass.push('bg-dark', 'text-white', 'border-0' )
       }
       return linkClass
     },
