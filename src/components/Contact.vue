@@ -2,7 +2,7 @@
   <div>
     <b-list-group>
       <div id="contact-form" class="contact-form">
-        <h1 class="contact-form_title" :class="textClass()">Contact Form</h1>
+        <h1 class="contact-form_title" :class="toggleDarkTextColorForNightMood()">Contact Form</h1>
         <div class="separator"></div>
 
         <div v-if="isSending" class="loading">Sendig...</div>
@@ -41,7 +41,7 @@ export default {
     bgnightmodeClass () {
       return this.nightmode ? 'bg-white  text-dark' : 'bg-dark text-white'
     },
-    textClass () {
+    toggleDarkTextColorForNightMood () {
       return this.nightmode ? 'text-white' : 'text-dark'
     },
 		clearForm() {

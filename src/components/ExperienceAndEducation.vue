@@ -8,12 +8,12 @@
          <div class="timeline-article">
            <div class="content-left-container">
              <div class="content-left rounded" :class="textAndBgSameClass">
-               <p :class="textClass">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
+               <p :class="toggleDarkTextColorForNightMood">Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </p>
              </div>
            </div>
            <div class="content-right-container">
              <div class="content-right rounded" :class="textAndBgSameClass">
-               <p :class="textClass">High school diploma from Milat school</p>
+               <p :class="toggleDarkTextColorForNightMood">High school diploma from Milat school</p>
 
              </div>
            </div>
@@ -28,12 +28,12 @@
          <div class="timeline-article">
            <div class="content-left-container">
              <div class="content-left rounded" :class="textAndBgSameClass">
-               <p :class="textClass">Tourist guide in Älvkungen Tourist boat: reception of tourist groups, guide and piloting of the boat. Vendor at Holmgardcykel, seller specializing in cycling</p>
+               <p :class="toggleDarkTextColorForNightMood">Tourist guide in Älvkungen Tourist boat: reception of tourist groups, guide and piloting of the boat. Vendor at Holmgardcykel, seller specializing in cycling</p>
              </div>
            </div>
            <div class="content-right-container">
              <div class="content-right rounded" :class="textAndBgSameClass">
-               <p :class="textClass">Learning Swedish and web development at balder high school </p>
+               <p :class="toggleDarkTextColorForNightMood">Learning Swedish and web development at balder high school </p>
              </div>
            </div>
            <div class="meta-start-year" :class="bgnightmodeClass">
@@ -47,12 +47,12 @@
         <div class="timeline-article">
           <div class="content-left-container">
             <div class="content-left rounded" :class="textAndBgSameClass">
-              <p :class="textClass">Volunteer interpreter within the Scarabée association</p>
+              <p :class="toggleDarkTextColorForNightMood">Volunteer interpreter within the Scarabée association</p>
             </div>
           </div>
           <div class="content-right-container">
             <div class="content-right rounded" :class="textAndBgSameClass">
-              <p :class="textClass">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
+              <p :class="toggleDarkTextColorForNightMood">Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart. </p>
             </div>
           </div>
           <div class="meta-start-year" :class="bgnightmodeClass">
@@ -66,7 +66,7 @@
         <div class="timeline-article">
           <div class="content-left-container">
             <div class="content-left rounded" :class="textAndBgSameClass">
-              <p :class="textClass">Work at jam as a junior web developer</p>
+              <p :class="toggleDarkTextColorForNightMood">Work at jam as a junior web developer</p>
             </div>
           </div>
           <div class="meta-start-year" :class="bgnightmodeClass">
@@ -89,7 +89,7 @@ export default {
   methods: {
   },
   computed:  {
-    ...mapGetters(['bgnightmodeClass', 'textClass', 'textAndBgSameClass'])
+    ...mapGetters(['bgnightmodeClass', 'toggleDarkTextColorForNightMood', 'textAndBgSameClass'])
 
   }
 }
