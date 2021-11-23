@@ -35,9 +35,9 @@
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
               <template #title>
-                <code> About </code>
+                <code> Contact </code>
               </template>
-              <about/>
+              <contact :nightmode="nightmode"/>
             </b-tab>
           </b-tabs>
         </b-col>
@@ -51,11 +51,11 @@ import GithubChart from './GithubChart'
 import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
 import ExperienceAndEducation from './ExperienceAndEducation'
-import About from './About'
+import Contact from './Contact'
 
 export default {
   name: 'Portfolio',
-  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, About },
+  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
   data() {
     return {
       tabIndex: 0,
@@ -105,6 +105,6 @@ a {
 }
 
 .moon-or-sun {
-  font-size: 50px;
+  font-size: 30px;
 }
 </style>
