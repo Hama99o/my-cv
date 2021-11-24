@@ -105,6 +105,6 @@ a {
 }
 
 .moon-or-sun {
-  font-size: 30px;
+  font-size: 50px;
 }
 </style>
