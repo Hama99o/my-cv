@@ -141,7 +141,7 @@ $cloud-color: #fff;
 }
 
 @media (max-width: 868px) {
-  .mountain, .ground  {
+  .cloud, .mountain, .ground  {
     display: none;
   }
 }
