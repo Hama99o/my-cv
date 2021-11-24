@@ -1,15 +1,18 @@
 <template>
   <div id="app" class="d-flex flex-column">
+    <backgournd-animation />
     <Portfolio/>
   </div>
 </template>
 
 <script>
 import Portfolio from './components/Portfolio.vue'
+import BackgourndAnimation from './components/layouts/BackgourndAnimation.vue'
+
 
 export default {
   name: 'App',
-  components: { Portfolio }
+  components: { Portfolio, BackgourndAnimation }
 }
 </script>
 
