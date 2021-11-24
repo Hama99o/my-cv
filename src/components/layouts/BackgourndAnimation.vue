@@ -120,8 +120,11 @@ $cloud-color: #fff;
   0% {
     transform: translateX(15vw);
   }
-  100% {
+  50% {
     transform: translateX(70vw);
+  }
+  100% {
+    transform: translateX(15vw);
   }
 }
 
