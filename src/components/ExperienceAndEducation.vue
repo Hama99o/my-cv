@@ -2,7 +2,7 @@
   <div>
     <b-list-group>
       <section id="conference-timeline">
-       <div class="timeline-start" :class="toggleWhitebgAndDarkTextClass">Start</div>
+       <div class="timeline-start rounded" :class="toggleWhitebgAndDarkTextClass">Start</div>
        <div class="conference-center-line" :class="toggleWhitebgAndDarkTextClass"></div>
        <div class="conference-timeline-content">
          <div class="timeline-article">
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-       <div class="timeline-end" :class="toggleWhitebgAndDarkTextClass">End</div>
+       <div class="timeline-end rounded" :class="toggleWhitebgAndDarkTextClass">End</div>
       </section>
     </b-list-group>
   </div>

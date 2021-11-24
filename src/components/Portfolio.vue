@@ -27,7 +27,7 @@
 
             <b-tab :title-link-class="linkClassForTabs(1)">
               <template #title>
-                <code> Experience and Education </code>
+                <code> Experience && Education </code>
               </template>
               <experience-and-education/>
             </b-tab>
