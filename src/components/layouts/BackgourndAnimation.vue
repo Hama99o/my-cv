@@ -19,13 +19,13 @@
     <div class="cloud top fixed"></div>
     <div class="cloud bottom fixed"></div>
 
-    <div class="mountain fixed" :class="toggleBgColor"></div>
-    <div class="ground fixed"></div>
+    <div class="mountain fixed" :class="toggleBorderBottomBgColor"></div>
+    <div class="ground fixed" :class="groundBgClass"></div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'BackgourndAnimation',
@@ -36,11 +36,11 @@ export default {
   methods: {
   },
   computed: {
-    ...mapGetters(['toggleBgColor'])
+    ...mapGetters(['groundBgClass', 'toggleWhitebgAndDarkTextClass', 'toggleBorderBottomBgColor']),
+    ...mapState(['hasNightMood'])
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 $master-size: 10px;
@@ -165,7 +165,7 @@ $cloud-color: #fff;
 
 .cloud {
   animation:slide ease-in 100s infinite;
-  background:$cloud-color;
+  background: #d0cccc;
   border-radius: 10vw;
   bottom: 20vh;
   clear: both;
@@ -208,7 +208,6 @@ $cloud-color: #fff;
 }
 
 .ground {
-  background:$ground-color;
   height: 4vh;
   width: 100vw;
 }
@@ -233,10 +232,18 @@ $cloud-color: #fff;
 }
 
 .dark-bottom-border {
-  border-bottom-color: $ground-color;
+  border-bottom-color: #292b2c;
 }
 
 .white-bottom-border {
+  border-bottom-color: white;
+}
+
+.dark-bottom-border:before,.dark-bottom-border:after {
+  border-bottom-color: #292b2c;
+}
+
+.white-bottom-border:before,.white-bottom-border:after {
   border-bottom-color: white;
 }
 </style>
