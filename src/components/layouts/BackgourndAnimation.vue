@@ -232,7 +232,6 @@ $cloud-color: #fff;
   }
 }
 
-
 .dark-bottom-border {
   border-bottom-color: $ground-color;
 }
