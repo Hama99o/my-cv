@@ -22,6 +22,9 @@ const getters = {
   },
   toggleSameTextColorAndBgClass () {
     return state.hasNightMood ? 'bg-white text-white' : 'bg-dark text-dark'
+  },
+  toggleBgColor () {
+    return state.hasNightMood ? 'bg-white' : 'bg-dark'
   }
 }
 
