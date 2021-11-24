@@ -246,4 +246,10 @@ $cloud-color: #fff;
 .white-bottom-border:before,.white-bottom-border:after {
   border-bottom-color: white;
 }
+
+@media (max-width: 868px) {
+  .cloud, .moon, .mountain, .ground  {
+    display: none;
+  }
+}
 </style>
