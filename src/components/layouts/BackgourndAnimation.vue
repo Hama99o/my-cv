@@ -19,12 +19,13 @@
     <div class="cloud top fixed"></div>
     <div class="cloud bottom fixed"></div>
 
-    <div class="mountain fixed"></div>
+    <div class="mountain fixed" :class="toggleBgColor"></div>
     <div class="ground fixed"></div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'BackgourndAnimation',
@@ -35,7 +36,7 @@ export default {
   methods: {
   },
   computed: {
-
+    ...mapGetters(['toggleBgColor'])
   }
 }
 </script>
@@ -187,7 +188,6 @@ $cloud-color: #fff;
 
 .mountain {
   border: 40vh solid transparent;
-  border-bottom-color: $ground-color;
   left: 10em;
 }
 
@@ -230,5 +230,14 @@ $cloud-color: #fff;
   100% {
     transform: translateX(100vw);
   }
+}
+
+
+.dark-bottom-border {
+  border-bottom-color: $ground-color;
+}
+
+.white-bottom-border {
+  border-bottom-color: white;
 }
 </style>
