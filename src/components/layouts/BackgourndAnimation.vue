@@ -47,19 +47,6 @@ $sky-color: #0a0a0a;
 $ground-color: #37474F;
 $cloud-color: #fff;
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-}
-/* Box sizing. Thanks Chris Coyier! */
-
-body {
-  background:$sky-color;
-  font:$master-size;
-}
-
 .fixed {
   bottom: 0;
   position: fixed;

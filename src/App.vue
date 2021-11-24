@@ -35,4 +35,8 @@ export default {
   background: #292b2c;
   color: #eee;
 }
+
+* {
+  position: relative;
+}
 </style>
