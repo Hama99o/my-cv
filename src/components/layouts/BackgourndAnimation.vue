@@ -44,11 +44,6 @@ $cloud-color: #fff;
   border-radius: 100vw;
 }
 
-.mountain {
-  border: 40vh solid transparent;
-  left: 10em;
-}
-
 .cloud {
 	width: 350px; height: 120px;
   animation:slide ease-in 100s infinite;
@@ -92,6 +87,12 @@ $cloud-color: #fff;
 	border-radius: 200px;
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
+}
+
+
+.mountain {
+  border: 40vh solid transparent;
+  left: 15em;
 }
 
 .mountain:before,.mountain:after {
