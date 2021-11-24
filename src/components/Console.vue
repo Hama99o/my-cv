@@ -1,15 +1,21 @@
 <template>
   <div class="console">
-    <div class="top" @click="toggleConsole"> <span class="options">⦿ ○ ○</span> <span class="title">Hama99o - Web developer </span></div>
+    <div class="top" @click="toggleConsole"> <span class="options">x ○ --</span> <span class="title">Hama99o - Web developer </span></div>
     <div v-if="open" class="text">
       <span class="pink">root@hama99o:~$ </span> rails c
       <br> 2.5.7 :001 > <span class="text-success">my_name, my_age </span> <span class="text-primary">= </span> <span class="orange">'Hammayoun Safi',</span> <span class="text-warning">{{myAge}}</span>
       <br> 2.5.7 :002 > <span class="text-success">from </span> <span class="text-primary">= </span> <span class="orange">'Afghanistan'</span>
-      <br> 2.5.7 :003 > <span class="text-success">lived </span> <span class="text-primary">= </span> <span class="orange">['Sweden', 'Italy']</span>
+      <br> 2.5.7 :003 > <span class="text-success">lived </span> <span class="text-primary">= </span> <span class="orange">['Sweden','Italy']</span>
       <br> 2.5.7 :004 > <span class="text-success">living </span> <span class="text-primary">= </span> <span class="orange"> 'Malakoff, France'</span>
-      <br> 2.5.7 :005 > <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['pashto', 'french' 'english', 'swedish', 'urdu', 'hindi', 'persian']</span>
-      <br> 2.5.7 :006 > <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">['coding', 'travel', 'hiking', 'snowboarding', 'swimming', 'cycling']</span>
-      <br> 2.5.7 :007 > <input type="text" class="text-success console-input" autofocus>
+      <br> 2.5.7 :005 > <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">['coding','travel', 'hiking','snowboarding','swimming','cycling']</span>
+      <br> 2.5.7 :006 > <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['Pashto','French', 'English','Swedish', 'Urdu','Hindi','Persian']</span>
+      <br> 2.5.7 :007 > <span class="text-success">programming_languages </span> <span class="text-primary">= </span> <span class="orange">['Javascript','Ruby','Bash']</span>
+      <br> 2.5.7 :008 > <span class="text-success">web_technologies </span> <span class="text-primary">= </span> <span class="orange">['HTML','CSS']</span>
+      <br> 2.5.7 :009 > <span class="text-success">database_server </span> <span class="text-primary">= </span> <span class="orange">['PostgreSQL']</span>
+      <br> 2.5.7 :010 > <span class="text-success">frameworks </span> <span class="text-primary">= </span> <span class="orange">['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']</span>
+      <br> 2.5.7 :011 > <span class="text-success">other_dev_tool </span> <span class="text-primary">= </span> <span class="orange">['Git','Github','Heroku','Linux']</span>
+      <br> 2.5.7 :012 > <span class="text-success">exit</span>
+      <br> 2.5.7 :013 > <input type="text" class="text-success console-input w-80" autofocus>
     </div>
   </div>
 </template>

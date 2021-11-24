@@ -44,11 +44,6 @@ $cloud-color: #fff;
   border-radius: 100vw;
 }
 
-.mountain {
-  border: 40vh solid transparent;
-  left: 10em;
-}
-
 .cloud {
 	width: 350px; height: 120px;
   animation:slide ease-in 100s infinite;
@@ -94,6 +89,12 @@ $cloud-color: #fff;
 	-moz-border-radius: 200px;
 }
 
+
+.mountain {
+  border: 40vh solid transparent;
+  left: 15em;
+}
+
 .mountain:before,.mountain:after {
   border: 30vh solid transparent;
   border-bottom-color: $ground-color;
@@ -119,8 +120,11 @@ $cloud-color: #fff;
   0% {
     transform: translateX(15vw);
   }
-  100% {
+  50% {
     transform: translateX(70vw);
+  }
+  100% {
+    transform: translateX(15vw);
   }
 }
 
