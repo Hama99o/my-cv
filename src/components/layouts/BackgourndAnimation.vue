@@ -108,10 +108,11 @@ $cloud-color: #fff;
   position:fixed;
   right:2vw;
   text-align: center;
-  top:-4vh;
+  top:-10vh;
   right: 25vh;
   transform:scale(.3);
   width: 20vw;
+  z-index: 2;
 }
 
 .moon > * {
