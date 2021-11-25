@@ -43,14 +43,18 @@ export default {
 }
 
 .brightness {
-  -webkit-animation: brightness 95s infinite;
+  -webkit-animation: brightness 40s infinite;
   animation-iteration-count: 1;
 }
 
-@-webkit-keyframes brightness {
-  0%, 100%  { -webkit-filter: brightness(25%); }
-  50% { -webkit-filter: brightness(1.2); }
+@keyframes brightness {
+  0% {
+    -webkit-filter: brightness(25%);
+  }
 
+  100% {
+    -webkit-filter: brightness(1.1);
+  }
 }
 
 @keyframes float {
