@@ -30,10 +30,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$master-size: 10px;
-$sky-color: #0a0a0a;
-$ground-color: #37474F;
-$cloud-color: #fff;
 
 .fixed {
   bottom: 0;
@@ -91,7 +87,6 @@ $cloud-color: #fff;
 
 .mountain:before,.mountain:after {
   border: 30vh solid transparent;
-  border-bottom-color: $ground-color;
   bottom: 0;
   content: "";
   display: block;
