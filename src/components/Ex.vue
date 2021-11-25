@@ -2,16 +2,16 @@
   <div class="resume">
     <div class="func" :class="toggleWhiteTextColorForNightMood">
       <div class="work">
-        <h3><i class="fa fa-briefcase"></i></h3>
-        <ul>
+        <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass" @click="toggleExperience"></i></h3>
+        <ul v-if="experienceOpen">
           <li><span>Front-end Web Designer</span><small>Apr 2016 - Now</small></li>
           <li><span>Design Assistant</span><small>Mar 2015 - Dec 2015</small></li>
           <li><span>Design Assistant (Part-time)</span><small>Oct 2014 - Jul 2015</small></li>
         </ul>
       </div>
       <div class="edu">
-        <h3><i class="fa fa-graduation-cap"></i></h3>
-        <ul>
+        <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass" @click="toggleEducation"></i></h3>
+        <ul v-if="educationOpen">
           <li><span>Department of Information Management</span><small>Set 2010 - Jun 2014</small></li>
           <li><span>Department of Data Processing</span><small>Set 2007 - Jun 2010</small></li>
         </ul>
@@ -25,10 +25,22 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Ex',
+  data () {
+    return {
+      experienceOpen: true,
+      educationOpen: true
+    }
+  },
   computed:  {
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
   },
   methods: {
+    toggleExperience () {
+      this.experienceOpen = !this.experienceOpen
+    },
+    toggleEducation () {
+      this.educationOpen = !this.educationOpen
+    }
   }
 }
 </script>
@@ -56,22 +68,13 @@ h3 {
 }
 
 .resume {
-  width: 870px;
   margin: 20px auto;
   border: 1px solid #bbb;
   box-shadow: 0 0 20px -3px #bbb;
   position: relative;
   display: flex;
 }
-.resume::before {
-  content: "";
-  width: 100%;
-  height: 6px;
-  background: #8d9e78;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+
 .resume::after {
   content: "";
   display: block;
@@ -142,7 +145,7 @@ h3 {
   animation: circle 1.2s infinite;
 }
 .resume .func .work ul li:hover span, .resume .func .edu ul li:hover span {
-  color: #c05a88;
+  color: #716D69;
 }
 @keyframes circle {
   from {
@@ -192,5 +195,13 @@ h3 {
 }
 .resume .func .edu {
   width: 58%;
+}
+
+.fa {
+   cursor: pointer;
+}
+
+.toggle {
+   display: none;
 }
 </style>
