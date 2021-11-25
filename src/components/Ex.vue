@@ -57,7 +57,6 @@ h3 {
 
 .resume {
   width: 870px;
-  // background: #fbfbfb;
   margin: 20px auto;
   border: 1px solid #bbb;
   box-shadow: 0 0 20px -3px #bbb;
