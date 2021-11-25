@@ -30,10 +30,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$master-size: 10px;
-$sky-color: #0a0a0a;
-$ground-color: #37474F;
-$cloud-color: #fff;
 
 .fixed {
   bottom: 0;
@@ -49,12 +45,6 @@ $cloud-color: #fff;
   animation:slide ease-in 100s infinite;
 
 	background: #d0cccc;
-	background: linear-gradient(top, #d0cccc 5%, #d6f0fd 100%);
-	background: -webkit-linear-gradient(top, #d0cccc 5%, #d6f0fd 100%);
-	background: -moz-linear-gradient(top, #d0cccc 5%, #d6f0fd 100%);
-	background: -ms-linear-gradient(top, #d0cccc 5%, #d6f0fd 100%);
-	background: -o-linear-gradient(top, #d0cccc 5%, #d6f0fd 100%);
-
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
@@ -97,7 +87,6 @@ $cloud-color: #fff;
 
 .mountain:before,.mountain:after {
   border: 30vh solid transparent;
-  border-bottom-color: $ground-color;
   bottom: 0;
   content: "";
   display: block;
