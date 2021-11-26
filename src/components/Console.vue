@@ -93,7 +93,7 @@ export default {
   max-width: 100%;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 360px) {
   .console {
     .top {
       font-size: 6px;
@@ -106,7 +106,7 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 600px) and (min-width: 460px) {
+@media only screen and (max-width: 600px) and (min-width: 360px) {
   .console {
     .top {
       font-size: 8px;
