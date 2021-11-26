@@ -7,15 +7,15 @@
           <li><span>Work at <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> as a junior developer</span><small>location: France</small><small>Dec 2019 - Now</small></li>
           <li><span>Volunteer interpreter at the <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>association</span><small>location: France</small><small>Jan 2019 - Dec 2019</small></li>
           <li><span>Tourist guide in  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> Tourist boat: reception of tourist groups, guide and piloting of the boat. (Part-time)</span><small>location: Sweden</small><small>Mar 2016 - Jul 2018</small></li>
-          <li><span>Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </span><small>2013 - 2015</small></li>
+          <li><span>Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </span><small>location: Pakistan</small><small>2013 - 2015</small></li>
         </ul>
       </div>
       <div class="edu">
         <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass" @click="toggleEducation"></i></h3>
         <ul v-if="educationOpen">
-          <li><span>High school diploma from Milat school</span><small>2012 - 2014</small></li>
-          <li><span>Learning Swedish and web development at balder high school</span><small>2015 - 2019</small></li>
-          <li><span>Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.</span><small>2019 - 2020</small></li>
+          <li><span>Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.</span><small>location: France</small><small>2019 - 2020</small></li>
+          <li><span>Learning Swedish and web development at balder high school</span><small>location: Sweden</small><small>2015 - 2019</small></li>
+          <li><span>High school diploma from Milat school</span><small>location: Pakistan</small><small>2012 - 2014</small></li>
         </ul>
       </div>
     </div>
