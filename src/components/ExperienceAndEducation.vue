@@ -26,7 +26,7 @@
 import { mapGetters, mapState } from 'vuex'
 
 export default {
-  name: 'Ex',
+  name: 'ExperienceAndEducation',
   data () {
     return {
     }
