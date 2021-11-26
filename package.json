@@ -10,8 +10,6 @@
     "lintFull": "esli>nt \"./**/*.js\"",
     "lint:fix": "eslint --fix './**/*.js'",
     "start": "node server/server.js",
-    "start:dev": "NODE_ENV=development nodemon server/server.js",
-    "all": "NODE_ENV=development npm-run-all --parallel serve start:dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
