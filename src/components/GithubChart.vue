@@ -22,7 +22,7 @@ export default {
       if (this.hasNightMood) {
         return 'https://ghchart.rshah.org/5A30AF/Hama99o'
       } else {
-        return 'http://ghchart.rshah.org/873030/Hama99o'
+        return 'https://ghchart.rshah.org/873030/Hama99o'
       }
     }
   }
