@@ -201,10 +201,6 @@ h3 {
   transition-duration: 0.3s;
 }
 
-.fa {
-   cursor: pointer;
-}
-
 .toggle {
    display: none;
 }
