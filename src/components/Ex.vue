@@ -13,8 +13,9 @@
       <div class="edu">
         <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass" @click="toggleEducation"></i></h3>
         <ul v-if="educationOpen">
-          <li><span>Department of Information Management</span><small>Set 2010 - Jun 2014</small></li>
-          <li><span>Department of Data Processing</span><small>Set 2007 - Jun 2010</small></li>
+          <li><span>High school diploma from Milat school</span><small>2012 - 2014</small></li>
+          <li><span>Learning Swedish and web development at balder high school</span><small>2015 - 2019</small></li>
+          <li><span>Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.</span><small>2019 - 2020</small></li>
         </ul>
       </div>
     </div>
@@ -146,9 +147,7 @@ h3 {
 .resume .func .work ul li:hover::before, .resume .func .edu ul li:hover::before {
   animation: circle 1.2s infinite;
 }
-.resume .func .work ul li:hover span, .resume .func .edu ul li:hover span {
-  color: #f0ad4e;
-}
+
 @keyframes circle {
   from {
     box-shadow: 0 0 0 0px #3d405b;
