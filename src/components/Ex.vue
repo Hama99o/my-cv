@@ -4,7 +4,7 @@
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass" @click="toggleExperience"></i></h3>
         <ul v-if="experienceOpen">
-          <li class="nowrap"><span>Work at <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> as a junior developer</span><small>location: France</small><small>Dec 2019 - Now</small></li>
+          <li><span>Work at <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> as a junior developer</span><small>location: France</small><small>Dec 2019 - Now</small></li>
           <li><span>Volunteer interpreter at the <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>association</span><small>location: France</small><small>Jan 2019 - Dec 2019</small></li>
           <li><span>Tourist guide in  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> Tourist boat: reception of tourist groups, guide and piloting of the boat. (Part-time)</span><small>location: Sweden</small><small>Mar 2016 - Jul 2018</small></li>
           <li><span>Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </span><small>2013 - 2015</small></li>
