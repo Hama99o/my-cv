@@ -1,17 +1,16 @@
-//index.js
-import Vue from "vue";
-import Vuex from "vuex";
+// index.js
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
-
+Vue.use(Vuex)
 
 const state = {
-  errors:  {},
+  errors: {},
   hasNightMood: false
 }
 
 const getters = {
-  toggleWhiteTextColorForNightMood ()  {
+  toggleWhiteTextColorForNightMood () {
     return state.hasNightMood ? 'text-white' : 'text-dark'
   },
   toggleWhitebgAndDarkTextClass () {
@@ -37,8 +36,8 @@ const mutations = {
 const actions = {
 }
 export const store = new Vuex.Store({
- state,
- getters,
- mutations,
- actions
+  state,
+  getters,
+  mutations,
+  actions
 })
