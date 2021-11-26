@@ -21,7 +21,7 @@ export default {
   name: 'GithubPhoto',
   methods: {
   },
-  computed:  {
+  computed: {
     ...mapGetters(['toggleWhiteTextColorForNightMood'])
   }
 }

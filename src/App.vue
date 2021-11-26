@@ -8,7 +8,6 @@
 <script>
 import BackgourndAnimation from './components/layouts/BackgourndAnimation.vue'
 
-
 export default {
   name: 'App',
   components: { BackgourndAnimation }

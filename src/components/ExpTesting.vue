@@ -88,7 +88,7 @@ export default {
   name: 'ExperienceAndEducation',
   methods: {
   },
-  computed:  {
+  computed: {
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleDarkTextColorForNightMood', 'toggleSameTextColorAndBgClass'])
 
   }

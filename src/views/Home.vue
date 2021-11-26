@@ -57,29 +57,29 @@ import Contact from '@/components/Contact'
 export default {
   name: 'Home',
   components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
-  data() {
+  data () {
     return {
       tabIndex: 0
     }
   },
-  computed:  {
+  computed: {
     hasNightMood () {
       return this.$store.state.hasNightMood
     }
   },
   methods: {
-    linkClassForTabs(idx) {
+    linkClassForTabs (idx) {
       const linkClass = []
       if (!this.hasNightMood) {
-        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white' ) : linkClass.push('text-dark')
+        this.tabIndex === idx ? linkClass.push('bg-dark', 'text-white') : linkClass.push('text-dark')
       } else {
         this.tabIndex === idx ? linkClass.push('text-dark', 'bg-white') : linkClass.push('bg-dark', 'text-white')
       }
       return linkClass
     },
-    theme() {
-      let body = document.querySelector("body");
-      body.classList.toggle("nightmode");
+    theme () {
+      const body = document.querySelector('body')
+      body.classList.toggle('nightmode')
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     }
   }

@@ -25,12 +25,12 @@
 export default {
   name: 'Console',
   data () {
-     return {
-       open: true
-     }
-   },
+    return {
+      open: true
+    }
+  },
   methods: {
-    toggleConsole ()  {
+    toggleConsole () {
       if (this.open) {
         this.open = false
       } else {
@@ -43,7 +43,7 @@ export default {
       return `root@hama99o:~$`
     },
     myAge () {
-      return Math.abs(new Date( Date.now()).getUTCFullYear() - 1995)
+      return Math.abs(new Date(Date.now()).getUTCFullYear() - 1995)
     }
   }
 }

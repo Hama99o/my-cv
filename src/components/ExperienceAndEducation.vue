@@ -31,7 +31,7 @@ export default {
     return {
     }
   },
-  computed:  {
+  computed: {
     togglebgWithOpacity () {
       return this.hasNightMood ? 'bg-white-with-opacity' : 'bg-black-with-opacity'
     },

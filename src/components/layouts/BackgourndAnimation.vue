@@ -12,13 +12,13 @@ import { mapGetters, mapState } from 'vuex'
 export default {
   name: 'BackgourndAnimation',
   data () {
-     return {
-     }
-   },
+    return {
+    }
+  },
   methods: {
-    theme() {
-      let body = document.querySelector("body");
-      body.classList.toggle("nightmode");
+    theme () {
+      const body = document.querySelector('body')
+      body.classList.toggle('nightmode')
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     }
   },
@@ -78,7 +78,6 @@ export default {
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
 }
-
 
 .mountain {
   border: 40vh solid transparent;

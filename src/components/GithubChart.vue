@@ -11,18 +11,18 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'GithubChart',
-  computed:  {
+  computed: {
     ...mapState(['hasNightMood'])
   },
   methods: {
-    RedirectToGithub() {
-      window.open("https://github.com/Hama99o", '_blank')
+    RedirectToGithub () {
+      window.open('https://github.com/Hama99o', '_blank')
     },
     toggleChart () {
       if (this.hasNightMood) {
-        return "https://ghchart.rshah.org/5A30AF/Hama99o"
+        return 'https://ghchart.rshah.org/5A30AF/Hama99o'
       } else {
-        return "http://ghchart.rshah.org/873030/Hama99o"
+        return 'http://ghchart.rshah.org/873030/Hama99o'
       }
     }
   }

@@ -32,38 +32,38 @@ export default {
       },
       isSending: false
     }
-	},
+  },
   computed: {
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
   },
-	methods: {
-		clearForm() {
-			for (let field in this.contact) {
-				this.contact[field] = ''
-			}
-		},
-		onSubmit(evt) {
-			evt.preventDefault();
-			this.isSending = true;
-			// setTimeout(() => {
-			// 	// Build for data
-			// 	let form = new FormData();
-			// 	for (let field in this.contact) {
-			// 		form.append(field, this.contact[field]);
-			// 	}
+  methods: {
+    clearForm () {
+      for (const field in this.contact) {
+        this.contact[field] = ''
+      }
+    },
+    onSubmit (evt) {
+      evt.preventDefault()
+      this.isSending = true
+      // setTimeout(() => {
+      // 	// Build for data
+      // 	let form = new FormData();
+      // 	for (let field in this.contact) {
+      // 		form.append(field, this.contact[field]);
+      // 	}
       //
-			// 	// Send form to server
-			// 	this.$http.post('/app.php', form).then((response) => {
-			// 		console.log(response);
-					// this.clearForm();
-			// 		this.isSending = false;
-			// 	}).catch((e) => {
-			// 		console.log(e)
-			// 	});
+      // 	// Send form to server
+      // 	this.$http.post('/app.php', form).then((response) => {
+      // 		console.log(response);
+      // this.clearForm();
+      // 		this.isSending = false;
+      // 	}).catch((e) => {
+      // 		console.log(e)
+      // 	});
       //
-			// }, 1000);
-		}
-	}
+      // }, 1000);
+    }
+  }
 }
 </script>
 
