@@ -1,18 +1,17 @@
 <template>
   <div id="app" class="d-flex flex-column">
     <backgournd-animation />
-    <home/>
+    <router-view> </router-view>
   </div>
 </template>
 
 <script>
-import Home from './views/Home.vue'
 import BackgourndAnimation from './components/layouts/BackgourndAnimation.vue'
 
 
 export default {
   name: 'App',
-  components: { Home, BackgourndAnimation }
+  components: { BackgourndAnimation }
 }
 </script>
 
