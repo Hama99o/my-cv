@@ -10,12 +10,12 @@
       <br> 2.5.7 :005 > <span class="text-success">my_hobbies</span> <span class="text-primary">= </span> <span class="orange">['coding','travel', 'hiking','snowboarding','swimming','cycling']</span>
       <br> 2.5.7 :006 > <span class="text-success">languages </span> <span class="text-primary">= </span> <span class="orange">['Pashto','French', 'English','Swedish', 'Urdu','Hindi','Persian']</span>
       <br> 2.5.7 :007 > <span class="text-success">programming_languages </span> <span class="text-primary">= </span> <span class="orange">['Javascript','Ruby','Bash']</span>
-      <br> 2.5.7 :009 > <span class="text-success">database_server </span> <span class="text-primary">= </span> <span class="orange">['PostgreSQL']</span>
-      <br> 2.5.7 :008 > <span class="text-success">web_technologies </span> <span class="text-primary">= </span> <span class="orange">['HTML','CSS']</span>
+      <br> 2.5.7 :008 > <span class="text-success">database_server </span> <span class="text-primary">= </span> <span class="orange">['PostgreSQL']</span>
+      <br> 2.5.7 :009 > <span class="text-success">web_technologies </span> <span class="text-primary">= </span> <span class="orange">['HTML','CSS']</span>
       <br> 2.5.7 :010 > <span class="text-success">frameworks </span> <span class="text-primary">= </span> <span class="orange">['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']</span>
       <br> 2.5.7 :011 > <span class="text-success">other_dev_tool </span> <span class="text-primary">= </span> <span class="orange">['Git','Github','Heroku','Linux']</span>
       <br> 2.5.7 :012 > <span class="text-success">exit</span>
-      <br> 2.5.7 :013 > <input type="text" class="text-success console-input w-80" autofocus>
+      <br> <span class="pink">root@hama99o:~$ </span> <input type="text" class="text-success console-input w-80" autofocus>
     </div>
   </div>
 </template>
@@ -91,5 +91,46 @@ export default {
   border:0;
   outline: none;
   max-width: 100%;
+}
+
+@media (max-width: 360px) {
+  .console {
+    .top {
+      font-size: 6px;
+      .options {
+        font-size: 8px;
+      }
+    }
+    .text {
+      font-size: 5px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 360px) {
+  .console {
+    .top {
+      font-size: 8px;
+      .options {
+        font-size: 10px;
+      }
+    }
+    .text {
+      font-size: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1220px) and (min-width: 600px) {
+  .console {
+    .top {
+      font-size: 12px;
+      .options {
+        font-size: 12px;
+      }
+    }
+    .text {
+      font-size: 10px;
+    }
+  }
 }
 </style>

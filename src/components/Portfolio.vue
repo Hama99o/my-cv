@@ -49,8 +49,8 @@
 import GithubChart from './GithubChart'
 import GithubPhoto from './GithubPhoto'
 import PersonalProfile from './PersonalProfile'
-// import ExperienceAndEducation from './ExperienceAndEducation'
-import ExperienceAndEducation from './Ex'
+// import ExperienceAndEducation from './ExpTesting'
+import ExperienceAndEducation from './ExperienceAndEducation'
 import Contact from './Contact'
 
 export default {
