@@ -28,7 +28,7 @@ export default {
       contact: {
         name: '',
         email: '',
-        message: '',
+        message: ''
       },
       isSending: false
     }
