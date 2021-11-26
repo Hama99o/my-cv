@@ -9,7 +9,7 @@
     "lint": " eslint \"./**/*.js\" --quiet",
     "lintFull": "esli>nt \"./**/*.js\"",
     "lint:fix": "eslint --fix './**/*.js'",
-    "start": "node server/server.js",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
