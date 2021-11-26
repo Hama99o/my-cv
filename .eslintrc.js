@@ -32,5 +32,5 @@ module.exports = {
       }
     }
   ],
-  ignorePatterns: ['main.js', 'node_modules', 'dist', 'src/componets', 'src/views']
+  ignorePatterns: ['main.js', 'node_modules', 'dist', 'src/components', 'src/views']
 }
