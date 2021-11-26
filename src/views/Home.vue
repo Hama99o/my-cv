@@ -46,15 +46,16 @@
 </template>
 
 <script>
-import GithubChart from './GithubChart'
-import GithubPhoto from './GithubPhoto'
-import PersonalProfile from './PersonalProfile'
+
+import GithubChart from '@/components/GithubChart'
+import GithubPhoto from '@/components/GithubPhoto'
+import PersonalProfile from '@/components/PersonalProfile'
 // import ExperienceAndEducation from './ExpTesting'
-import ExperienceAndEducation from './ExperienceAndEducation'
-import Contact from './Contact'
+import ExperienceAndEducation from '@/components/ExperienceAndEducation'
+import Contact from '@/components/Contact'
 
 export default {
-  name: 'Portfolio',
+  name: 'Home',
   components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
   data() {
     return {
