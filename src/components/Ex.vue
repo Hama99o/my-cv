@@ -1,12 +1,13 @@
 <template>
-  <div class="resume">
+  <div class="resume" :class="togglebgWithOpacity">
     <div class="func" :class="toggleWhiteTextColorForNightMood">
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass" @click="toggleExperience"></i></h3>
         <ul v-if="experienceOpen">
-          <li><span>Front-end Web Designer</span><small>Apr 2016 - Now</small></li>
-          <li><span>Design Assistant</span><small>Mar 2015 - Dec 2015</small></li>
-          <li><span>Design Assistant (Part-time)</span><small>Oct 2014 - Jul 2015</small></li>
+          <li class="nowrap"><span>Work at <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> as a junior developer</span><small>location: France</small><small>Dec 2019 - Now</small></li>
+          <li><span>Volunteer interpreter at the <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>association</span><small>location: France</small><small>Jan 2019 - Dec 2019</small></li>
+          <li><span>Tourist guide in  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> Tourist boat: reception of tourist groups, guide and piloting of the boat. (Part-time)</span><small>location: Sweden</small><small>Mar 2016 - Jul 2018</small></li>
+          <li><span>Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </span><small>2013 - 2015</small></li>
         </ul>
       </div>
       <div class="edu">
@@ -21,7 +22,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'Ex',
@@ -32,6 +33,10 @@ export default {
     }
   },
   computed:  {
+    togglebgWithOpacity () {
+      return this.hasNightMood ? 'bg-white-with-opacity' : 'bg-black-with-opacity'
+    },
+    ...mapState(['hasNightMood']),
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
   },
   methods: {
@@ -108,9 +113,6 @@ h3 {
 .resume .func:hover > div:hover h3 i {
   transform: scale(1.2);
 }
-.resume .func:hover > div:not(:hover) {
-  opacity: 0.5;
-}
 .resume .func h3 {
   transition-duration: 0.3s;
   margin-top: 0;
@@ -145,7 +147,7 @@ h3 {
   animation: circle 1.2s infinite;
 }
 .resume .func .work ul li:hover span, .resume .func .edu ul li:hover span {
-  color: #716D69;
+  color: #f0ad4e;
 }
 @keyframes circle {
   from {
@@ -203,5 +205,18 @@ h3 {
 
 .toggle {
    display: none;
+}
+
+a {
+   display: inline;
+   color: blue;
+}
+
+.bg-white-with-opacity  {
+  background-color: rgba(#292b2c, 0.8);
+}
+
+.bg-black-with-opacity  {
+  background-color: rgba(#f7f7f7, 0.8);
 }
 </style>
