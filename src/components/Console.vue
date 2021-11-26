@@ -92,4 +92,45 @@ export default {
   outline: none;
   max-width: 100%;
 }
+
+@media (max-width: 460px) {
+  .console {
+    .top {
+      font-size: 6px;
+      .options {
+        font-size: 8px;
+      }
+    }
+    .text {
+      font-size: 5px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 460px) {
+  .console {
+    .top {
+      font-size: 8px;
+      .options {
+        font-size: 10px;
+      }
+    }
+    .text {
+      font-size: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1220px) and (min-width: 600px) {
+  .console {
+    .top {
+      font-size: 12px;
+      .options {
+        font-size: 12px;
+      }
+    }
+    .text {
+      font-size: 10px;
+    }
+  }
+}
 </style>
