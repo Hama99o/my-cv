@@ -4,18 +4,18 @@
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
-          <li><span>Work at <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> as a junior developer</span><small>location: France</small><small>Dec 2019 - Now</small></li>
-          <li><span>Volunteer interpreter at the <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>association. (Part-time)</span><small>location: France</small><small>Jan 2019 - Dec 2019</small></li>
-          <li><span>Tourist guide in  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> Tourist boat: reception of tourist groups, guide and piloting of the boat. (Part-time)</span><small>location: Sweden</small><small>Mar 2016 - Jul 2018</small></li>
-          <li><span>Seller with an artisanal honey producer (international distribution) Sale to traders and individuals. </span><small>location: Pakistan</small><small>2013 - 2015</small></li>
+          <li><span>{{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}</span><small>{{exAndEduLocation.jamLocation}}</small><small>{{exAndEduYear.jamYear}}</small></li>
+          <li><span>{{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>{{exAndEduText.scarabeeText2}}</span><small>{{exAndEduLocation.scarabeeLocation}}</small><small>{{exAndEduYear.scarabeeYear}}</small></li>
+          <li><span>{{exAndEduText.alvkungenText1}}  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}} </span><small>{{exAndEduLocation.alvkungenLocation}}</small><small>{{exAndEduYear.alvkungenYear}}</small></li>
+          <li><span>{{exAndEduText.honeySellerText}}</span><small>{{exAndEduLocation.honeySellerLocation}}</small><small>{{exAndEduYear.honeySellerYear}}</small></li>
         </ul>
       </div>
       <div class="edu">
         <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
-          <li><span>Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.</span><small>location: France</small><small>2019 - 2020</small></li>
-          <li><span>Learning Swedish and web development at balder high school</span><small>location: Sweden</small><small>2015 - 2019</small></li>
-          <li><span>High school diploma from Milat school</span><small>location: Pakistan</small><small>2012 - 2014</small></li>
+          <li><span>{{exAndEduText.konexioText}}</span><small>{{exAndEduLocation.konexioLocation}}</small><small>{{exAndEduYear.konexioYear}}</small></li>
+          <li><span>{{exAndEduText.balderText}}</span><small>{{exAndEduLocation.balderLocation}}</small><small>{{exAndEduYear.balderYear}}</small></li>
+          <li><span>{{exAndEduText.milatSchoolText}}</span><small>{{exAndEduLocation.milatSchoolLocation}}</small><small>{{exAndEduYear.milatSchoolYear}}</small></li>
         </ul>
       </div>
     </div>
@@ -34,6 +34,15 @@ export default {
   computed: {
     togglebgWithOpacity () {
       return this.hasNightMood ? 'bg-white-with-opacity' : 'bg-black-with-opacity'
+    },
+    exAndEduText() {
+      return this.$t('message.experienceAndEducation.text');
+    },
+    exAndEduLocation () {
+      return this.$t('message.experienceAndEducation.location');
+    },
+    exAndEduYear () {
+      return this.$t('message.experienceAndEducation.year');
     },
     ...mapState(['hasNightMood']),
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])

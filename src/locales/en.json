@@ -1,0 +1,74 @@
+{
+  "message": {
+    "heading": {
+      "personalProfile": "Personal Profile",
+      "experienceAndEducation": " Experience && Education ",
+      "contact": "Contact"
+    },
+    "console": {
+      "questions": {
+        "myNameAndAGe": "my_name, my_age",
+        "from": "from",
+        "lived": "lived",
+        "living": "living",
+        "myHobbies": "my_hobbies",
+        "languages": "languages",
+        "programmingLanguages": "programming_languages",
+        "databaseServer": "database_server",
+        "webTechnologies": "web_technologies",
+        "frameworks": "frameworks",
+        "otherDevTool": "other_dev_tool"
+      },
+      "answers": {
+        "myNameAndAGe": "'Hammayoun Safi'",
+        "from": "Afghanistan",
+        "lived": "['Sweden','Italy']",
+        "living": "'Malakoff, France'",
+        "myHobbies": "['development','travel', 'hiking','snowboarding','swimming','cycling']",
+        "languages": "['Pashto','French', 'English','Swedish', 'Urdu','Hindi','Persian']",
+        "programmingLanguages": "['Javascript','Ruby','Bash']",
+        "databaseServer": "['PostgreSQL']",
+        "webTechnologies": "['HTML','CSS']",
+        "frameworks": "['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']",
+        "otherDevTool": "['Git','Github','Heroku','Linux']"
+      },
+      "phrase":  {
+        "exit": "exit",
+        "cv": "You can also take a look at my",
+        "consoleHeading":  "Hama99o - Web developer"
+      }
+    },
+    "experienceAndEducation": {
+      "location" : {
+        "jamLocation": "location: France",
+        "scarabeeLocation": "location: France",
+        "alvkungenLocation": "location: Sweden",
+        "honeySellerLocation": "location: Pakistan",
+        "konexioLocation": "location: France",
+        "balderLocation": "location: Sweden",
+        "milatSchoolLocation": "location: Pakistan"
+      },
+      "year": {
+        "jamYear": "Dec 2019 - Now",
+        "scarabeeYear": "Jan 2019 - Dec 2019",
+        "alvkungenYear": "2016 - 2018",
+        "honeySellerYear": "2013 - 2015",
+        "konexioYear": "2019 - 2020",
+        "balderYear": "2015 - 2019",
+        "milatSchoolYear": "2012 - 2014"
+      },
+      "text": {
+        "jamText1": "Work at",
+        "jamText2": "as a junior developer",
+        "scarabeeText1": "Volunteer interpreter at the",
+        "scarabeeText2": "association. (Part-time)",
+        "alvkungenText1": "Tourist guide in",
+        "alvkungenText2": "Tourist boat: reception of tourist groups, guide and piloting of the boat. (Part-time)",
+        "honeySellerText": "Seller with an artisanal honey producer (international distribution) Sale to traders and individuals.",
+        "konexioText": "Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.",
+        "balderText": "Learning Swedish and web development at balder high school",
+        "milatSchoolText": "High school diploma from Milat school"
+      }
+    }
+  }
+}

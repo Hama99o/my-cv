@@ -1,5 +1,6 @@
 <template>
   <div class="portfolio-container container">
+    <select-locale />
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
@@ -19,7 +20,7 @@
           <b-tabs pills content-class="mt-3" v-model="tabIndex">
             <b-tab :title-link-class="linkClassForTabs(0)">
               <template #title>
-                <code> Personal Profile </code>
+                <div>{{ $t('message.heading.personalProfile') }}</div>
               </template>
               <personal-profile/>
               <github-chart/>
@@ -27,14 +28,14 @@
 
             <b-tab :title-link-class="linkClassForTabs(1)">
               <template #title>
-                <code> Experience && Education </code>
+                <code>{{ $t('message.heading.experienceAndEducation') }}</code>
               </template>
               <experience-and-education/>
             </b-tab>
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
               <template #title>
-                <code> Contact </code>
+                <code> {{ $t('message.heading.contact') }} </code>
               </template>
               <contact/>
             </b-tab>
@@ -46,7 +47,7 @@
 </template>
 
 <script>
-
+import SelectLocale from '@/components/SelectLocale.vue'
 import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
 import PersonalProfile from '@/components/PersonalProfile'
@@ -55,7 +56,7 @@ import Contact from '@/components/Contact'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact },
+  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact, SelectLocale },
   data () {
     return {
       tabIndex: 0
