@@ -8,7 +8,6 @@ import router from './router'
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
-// Make sure to inject the store in the vue instance
 new Vue({
   router,
   store,
