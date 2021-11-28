@@ -6,7 +6,6 @@ jobs:
       - image: circleci/node:14-browsers
     steps:
       - checkout # check out the code in the project directory
-
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
@@ -18,7 +17,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-          
+
   deploy_production:
     docker:
       - image: buildpack-deps:trusty
