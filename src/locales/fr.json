@@ -4,7 +4,38 @@
       "personalProfile" : "Profil Personnel",
       "experienceAndEducation": "Expérience && Éducation",
       "contact": "Contact"
-
+    },
+    "console": {
+      "questions": {
+        "myNameAndAGe": "mon_nom, mon_âge",
+        "from": "de",
+        "lived": "vivait",
+        "living": "vie",
+        "myHobbies": "mes_loisirs",
+        "languages": "langues",
+        "programmingLanguages": "langages_de_programmation",
+        "databaseServer": "serveur_de_base_dedonnées",
+        "webTechnologies": "technologies_web",
+        "frameworks": "frameworks",
+        "otherDevTool": "autre_outil_de_développement"
+      },
+      "answers": {
+        "from": "Afghanistan",
+        "lived": "['Suède','Italie']",
+        "living": "'Malakoff, France'",
+        "myHobbies": "['développement','voyage', 'randonnée','snowboard','natation','vélo']",
+        "languages": "['Pachto','Français', 'Anglais', 'Suédois', 'Ourdou', 'Hindi', 'Persan']",
+        "programmingLanguages": "['Javascript','Ruby','Bash']",
+        "databaseServer": "['PostgreSQL']",
+        "webTechnologies": "['HTML','CSS']",
+        "frameworks": "['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']",
+        "otherDevTool": "['Git','Github','Heroku','Linux']"
+      },
+      "phrase":  {
+        "exit": "sortir",
+        "cv": "Vous pouvez également consulter mon",
+        "consoleHeading":  "Hama99o - développeur web"
+      }
     }
   }
 }
