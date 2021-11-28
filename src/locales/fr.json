@@ -1,3 +1,10 @@
 {
-  "message": "bonjour i18n !!"
+  "message": {
+    "heading": {
+      "personalProfile" : "Profil Personnel",
+      "experienceAndEducation": "Expérience && Éducation",
+      "contact": "Contact"
+
+    }
+  }
 }
