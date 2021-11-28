@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import Home from '@/views/Home.vue'
-import MyCv from '@/views/MyCv.vue'
+import HammayounSaficv from '@/views/HammayounSaficv.vue'
 
 Vue.use(VueRouter)
 
@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: '/hammayoun-safi-cv',
-    name: 'MyCv',
-    component: MyCv
+    name: 'HammayounSaficv',
+    component: HammayounSaficv
   }
 ]
 
