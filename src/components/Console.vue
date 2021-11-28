@@ -12,7 +12,7 @@
       <br> 2.5.7 :007 > <span class="text-success">{{consoleQuestions.programmingLanguages}}</span> <span class="text-primary">= </span> <span class="orange">{{consoleAnswers.programmingLanguages}}</span>
       <br> 2.5.7 :008 > <span class="text-success">{{consoleQuestions.databaseServer}}</span> <span class="text-primary">= </span> <span class="orange">{{consoleAnswers.databaseServer}}</span>
       <br> 2.5.7 :009 > <span class="text-success">{{consoleQuestions.webTechnologies}}</span> <span class="text-primary">= </span> <span class="orange">{{consoleAnswers.webTechnologies}}</span>
-      <br> 2.5.7 :010 > <span class="text-success">{{consoleQuestions.frameworks}} </span><span class="text-primary">= </span> <span class="orange">{{consoleAnswers.frameworks}}</span>
+      <br> 2.5.7 :010 > <span class="text-success">{{consoleQuestions.frameworks}}</span><span class="text-primary">= </span> <span class="orange">{{consoleAnswers.frameworks}}</span>
       <br> 2.5.7 :011 > <span class="text-success">{{consoleQuestions.otherDevTool}}</span><span class="text-primary">= </span> <span class="orange">{{consoleAnswers.otherDevTool}}</span>
       <br> 2.5.7 :012 > <span class="text-success">{{$t('message.console.phrase.exit')}}</span>
       <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.console.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficv' }" target="_blank">CV</router-link>
