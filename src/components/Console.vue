@@ -15,6 +15,7 @@
       <br> 2.5.7 :010 > <span class="text-success">frameworks </span> <span class="text-primary">= </span> <span class="orange">['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']</span>
       <br> 2.5.7 :011 > <span class="text-success">other_dev_tool </span> <span class="text-primary">= </span> <span class="orange">['Git','Github','Heroku','Linux']</span>
       <br> 2.5.7 :012 > <span class="text-success">exit</span>
+      <br> <span class="pink">root@hama99o:~$ </span> You can also take a look at my <router-link :to="{ name: 'HammayounSaficv' }" target="_blank"> CV </router-link>
       <br> <span class="pink">root@hama99o:~$ </span> <input type="text" class="text-success console-input w-80" autofocus>
     </div>
   </div>
