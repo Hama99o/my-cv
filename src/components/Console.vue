@@ -44,10 +44,10 @@ export default {
       return `root@hama99o:~$`
     },
     consoleQuestions () {
-       return this.$t('message.console.questions');
+       return this.$t('message.console.questions')
     },
     consoleAnswers () {
-       return this.$t('message.console.answers');
+       return this.$t('message.console.answers')
     },
     myAge () {
       return Math.abs(new Date(Date.now()).getUTCFullYear() - 1995)
