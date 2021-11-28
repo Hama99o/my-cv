@@ -50,7 +50,6 @@
 import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
 import PersonalProfile from '@/components/PersonalProfile'
-// import ExperienceAndEducation from './ExpTesting'
 import ExperienceAndEducation from '@/components/ExperienceAndEducation'
 import Contact from '@/components/Contact'
 
