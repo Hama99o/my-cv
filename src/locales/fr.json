@@ -37,6 +37,38 @@
         "cv": "Vous pouvez également consulter mon",
         "consoleHeading":  "Hama99o - développeur web"
       }
+    },
+    "experienceAndEducation": {
+      "location" : {
+        "jamLocation": "lieu: France",
+        "SscarabeeLocation": "lieu: France",
+        "alvkungenLocation": "lieu: Suède",
+        "honeySellerLocation": "lieu: Pakistan",
+        "konexioLocation": "lieu: France",
+        "balderLocation": "lieu: Suède",
+        "milatSchoolLocation": "lieu: Pakistan"
+      },
+      "year": {
+        "jamYear": "Déc 2019 - Maintenant",
+        "scarabeeYear": "Jan 2019 - 2019",
+        "alvkungenYear": "2016 - 2018",
+        "honeySellerYear": "2013 - 2015",
+        "konexioYear": "2019 - 2020",
+        "balderYear": "2015 - 2019",
+        "milatSchoolYear": "2012 - 2014"
+      },
+      "text": {
+        "jamText1": "Travaille à",
+        "jamText2": "en tant que développeur junior",
+        "scarabeeText1": "Interprète bénévole à lae",
+        "scarabeeText2": "association. (À temps partiel)",
+        "alvkungenText1": "Guide touristique en",
+        "alvkungenText2": "Bateau de tourisme : accueil de groupes touristiques, guide et pilotage du bateau. (À temps partiel)",
+        "honeySellerText": "Vendeur auprès d'un producteur de miel artisanal (distribution internationale) Vente aux commerçants et aux particuliers.",
+        "konexioText": "Préparation au Delf B1 (diplôme d'études de langue française) et développement Web chez Konexio Digistart.",
+        "balderText": "Apprendre le suédois et le développement web au lycée Balder",
+        "milatSchoolText": "Baccalauréat de l'école Milat"
+      }
     }
   }
 }
