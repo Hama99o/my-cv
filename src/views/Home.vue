@@ -11,31 +11,27 @@
         <b-col cols="6" md="2" class="my-4">
           <github-photo/>
         </b-col>
-
         <b-col cols="12" md="10">
-          <b-tabs pills content-class="mt-3" v-model="tabIndex">
-            <b-tab :title-link-class="linkClassForTabs(0)">
-              <template #title>
-                <div>{{ $t('message.heading.personalProfile') }}</div>
-              </template>
-              <router-view> </router-view>
-              <github-chart/>
-            </b-tab>
-
-            <b-tab :title-link-class="linkClassForTabs(1)">
-              <template #title>
-                <code>{{ $t('message.heading.experienceAndEducation') }}</code>
-              </template>
-              <router-view> </router-view>
-            </b-tab>
-
-            <b-tab title="About" :title-link-class="linkClassForTabs(2)">
-              <template #title>
-                <code> {{ $t('message.heading.contact') }} </code>
-              </template>
-              <router-view> </router-view>
-            </b-tab>
-          </b-tabs>
+          <div class="mb-4">
+            <ul class="nav nav-pills" >
+              <li class="nav-item">
+                <router-link class="nav-link" :class="linkClassForTabs(0)" :to="{ name: 'PersonalProfile' }">
+                  <code @click="clickOnMenu(0)">{{ $t('message.heading.personalProfile') }}</code>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" :class="linkClassForTabs(1)" :to="{ name: 'ExperienceAndEducation' }">
+                  <code @click="clickOnMenu(1)"> {{$t('message.heading.experienceAndEducation')}} </code>
+                </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" :class="linkClassForTabs(2)" :to="{ name: 'Contact' }">
+                    <code @click="clickOnMenu(2)"> {{ $t('message.heading.contact') }} </code>
+                  </router-link>
+                </li>
+              </ul>
+            </div>
+            <router-view> </router-view>
         </b-col>
       </b-row>
     </b-container>
@@ -53,24 +49,33 @@ export default {
   components: { GithubChart, GithubPhoto, SelectLocale, MoonOrSunMenu },
   data () {
     return {
-      tabIndex: 0
+      menuList: {
+        'PersonalProfile':  0,
+        'ExperienceAndEducation': 1,
+        'Contact': 2
+      }
     }
   },
   computed: {
     hasNightMood () {
       return this.$store.state.hasNightMood
     },
-    getCurrentPage () {
-      if (this.tabIndex === 0) {
-        return  "PersonalProfile"
-      } else if (this.tabIndex === 1) {
-        return "ExperienceAndEducation"
-      } else if (this.tabIndex === 2) {
-        return "Contact"
-      }
+    tabIndex: {
+      get (){
+        return this.tabIndex = this.menuList[`${this.$route.name}`]
+      },
+      set (val){}
     }
   },
   methods: {
+    clickOnMenu (id) {
+      this.tabIndex = id
+    },
+    theme () {
+      const body = document.querySelector('body')
+      body.classList.toggle('nightmode')
+      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
+    },
     linkClassForTabs (idx) {
       const linkClass = []
       if (!this.hasNightMood) {
@@ -79,16 +84,6 @@ export default {
         this.tabIndex === idx ? linkClass.push('text-dark', 'bg-white') : linkClass.push('bg-dark', 'text-white')
       }
       return linkClass
-    },
-    theme () {
-      const body = document.querySelector('body')
-      body.classList.toggle('nightmode')
-      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
-    }
-  },
-  watch: {
-    getCurrentPage () {
-      this.$router.push({ name: this.getCurrentPage })
     }
   }
 }
