@@ -62,6 +62,15 @@ export default {
   computed: {
     hasNightMood () {
       return this.$store.state.hasNightMood
+    },
+    getCurrentPage () {
+      if (this.tabIndex === 0) {
+        return  "Personal Profile"
+      } else if (this.tabIndex === 1) {
+        return "ex & edu"
+      } else if (this.tabIndex === 2) {
+        return "contact"
+      }
     }
   },
   methods: {
