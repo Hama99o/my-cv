@@ -4,11 +4,7 @@
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
-          <span @click="theme">
-            <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
-            <span v-else class="btn moon-or-sun">☀️</span>
-          </span>
-          <hr class="my-4" />
+          <moon-or-sun-menu :theme="theme" :hasNightMood="hasNightMood"  />
         </b-col>
       </b-row>
       <b-row align-h="center">
@@ -52,11 +48,12 @@ import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
 import PersonalProfile from '@/components/PersonalProfile'
 import ExperienceAndEducation from '@/components/ExperienceAndEducation'
+import MoonOrSunMenu from '@/components/MoonOrSunMenu'
 import Contact from '@/components/Contact'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact, SelectLocale },
+  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact, SelectLocale, MoonOrSunMenu },
   data () {
     return {
       tabIndex: 0
