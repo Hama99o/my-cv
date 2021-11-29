@@ -1,17 +1,23 @@
 <template>
-  <div>
-    <span @click="theme">
-      <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
-      <span v-else class="btn moon-or-sun">☀️</span>
-    </span>
+  <div class="">
+    <div class="d-flex justify-content-between text-align-center">
+      <span @click="theme">
+        <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
+        <span v-else class="btn moon-or-sun">☀️</span>
+      </span>
+      <select-locale class="align-self-end" />
+    </div>
     <hr class="my-4" />
   </div>
 </template>
 
 <script>
+import SelectLocale from '@/components/SelectLocale.vue'
+
 export default {
   name: 'MoonOrSunMenu',
   props: ['theme', 'hasNightMood'],
+  components: { SelectLocale },
   data() {
     return {
 

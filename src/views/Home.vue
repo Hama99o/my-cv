@@ -1,6 +1,5 @@
 <template>
   <div class="portfolio-container container">
-    <select-locale />
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
@@ -39,14 +38,13 @@
 </template>
 
 <script>
-import SelectLocale from '@/components/SelectLocale.vue'
 import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
 import MoonOrSunMenu from '@/components/MoonOrSunMenu'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, SelectLocale, MoonOrSunMenu },
+  components: { GithubChart, GithubPhoto, MoonOrSunMenu },
   data () {
     return {
       menuList: {
