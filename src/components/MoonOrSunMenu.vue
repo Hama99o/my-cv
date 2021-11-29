@@ -5,7 +5,7 @@
         <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
         <span v-else class="btn moon-or-sun">☀️</span>
       </span>
-      <select-locale class="align-self-end" />
+      <select-locale class="align-self-center" />
     </div>
     <hr class="my-4" />
   </div>
