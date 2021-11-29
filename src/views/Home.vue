@@ -19,21 +19,21 @@
                 <div>{{ $t('message.heading.personalProfile') }}</div>
               </template>
               <router-view> </router-view>
-              <github-chart/> 
+              <github-chart/>
             </b-tab>
 
             <b-tab :title-link-class="linkClassForTabs(1)">
               <template #title>
                 <code>{{ $t('message.heading.experienceAndEducation') }}</code>
               </template>
-              <experience-and-education/>
+              <router-view> </router-view>
             </b-tab>
 
             <b-tab title="About" :title-link-class="linkClassForTabs(2)">
               <template #title>
                 <code> {{ $t('message.heading.contact') }} </code>
               </template>
-              <contact/>
+              <router-view> </router-view>
             </b-tab>
           </b-tabs>
         </b-col>
@@ -46,13 +46,11 @@
 import SelectLocale from '@/components/SelectLocale.vue'
 import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
-import ExperienceAndEducation from '@/components/ExperienceAndEducation'
 import MoonOrSunMenu from '@/components/MoonOrSunMenu'
-import Contact from '@/components/Contact'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, ExperienceAndEducation, Contact, SelectLocale, MoonOrSunMenu },
+  components: { GithubChart, GithubPhoto, SelectLocale, MoonOrSunMenu },
   data () {
     return {
       tabIndex: 0
@@ -66,9 +64,9 @@ export default {
       if (this.tabIndex === 0) {
         return  "PersonalProfile"
       } else if (this.tabIndex === 1) {
-        return "ex & edu"
+        return "ExperienceAndEducation"
       } else if (this.tabIndex === 2) {
-        return "contact"
+        return "Contact"
       }
     }
   },
@@ -88,8 +86,10 @@ export default {
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     }
   },
-  mounted() {
-    this.$router.push({ name: this.getCurrentPage })
+  watch: {
+    getCurrentPage () {
+      this.$router.push({ name: this.getCurrentPage })
+    }
   }
 }
 </script>
