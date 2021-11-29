@@ -61,10 +61,10 @@ export default {
       return this.$store.state.hasNightMood
     },
     tabIndex: {
-      get (){
+      get () {
         return this.tabIndex = this.menuList[`${this.$route.name}`]
       },
-      set (val){}
+      set (val) {}
     }
   },
   methods: {
