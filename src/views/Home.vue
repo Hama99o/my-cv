@@ -18,8 +18,8 @@
               <template #title>
                 <div>{{ $t('message.heading.personalProfile') }}</div>
               </template>
-              <personal-profile/>
-              <github-chart/>
+              <router-view> </router-view>
+              <github-chart/> 
             </b-tab>
 
             <b-tab :title-link-class="linkClassForTabs(1)">
@@ -46,14 +46,13 @@
 import SelectLocale from '@/components/SelectLocale.vue'
 import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
-import PersonalProfile from '@/components/PersonalProfile'
 import ExperienceAndEducation from '@/components/ExperienceAndEducation'
 import MoonOrSunMenu from '@/components/MoonOrSunMenu'
 import Contact from '@/components/Contact'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact, SelectLocale, MoonOrSunMenu },
+  components: { GithubChart, GithubPhoto, ExperienceAndEducation, Contact, SelectLocale, MoonOrSunMenu },
   data () {
     return {
       tabIndex: 0
@@ -65,7 +64,7 @@ export default {
     },
     getCurrentPage () {
       if (this.tabIndex === 0) {
-        return  "Personal Profile"
+        return  "PersonalProfile"
       } else if (this.tabIndex === 1) {
         return "ex & edu"
       } else if (this.tabIndex === 2) {
@@ -88,6 +87,9 @@ export default {
       body.classList.toggle('nightmode')
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     }
+  },
+  mounted() {
+    this.$router.push({ name: this.getCurrentPage })
   }
 }
 </script>
