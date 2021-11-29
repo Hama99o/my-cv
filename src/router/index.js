@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Home from '@/views/Home.vue'
 import HammayounSaficv from '@/views/HammayounSaficv.vue'
 import PersonalProfile from '@/components/PersonalProfile'
+import ExperienceAndEducation from '@/components/ExperienceAndEducation'
 import Contact from '@/components/Contact'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
         path: 'contact',
         name: 'Contact',
         component: Contact
+      },
+      {
+        path: 'experience-education',
+        name: 'ExperienceAndEducation',
+        component: ExperienceAndEducation
       }
     ]
   },
