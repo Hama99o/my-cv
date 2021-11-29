@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Home from '@/views/Home.vue'
 import HammayounSaficv from '@/views/HammayounSaficv.vue'
 import PersonalProfile from '@/components/PersonalProfile'
+import Contact from '@/components/Contact'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
         path: 'personal-profile',
         name: 'PersonalProfile',
         component: PersonalProfile
+      },
+      {
+        path: 'contact',
+        name: 'Contact',
+        component: Contact
       }
     ]
   },
