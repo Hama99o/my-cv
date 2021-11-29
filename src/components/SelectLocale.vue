@@ -1,21 +1,30 @@
 <template>
   <div>
-    <select v-model="$i18n.locale">
+    <select v-model="$i18n.locale" :class="bgDarkIfHasNightMood">
       <option
-        v-for="(lang, i) in langs"
+        v-for="(langAndFlag, i) in langsAndFlags"
         :key="`lang-${i}`"
-        :value="lang">
-        {{ lang }}
+        :value="langAndFlag.lang">
+        {{ langAndFlag.flag }}
       </option>
     </select>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'SelectLocale',
   data() {
-    return { langs: ['en', 'fr'] }
+    return { langsAndFlags: [
+      { lang: 'en', flag: '🇺🇸'},
+      { lang: 'fr', flag:  '🇫🇷'}
+      ]
+    }
+  },
+  computed: {
+    ...mapGetters(['bgDarkIfHasNightMood'])
   }
 }
 </script>

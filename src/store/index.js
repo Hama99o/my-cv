@@ -27,6 +27,9 @@ const getters = {
   },
   groundBgClass () {
     return state.hasNightMood ? 'bg-white' : 'bg-dark'
+  },
+  bgDarkIfHasNightMood () {
+    return state.hasNightMood ? 'bg-dark' : 'bg-white'
   }
 }
 
