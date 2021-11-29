@@ -41,35 +41,4 @@ export default {
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
 }
-
-.brightness {
-  -webkit-animation: brightness 40s infinite;
-  animation-iteration-count: 1;
-}
-
-@keyframes brightness {
-  0% {
-    -webkit-filter: brightness(25%);
-  }
-
-  100% {
-    -webkit-filter: brightness(1.1);
-  }
-}
-
-@keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-15px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
-}
-
-.image-card  {
-	animation: float 6s ease-in-out infinite;
-}
 </style>
