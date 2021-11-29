@@ -1,15 +1,15 @@
 <template>
   <div class="zoom-effect-container">
-    <div class="image-card">
+    <div class="image-card d-flex justify-content-center">
       <b-img-lazy
         rounded="circle"
         class="brightness"
-        src="https://avatars.githubusercontent.com/u/72570079?v=4"
+        src="myPhoto.jpg"
         alt="github-photo">
       </b-img-lazy>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
-      <code :class="toggleWhiteTextColorForNightMood">Hammayoun Safi</code>
+      <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Safi</code>
     </h4>
   </div>
 </template>
@@ -42,34 +42,20 @@ export default {
   transform: scale(1.08);
 }
 
-.brightness {
-  -webkit-animation: brightness 40s infinite;
-  animation-iteration-count: 1;
-}
-
-@keyframes brightness {
-  0% {
-    -webkit-filter: brightness(25%);
+@media only screen and (max-width: 766px) {
+  .image-card img {
+    max-width: 70%;
   }
 
-  100% {
-    -webkit-filter: brightness(1.1);
+}
+
+@media only screen and (max-width: 566px) {
+  .image-card img {
+    max-width: 60%;
   }
-}
+  .name-title {
+    font-size: 15px;
+  }
 
-@keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-15px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
-}
-
-.image-card  {
-	animation: float 6s ease-in-out infinite;
 }
 </style>

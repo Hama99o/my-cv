@@ -4,42 +4,34 @@
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
-          <span @click="theme">
-            <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
-            <span v-else class="btn moon-or-sun">☀️</span>
-          </span>
-          <hr class="my-4" />
+          <moon-or-sun-menu :theme="theme" :hasNightMood="hasNightMood"  />
         </b-col>
       </b-row>
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
           <github-photo/>
         </b-col>
-
         <b-col cols="12" md="10">
-          <b-tabs pills content-class="mt-3" v-model="tabIndex">
-            <b-tab :title-link-class="linkClassForTabs(0)">
-              <template #title>
-                <div>{{ $t('message.heading.personalProfile') }}</div>
-              </template>
-              <personal-profile/>
-              <github-chart/>
-            </b-tab>
-
-            <b-tab :title-link-class="linkClassForTabs(1)">
-              <template #title>
-                <code>{{ $t('message.heading.experienceAndEducation') }}</code>
-              </template>
-              <experience-and-education/>
-            </b-tab>
-
-            <b-tab title="About" :title-link-class="linkClassForTabs(2)">
-              <template #title>
-                <code> {{ $t('message.heading.contact') }} </code>
-              </template>
-              <contact/>
-            </b-tab>
-          </b-tabs>
+          <div class="mb-4">
+            <ul class="nav nav-pills" >
+              <li class="nav-item">
+                <router-link class="nav-link" :class="linkClassForTabs(0)" :to="{ name: 'PersonalProfile' }">
+                  <code @click="clickOnMenu(0)">{{ $t('message.heading.personalProfile') }}</code>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" :class="linkClassForTabs(1)" :to="{ name: 'ExperienceAndEducation' }">
+                  <code @click="clickOnMenu(1)"> {{$t('message.heading.experienceAndEducation')}} </code>
+                </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" :class="linkClassForTabs(2)" :to="{ name: 'Contact' }">
+                    <code @click="clickOnMenu(2)"> {{ $t('message.heading.contact') }} </code>
+                  </router-link>
+                </li>
+              </ul>
+            </div>
+            <router-view> </router-view>
         </b-col>
       </b-row>
     </b-container>
@@ -50,24 +42,40 @@
 import SelectLocale from '@/components/SelectLocale.vue'
 import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
-import PersonalProfile from '@/components/PersonalProfile'
-import ExperienceAndEducation from '@/components/ExperienceAndEducation'
-import Contact from '@/components/Contact'
+import MoonOrSunMenu from '@/components/MoonOrSunMenu'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, PersonalProfile, ExperienceAndEducation, Contact, SelectLocale },
+  components: { GithubChart, GithubPhoto, SelectLocale, MoonOrSunMenu },
   data () {
     return {
-      tabIndex: 0
+      menuList: {
+        'PersonalProfile':  0,
+        'ExperienceAndEducation': 1,
+        'Contact': 2
+      }
     }
   },
   computed: {
     hasNightMood () {
       return this.$store.state.hasNightMood
+    },
+    tabIndex: {
+      get () {
+        return this.tabIndex = this.menuList[`${this.$route.name}`]
+      },
+      set (val) {}
     }
   },
   methods: {
+    clickOnMenu (id) {
+      this.tabIndex = id
+    },
+    theme () {
+      const body = document.querySelector('body')
+      body.classList.toggle('nightmode')
+      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
+    },
     linkClassForTabs (idx) {
       const linkClass = []
       if (!this.hasNightMood) {
@@ -76,11 +84,6 @@ export default {
         this.tabIndex === idx ? linkClass.push('text-dark', 'bg-white') : linkClass.push('bg-dark', 'text-white')
       }
       return linkClass
-    },
-    theme () {
-      const body = document.querySelector('body')
-      body.classList.toggle('nightmode')
-      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
     }
   }
 }
@@ -106,7 +109,4 @@ a {
   color: #42b983;
 }
 
-.moon-or-sun {
-  font-size: 50px;
-}
 </style>
