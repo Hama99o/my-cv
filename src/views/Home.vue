@@ -103,7 +103,4 @@ a {
   color: #42b983;
 }
 
-.moon-or-sun {
-  font-size: 50px;
-}
 </style>
