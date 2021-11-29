@@ -4,7 +4,7 @@
       <b-img-lazy
         rounded="circle"
         class="brightness"
-        src="https://avatars.githubusercontent.com/u/72570079?v=4"
+        src="myPhoto.jpg"
         alt="github-photo">
       </b-img-lazy>
     </div>
