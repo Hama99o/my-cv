@@ -15,7 +15,7 @@ const routes = [
     component: Home,
     children: [
       {
-        path: 'personal-profile',
+        path: '',
         name: 'PersonalProfile',
         component: PersonalProfile
       },
