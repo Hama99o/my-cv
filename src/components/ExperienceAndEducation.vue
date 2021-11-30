@@ -1,5 +1,5 @@
 <template>
-  <div class="resume" :class="togglebgWithOpacity">
+  <div class="exp-and-edu-container" :class="togglebgWithOpacity">
     <div class="func" :class="toggleWhiteTextColorForNightMood">
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass"></i></h3>
@@ -69,7 +69,7 @@ h3 {
   font-size: 18px;
 }
 
-.resume {
+.exp-and-edu-container {
   margin: 20px auto;
   border: 1px solid #bbb;
   box-shadow: 0 0 20px -3px #bbb;
@@ -77,52 +77,52 @@ h3 {
   display: flex;
 }
 
-.resume::after {
+.exp-and-edu-container::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.resume .base, .resume .func {
+.exp-and-edu-container .base, .exp-and-edu-container .func {
   box-sizing: border-box;
   float: left;
 }
 
-.resume .base > div, .resume .func > div {
+.exp-and-edu-container .base > div, .exp-and-edu-container .func > div {
   padding-bottom: 10px;
 }
 
-.resume .base > div:last-of-type, .resume .func > div:last-of-type {
+.exp-and-edu-container .base > div:last-of-type, .exp-and-edu-container .func > div:last-of-type {
   padding-bottom: 0;
 }
 
-.resume .base {
+.exp-and-edu-container .base {
   width: 225px;
   padding: 30px 15px;
   background: rgba(238, 238, 238, 0.6);
 }
 
-.resume .func {
+.exp-and-edu-container .func {
   padding: 30px 25px;
 }
 
-.resume .func:hover > div {
+.exp-and-edu-container .func:hover > div {
   transition-duration: 0.3s;
 }
 
-.resume .func:hover > div:hover h3 {
+.exp-and-edu-container .func:hover > div:hover h3 {
   letter-spacing: 1.6px;
 }
 
-.resume .func:hover > div:hover h3 i {
+.exp-and-edu-container .func:hover > div:hover h3 i {
   transform: scale(1.2);
 }
-.resume .func h3 {
+.exp-and-edu-container .func h3 {
   transition-duration: 0.3s;
   margin-top: 0;
 }
 
-.resume .func h3 i {
+.exp-and-edu-container .func h3 i {
   color: #fcfcfc;
   background: #8d9e78;
   width: 42px;
@@ -136,23 +136,23 @@ h3 {
   transition-duration: 0.3s;
 }
 
-.resume .func .work, .resume .func .edu {
+.exp-and-edu-container .func .work, .exp-and-edu-container .func .edu {
   float: left;
 }
 
-.resume .func .work small, .resume .func .edu small {
+.exp-and-edu-container .func .work small, .exp-and-edu-container .func .edu small {
   display: block;
   opacity: 0.7;
 }
 
-.resume .func .work ul li, .resume .func .edu ul li {
+.exp-and-edu-container .func .work ul li, .exp-and-edu-container .func .edu ul li {
   position: relative;
   margin-left: 15px;
   padding-left: 25px;
   padding-bottom: 15px;
 }
 
-.resume .func .work ul li:hover::before, .resume .func .edu ul li:hover::before {
+.exp-and-edu-container .func .work ul li:hover::before, .exp-and-edu-container .func .edu ul li:hover::before {
   animation: circle 1.2s infinite;
 }
 
@@ -165,27 +165,27 @@ h3 {
   }
 }
 
-.resume .func .work ul li:first-of-type::before, .resume .func .edu ul li:first-of-type::before {
+.exp-and-edu-container .func .work ul li:first-of-type::before, .exp-and-edu-container .func .edu ul li:first-of-type::before {
   width: 10px;
   height: 10px;
   left: -2px;
 }
 
-.resume .func .work ul li:last-of-type, .resume .func .edu ul li:last-of-type {
+.exp-and-edu-container .func .work ul li:last-of-type, .exp-and-edu-container .func .edu ul li:last-of-type {
   padding-bottom: 3px;
 }
 
-.resume .func .work ul li:last-of-type::after, .resume .func .edu ul li:last-of-type::after {
+.exp-and-edu-container .func .work ul li:last-of-type::after, .exp-and-edu-container .func .edu ul li:last-of-type::after {
   border-radius: 1.5px;
 }
 
-.resume .func .work ul li::before, .resume .func .work ul li::after, .resume .func .edu ul li::before, .resume .func .edu ul li::after {
+.exp-and-edu-container .func .work ul li::before, .exp-and-edu-container .func .work ul li::after, .exp-and-edu-container .func .edu ul li::before, .exp-and-edu-container .func .edu ul li::after {
   content: "";
   display: block;
   position: absolute;
 }
 
-.resume .func .work ul li::before, .resume .func .edu ul li::before {
+.exp-and-edu-container .func .work ul li::before, .exp-and-edu-container .func .edu ul li::before {
   width: 7px;
   height: 7px;
   border: 3px solid #3d405b;
@@ -195,7 +195,7 @@ h3 {
   z-index: 1;
 }
 
-.resume .func .work ul li::after, .resume .func .edu ul li::after {
+.exp-and-edu-container .func .work ul li::after, .exp-and-edu-container .func .edu ul li::after {
   width: 3px;
   height: 100%;
   background: #3d405b;
@@ -203,7 +203,7 @@ h3 {
   top: 0;
 }
 
-.resume .func .work ul li span, .resume .func .edu ul li span {
+.exp-and-edu-container .func .work ul li span, .exp-and-edu-container .func .edu ul li span {
   transition-duration: 0.3s;
 }
 
@@ -216,10 +216,10 @@ h3 {
 }
 
 @media (min-width: 500px) {
-  .resume .func .work {
+  .exp-and-edu-container .func .work {
     width: 50%;
   }
-  .resume .func .edu {
+  .exp-and-edu-container .func .edu {
     width: 50%;
   }
 }
