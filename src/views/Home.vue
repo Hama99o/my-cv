@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
-          <moon-or-sun-menu :theme="theme" :hasNightMood="hasNightMood"  />
+          <moon-or-sun-menu :theme="theme" :hasNightMood="hasNightMood" />
         </b-col>
       </b-row>
       <b-row align-h="center">
