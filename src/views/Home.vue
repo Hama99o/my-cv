@@ -97,4 +97,9 @@ a {
   color: #42b983;
 }
 
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 12px;
+  }
+}
 </style>
