@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-container d-flex justify-content-center">
+  <div class="skill-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func">
       <div class="skills-prog">
         <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>Programming Skills</h3>
@@ -218,11 +218,11 @@ h3 {
 }
 
 .bg-white-with-opacity  {
-  background-color: rgba(#292b2c, 0.8);
+  background-color: rgba(41, 43, 44, 0.8)
 }
 
 .bg-black-with-opacity  {
-  background-color: rgba(#f7f7f7, 0.8);
+  background-color: rgb(247, 247, 247,  0.8)
 }
 
 @media (max-width: 768px) {
