@@ -1,5 +1,5 @@
 <template>
-  <div class="backgournd-animation">
+  <div class="background-animation">
     <div class="cloud"></div>
     <div class="mountain fixed" :class="toggleBorderBottomBgColor"></div>
     <div class="ground fixed" :class="groundBgClass"></div>
@@ -10,7 +10,7 @@
 import { mapGetters, mapState } from 'vuex'
 
 export default {
-  name: 'BackgourndAnimation',
+  name: 'BackgroundAnimation',
   data () {
     return {
     }

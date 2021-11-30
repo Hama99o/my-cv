@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="d-flex flex-column">
-    <backgournd-animation />
+    <background-animation />
     <router-view> </router-view>
   </div>
 </template>
 
 <script>
-import BackgourndAnimation from './components/layouts/BackgourndAnimation.vue'
+import BackgroundAnimation from './components/layouts/BackgroundAnimation.vue'
 
 export default {
   name: 'App',
-  components: { BackgourndAnimation }
+  components: { BackgroundAnimation }
 }
 </script>
 
