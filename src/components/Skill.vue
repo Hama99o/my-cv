@@ -49,13 +49,12 @@
       <div class="interests" :class="toggleWhiteTextColorForNightMood">
         <h3><i class="fa fa-star" :class="toggleWhitebgAndDarkTextClass"></i>Interests</h3>
         <div class="interests-items">
-          <div class="draw"><i class="fa fa-paint-brush" :class="toggleWhiteTextColorForNightMood"></i><span>Draw</span></div>
-            <div class="movie"><i class="fa fa-film" :class="toggleWhiteTextColorForNightMood"></i><span>Movie</span></div>
+          <div class="mountain"><i class="fas fa-mountain" :class="toggleWhiteTextColorForNightMood"></i><span>Travel</span></div>
+            <div class="bicycle"><i class="fas fa-bicycle" :class="toggleWhiteTextColorForNightMood"></i><span>Cycle</span></div>
             <div class="music"><i class="fa fa-headphones" :class="toggleWhiteTextColorForNightMood"></i><span>Music</span></div>
-
             <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
-            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
-            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
+            <div class="chess"><i class="fas fa-chess" :class="toggleWhiteTextColorForNightMood"></i><span>Chess</span></div>
+            <div class="snowboarding"><i class="fas fa-snowboarding" :class="toggleWhiteTextColorForNightMood"></i><span>Snowboard</span></div>
           </div>
         </div>
     </div>
