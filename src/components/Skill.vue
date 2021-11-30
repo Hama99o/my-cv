@@ -1,5 +1,5 @@
 <template>
-  <div class="resume d-flex justify-content-center">
+  <div class="skill-container d-flex justify-content-center">
     <div class="func">
       <div class="skills-prog">
         <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>Programming Skills</h3>
@@ -92,7 +92,7 @@ h3 {
   font-size: 18px;
 }
 
-.resume {
+.skill-container {
   margin: 20px auto;
   border: 1px solid #bbb;
   box-shadow: 0 0 20px -3px #bbb;
@@ -100,33 +100,33 @@ h3 {
   display: flex;
 }
 
-.resume::after {
+.skill-container::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.resume .func {
+.skill-container .func {
   width: 645px;
   padding: 30px 25px;
 }
-.resume .func:hover > div {
+.skill-container .func:hover > div {
   transition-duration: 0.3s;
 }
-.resume .func:hover > div:hover h3 {
+.skill-container .func:hover > div:hover h3 {
   letter-spacing: 1.6px;
 }
-.resume .func:hover > div:hover h3 i {
+.skill-container .func:hover > div:hover h3 i {
   transform: scale(1.2);
 }
-.resume .func:hover > div:not(:hover) {
+.skill-container .func:hover > div:not(:hover) {
   opacity: 0.5;
 }
-.resume .func h3 {
+.skill-container .func h3 {
   transition-duration: 0.3s;
   margin-top: 0;
 }
-.resume .func h3 i {
+.skill-container .func h3 i {
   width: 42px;
   height: 42px;
   font-size: 20px;
@@ -137,37 +137,37 @@ h3 {
   margin-right: 8px;
   transition-duration: 0.3s;
 }
-.resume .func .skills-prog {
+.skill-container .func .skills-prog {
   clear: both;
 }
-.resume .func .skills-prog ul {
+.skill-container .func .skills-prog ul {
   margin-left: 15px;
 }
-.resume .func .skills-prog ul li {
+.skill-container .func .skills-prog ul li {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   transition-duration: 0.3s;
 }
-.resume .func .skills-prog ul li:hover {
+.skill-container .func .skills-prog ul li:hover {
   color: #e07a5f;
 }
-.resume .func .skills-prog ul li:hover .skills-bar .bar {
+.skill-container .func .skills-prog ul li:hover .skills-bar .bar {
   background: #e07a5f;
   box-shadow: 0 0 0 1px #e07a5f;
 }
-.resume .func .skills-prog ul li span {
+.skill-container .func .skills-prog ul li span {
   display: block;
   width: 120px;
 }
-.resume .func .skills-prog ul li .skills-bar {
+.skill-container .func .skills-prog ul li .skills-bar {
   background: #cdcdcd;
   height: 2px;
   width: calc(100% - 120px);
   position: relative;
   border-radius: 2px;
 }
-.resume .func .skills-prog ul li .skills-bar .bar {
+.skill-container .func .skills-prog ul li .skills-bar .bar {
   position: absolute;
   top: -1px;
   height: 4px;
@@ -176,7 +176,7 @@ h3 {
   border-radius: 5px;
 }
 
-.resume .func .interests-items {
+.skill-container .func .interests-items {
   box-sizing: border-box;
   padding: 15px;
   width: 100%;
@@ -185,19 +185,19 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-.resume .func .interests-items div {
+.skill-container .func .interests-items div {
   display: inline-block;
   width: 80px;
   height: 80px;
 }
-.resume .func .interests-items div:hover i {
+.skill-container .func .interests-items div:hover i {
   transform: scale(1.2);
 }
-.resume .func .interests-items div:hover span {
+.skill-container .func .interests-items div:hover span {
   color: #e07a5f;
   transition-duration: 0.3s;
 }
-.resume .func .interests-items div i {
+.skill-container .func .interests-items div i {
   font-size: 45px;
   width: 60px;
   height: 60px;
@@ -206,7 +206,7 @@ h3 {
   transition-duration: 0.3s;
 }
 
-.resume .func .interests-items div span {
+.skill-container .func .interests-items div span {
   display: block;
 }
 
