@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-container d-flex justify-content-center">
+  <div class="contact-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func py-5">
       <div class="contact" :class="toggleWhiteTextColorForNightMood">
         <h3 :class="toggleWhiteTextColorForNightMood">Contact</h3>
@@ -41,7 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
+    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
   methods: {
   }
@@ -91,5 +91,13 @@ export default {
 }
 .follow .box i::before {
   transition-duration: 0.3s;
+}
+
+.bg-white-with-opacity  {
+  background-color: rgba(41, 43, 44, 0.8)
+}
+
+.bg-black-with-opacity  {
+  background-color: rgb(247, 247, 247,  0.8)
 }
 </style>
