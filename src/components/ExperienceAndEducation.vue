@@ -210,10 +210,6 @@ h3 {
   transition-duration: 0.3s;
 }
 
-.toggle {
-   display: none;
-}
-
 .bg-white-with-opacity  {
   background-color: rgba(#292b2c, 0.8);
 }
