@@ -13,6 +13,9 @@ const getters = {
   toggleWhiteTextColorForNightMood () {
     return state.hasNightMood ? 'text-white' : 'text-dark'
   },
+  togglebgWithOpacity () {
+    return state.hasNightMood ? 'bg-white-with-opacity' : 'bg-black-with-opacity'
+  },
   toggleWhitebgAndDarkTextClass () {
     return state.hasNightMood ? 'bg-white  text-dark' : 'bg-dark text-white'
   },

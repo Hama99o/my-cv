@@ -32,9 +32,6 @@ export default {
     }
   },
   computed: {
-    togglebgWithOpacity () {
-      return this.hasNightMood ? 'bg-white-with-opacity' : 'bg-black-with-opacity'
-    },
     exAndEduText() {
       return this.$t('message.experienceAndEducation.text');
     },
@@ -45,7 +42,7 @@ export default {
       return this.$t('message.experienceAndEducation.year');
     },
     ...mapState(['hasNightMood']),
-    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
+    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
   methods: {
   }
