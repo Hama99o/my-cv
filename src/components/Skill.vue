@@ -52,6 +52,9 @@
           <div class="draw"><i class="fa fa-paint-brush" :class="toggleWhiteTextColorForNightMood"></i><span>Draw</span></div>
             <div class="movie"><i class="fa fa-film" :class="toggleWhiteTextColorForNightMood"></i><span>Movie</span></div>
             <div class="music"><i class="fa fa-headphones" :class="toggleWhiteTextColorForNightMood"></i><span>Music</span></div>
+
+            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
+            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
             <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
           </div>
         </div>
@@ -223,20 +226,25 @@ h3 {
   background-color: rgba(#f7f7f7, 0.8);
 }
 
-
-@media (max-width: 400px) {
-  .skill-container .func .skills-prog ul li .skills-bar {
-    width: 20%;
-  }
-
+@media (max-width: 768px) {
   h3 {
     font-size: 12px;
   }
-  .skill-container .func .skills-prog ul {
-    margin-left: 50px;
+  .skill-container .func .interests-items div i {
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    line-height: 60px;
   }
-  .skill-container .func h3 {
-    margin-left: 65px;
+
+  .skill-container .func .interests-items div {
+    display: inline-block;
+    width: 20%;
+    height: 80px;
+  }
+
+  .skill-container .func .interests-items div span {
+    font-size: 10px;
   }
 }
 
