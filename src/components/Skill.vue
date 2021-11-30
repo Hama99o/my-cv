@@ -168,7 +168,7 @@ h3 {
 .skill-container .func .skills-prog ul li .skills-bar {
   background: #cdcdcd;
   height: 2px;
-  width: calc(100% - 120px);
+  width: 50%;
   position: relative;
   border-radius: 2px;
 }
@@ -221,6 +221,23 @@ h3 {
 
 .bg-black-with-opacity  {
   background-color: rgba(#f7f7f7, 0.8);
+}
+
+
+@media (max-width: 400px) {
+  .skill-container .func .skills-prog ul li .skills-bar {
+    width: 20%;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+  .skill-container .func .skills-prog ul {
+    margin-left: 50px;
+  }
+  .skill-container .func h3 {
+    margin-left: 65px;
+  }
 }
 
 </style>
