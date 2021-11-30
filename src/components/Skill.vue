@@ -2,7 +2,7 @@
   <div class="skill-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func">
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
+        <h3 :class="toggleWhiteTextColorForNightMood" class="my-3"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
         <ul  :class="toggleWhiteTextColorForNightMood">
           <li data-percent="65"><span>Ruby</span>
             <div class="skills-bar">
@@ -147,9 +147,7 @@ h3 {
 .skill-container .func .skills-prog {
   clear: both;
 }
-.skill-container .func .skills-prog ul {
-  margin-left: 15px;
-}
+
 .skill-container .func .skills-prog ul li {
   margin-bottom: 8px;
   display: flex;
