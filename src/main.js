@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { store } from './store/index'
 import router from './router'
 import i18n from './i18n'
+import jQuery from 'jquery'
+global.$ = jQuery
 
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
