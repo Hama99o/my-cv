@@ -1,9 +1,10 @@
 {
   "message": {
     "heading": {
-      "personalProfile" : "Profil Personnel",
-      "experienceAndEducation": "Expérience && Éducation",
-      "contact": "Contact"
+      "PersonalProfile" : "Profil Personnel",
+      "ExperienceAndEducation": "Expérience && Éducation",
+      "Skill": "Compétence",
+      "Contact": "Contact"
     },
     "console": {
       "questions": {
@@ -68,6 +69,20 @@
         "konexioText": "Préparation au Delf B1 (diplôme d'études de langue française) et développement Web chez Konexio Digistart.",
         "balderText": "Apprendre le suédois et le développement web au lycée Balder",
         "milatSchoolText": "Baccalauréat de l'école Milat"
+      }
+    },
+    "skills":  {
+      "heading": {
+        "programminSkill": "Programmin Skill",
+        "interests": "Interests"
+      },
+      "interests": {
+        "travel": "Voyager",
+        "cycle": "Cycle",
+        "music": "Musique",
+        "game": "jouer",
+        "chess": "Échecs",
+        "snowboard": "Snowboard"
       }
     }
   }

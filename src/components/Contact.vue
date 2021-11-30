@@ -1,11 +1,11 @@
 <template>
-  <div class="resume d-flex justify-content-center">
+  <div class="contact-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func py-5">
       <div class="contact" :class="toggleWhiteTextColorForNightMood">
         <h3 :class="toggleWhiteTextColorForNightMood">Contact</h3>
         <div class="call my-2"><i class="fa fa-phone"></i><span> +33 7 66 66 62 33</span></div>
         <div class="address my-2"><i class="fa fa-map-marker"></i><span> Malakoff, France</span></div>
-        <div class="email my-2"><i class="fa fa-envelope"></i><span> hmmshl@gmail.com</span></div>
+        <div class="email my-2"><i class="fa fa-envelope"></i> <a href="mailto:hmmshl@gmail.com" target="_blank"> <span> hmmshl@gmail.com</span></a></div>
       </div>
       <div class="follow py-3">
         <h3 :class="toggleWhiteTextColorForNightMood">Follow</h3>
@@ -41,7 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
+    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
   methods: {
   }
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.resume {
+.contact-container {
   margin: 20px auto;
   border: 1px solid #bbb;
   box-shadow: 0 0 20px -3px #bbb;
@@ -57,7 +57,7 @@ export default {
   display: flex;
 }
 
-.resume .func {
+.contact-container .func {
   padding: 30px 25px;
 }
 .contact div:hover i {
@@ -91,5 +91,13 @@ export default {
 }
 .follow .box i::before {
   transition-duration: 0.3s;
+}
+
+.bg-white-with-opacity  {
+  background-color: rgba(41, 43, 44, 0.8)
+}
+
+.bg-black-with-opacity  {
+  background-color: rgb(247, 247, 247,  0.8)
 }
 </style>
