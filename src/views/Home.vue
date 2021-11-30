@@ -12,30 +12,15 @@
         </b-col>
         <b-col cols="12" md="10">
           <div class="mb-4">
-            <ul class="nav nav-pills" >
-              <li class="nav-item">
-                <router-link class="nav-link" :class="linkClassForTabs(0)" :to="{ name: 'PersonalProfile' }">
-                  <code @click="clickOnMenu(0)">{{ $t('message.heading.personalProfile') }}</code>
+            <ul class="nav nav-pills">
+              <li class="nav-item" v-for="(text, routeName, index) in  $t('message.heading')" >
+                <router-link class="nav-link" :class="linkClassForTabs(index)" :to="{ name: routeName }">
+                  <code @click="clickOnMenu(index)">{{text}}</code>
                 </router-link>
               </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :class="linkClassForTabs(1)" :to="{ name: 'ExperienceAndEducation' }">
-                  <code @click="clickOnMenu(1)"> {{$t('message.heading.experienceAndEducation')}} </code>
-                </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link class="nav-link" :class="linkClassForTabs(2)" :to="{ name: 'Skill' }">
-                    <code @click="clickOnMenu(2)"> {{ $t('message.heading.skill') }} </code>
-                  </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link class="nav-link" :class="linkClassForTabs(2)" :to="{ name: 'Contact' }">
-                    <code @click="clickOnMenu(2)"> {{ $t('message.heading.contact') }} </code>
-                  </router-link>
-                </li>
-              </ul>
-            </div>
-            <router-view> </router-view>
+            </ul>
+          </div>
+          <router-view> </router-view>
         </b-col>
       </b-row>
     </b-container>
@@ -54,7 +39,8 @@ export default {
       menuList: {
         'PersonalProfile':  0,
         'ExperienceAndEducation': 1,
-        'Contact': 2
+        "Skill": 2,
+        'Contact': 3
       }
     }
   },

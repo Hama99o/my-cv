@@ -1,10 +1,10 @@
 {
   "message": {
     "heading": {
-      "personalProfile": "Personal Profile",
-      "experienceAndEducation": " Experience && Education ",
-      "contact": "Contact",
-      "skill": "Skill"
+      "PersonalProfile": "Personal Profile",
+      "ExperienceAndEducation": " Experience && Education ",
+      "Skill": "Skill",
+      "Contact": "Contact"
     },
     "console": {
       "questions": {
