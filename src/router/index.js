@@ -5,6 +5,7 @@ import HammayounSaficv from '@/views/HammayounSaficv.vue'
 import PersonalProfile from '@/components/PersonalProfile'
 import ExperienceAndEducation from '@/components/ExperienceAndEducation'
 import Contact from '@/components/Contact'
+import Skill from '@/components/Skill'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
         path: 'experience-education',
         name: 'ExperienceAndEducation',
         component: ExperienceAndEducation
+      },
+      {
+        path: 'skill',
+        name: 'Skill',
+        component: Skill
       }
     ]
   },

@@ -24,6 +24,11 @@
                 </router-link>
                 </li>
                 <li class="nav-item">
+                  <router-link class="nav-link" :class="linkClassForTabs(2)" :to="{ name: 'Skill' }">
+                    <code @click="clickOnMenu(2)"> {{ $t('message.heading.skill') }} </code>
+                  </router-link>
+                </li>
+                <li class="nav-item">
                   <router-link class="nav-link" :class="linkClassForTabs(2)" :to="{ name: 'Contact' }">
                     <code @click="clickOnMenu(2)"> {{ $t('message.heading.contact') }} </code>
                   </router-link>

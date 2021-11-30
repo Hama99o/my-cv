@@ -3,7 +3,8 @@
     "heading": {
       "personalProfile" : "Profil Personnel",
       "experienceAndEducation": "Expérience && Éducation",
-      "contact": "Contact"
+      "contact": "Contact",
+      "skill": "Compétence"
     },
     "console": {
       "questions": {
