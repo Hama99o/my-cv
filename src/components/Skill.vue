@@ -127,8 +127,6 @@ h3 {
   margin-top: 0;
 }
 .resume .func h3 i {
-  color: #fcfcfc;
-  background: #8d9e78;
   width: 42px;
   height: 42px;
   font-size: 20px;
