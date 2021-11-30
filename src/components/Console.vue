@@ -119,7 +119,7 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 1220px) and (min-width: 360px) {
+@media only screen and (max-width: 768px) and (min-width: 360px) {
   .console {
     margin: 0.5rem;
 
