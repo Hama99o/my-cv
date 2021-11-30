@@ -1,5 +1,5 @@
 <template>
-  <div class="resume d-flex justify-content-center" :class="togglebgWithOpacity">
+  <div class="resume d-flex justify-content-center">
     <div class="func py-5">
       <div class="contact" :class="toggleWhiteTextColorForNightMood">
         <h3 :class="toggleWhiteTextColorForNightMood">Contact</h3>
@@ -41,7 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
+    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood'])
   },
   methods: {
   }
