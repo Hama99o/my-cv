@@ -24,6 +24,11 @@
               <div class="bar"></div>
             </div>
           </li>
+          <li data-percent="65"><span>Ruby on Rails</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
           <li data-percent="65"><span>VueJS</span>
             <div class="skills-bar">
               <div class="bar"></div>
@@ -124,7 +129,7 @@ h3 {
 }
 .skill-container .func h3 {
   transition-duration: 0.3s;
-  margin-top: 0;
+  margin-left: 25px;
 }
 .skill-container .func h3 i {
   width: 42px;
