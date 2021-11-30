@@ -107,35 +107,24 @@ export default {
 
 @media (max-width: 360px) {
   .console {
+    margin: 0.5rem;
     .top {
-      font-size: 6px;
+      font-size: 10px;
       .options {
-        font-size: 8px;
+        font-size: 11px;
       }
     }
     .text {
-      font-size: 5px;
+      font-size: 10px;
     }
   }
 }
-@media only screen and (max-width: 600px) and (min-width: 360px) {
+@media only screen and (max-width: 1220px) and (min-width: 360px) {
   .console {
-    .top {
-      font-size: 8px;
-      .options {
-        font-size: 10px;
-      }
-    }
-    .text {
-      font-size: 8px;
-    }
-  }
-}
+    margin: 0.5rem;
 
-@media only screen and (max-width: 1220px) and (min-width: 600px) {
-  .console {
     .top {
-      font-size: 12px;
+      font-size: 10px;
       .options {
         font-size: 12px;
       }
@@ -145,4 +134,5 @@ export default {
     }
   }
 }
+
 </style>
