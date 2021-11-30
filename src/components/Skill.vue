@@ -2,7 +2,7 @@
   <div class="skill-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func">
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>Programming Skills</h3>
+        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
         <ul  :class="toggleWhiteTextColorForNightMood">
           <li data-percent="65"><span>Ruby</span>
             <div class="skills-bar">
@@ -47,14 +47,14 @@
         </ul>
       </div>
       <div class="interests" :class="toggleWhiteTextColorForNightMood">
-        <h3><i class="fa fa-star" :class="toggleWhitebgAndDarkTextClass"></i>Interests</h3>
+        <h3><i class="fa fa-star" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.interests')}}</h3>
         <div class="interests-items">
-          <div class="mountain"><i class="fas fa-mountain" :class="toggleWhiteTextColorForNightMood"></i><span>Travel</span></div>
-            <div class="bicycle"><i class="fas fa-bicycle" :class="toggleWhiteTextColorForNightMood"></i><span>Cycle</span></div>
-            <div class="music"><i class="fa fa-headphones" :class="toggleWhiteTextColorForNightMood"></i><span>Music</span></div>
-            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>Game</span></div>
-            <div class="chess"><i class="fas fa-chess" :class="toggleWhiteTextColorForNightMood"></i><span>Chess</span></div>
-            <div class="snowboarding"><i class="fas fa-snowboarding" :class="toggleWhiteTextColorForNightMood"></i><span>Snowboard</span></div>
+          <div class="mountain"><i class="fas fa-mountain" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.travel')}}</span></div>
+            <div class="bicycle"><i class="fas fa-bicycle" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.cycle')}}</span></div>
+            <div class="music"><i class="fa fa-headphones" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.music')}}</span></div>
+            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.game')}}</span></div>
+            <div class="chess"><i class="fas fa-chess" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.chess')}}</span></div>
+            <div class="snowboarding"><i class="fas fa-snowboarding" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.snowboard')}}</span></div>
           </div>
         </div>
     </div>

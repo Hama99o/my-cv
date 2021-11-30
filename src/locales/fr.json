@@ -70,6 +70,20 @@
         "balderText": "Apprendre le suédois et le développement web au lycée Balder",
         "milatSchoolText": "Baccalauréat de l'école Milat"
       }
+    },
+    "skills":  {
+      "heading": {
+        "programminSkill": "Programmin Skill",
+        "interests": "Interests"
+      },
+      "interests": {
+        "travel": "Voyager",
+        "cycle": "Cycle",
+        "music": "Musique",
+        "game": "jouer",
+        "chess": "Échecs",
+        "snowboard": "Snowboard"
+      }
     }
   }
 }
