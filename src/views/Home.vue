@@ -38,13 +38,12 @@
 </template>
 
 <script>
-import GithubChart from '@/components/GithubChart'
 import GithubPhoto from '@/components/GithubPhoto'
 import MoonOrSunMenu from '@/components/MoonOrSunMenu'
 
 export default {
   name: 'Home',
-  components: { GithubChart, GithubPhoto, MoonOrSunMenu },
+  components: { GithubPhoto, MoonOrSunMenu },
   data () {
     return {
       menuList: {

@@ -1,5 +1,6 @@
 <template>
-  <div class="console">
+  <div class="">
+    <div class="console">
     <div class="top" @click="toggleConsole"> <span class="options">⦿ x ○</span> <span class="title">{{ $t('message.console.phrase.consoleHeading') }}</span></div>
     <div v-if="open" class="text">
       <span class="pink">root@hama99o:~$ </span> rails c
@@ -19,12 +20,16 @@
       <br> <span class="pink">root@hama99o:~$ </span> <input type="text" class="text-success console-input w-80" autofocus>
     </div>
   </div>
+    <github-chart/>
+  </div>
 </template>
 
 <script>
+import GithubChart from '@/components/GithubChart'
 
 export default {
   name: 'Console',
+  components: { GithubChart },
   data () {
     return {
       open: true
