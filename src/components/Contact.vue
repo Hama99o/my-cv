@@ -1,5 +1,5 @@
 <template>
-  <div class="resume d-flex justify-content-center">
+  <div class="contact-container d-flex justify-content-center">
     <div class="func py-5">
       <div class="contact" :class="toggleWhiteTextColorForNightMood">
         <h3 :class="toggleWhiteTextColorForNightMood">Contact</h3>
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.resume {
+.contact-container {
   margin: 20px auto;
   border: 1px solid #bbb;
   box-shadow: 0 0 20px -3px #bbb;
@@ -57,7 +57,7 @@ export default {
   display: flex;
 }
 
-.resume .func {
+.contact-container .func {
   padding: 30px 25px;
 }
 .contact div:hover i {
