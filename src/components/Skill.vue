@@ -4,42 +4,42 @@
       <div class="skills-prog">
         <h3 :class="toggleWhiteTextColorForNightMood" class="my-3"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
         <ul  :class="toggleWhiteTextColorForNightMood">
-          <li data-percent="60"><span>Ruby</span>
+          <li data-percent="55"><span>Ruby</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="60"><span>JavaScript</span>
+          <li data-percent="55"><span>JavaScript</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="70"><span>HTML5</span>
+          <li data-percent="60"><span>HTML5</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="55"><span>CSS3 & SASS</span>
+          <li data-percent="50"><span>CSS3 & SASS</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="60"><span>Ruby on Rails</span>
+          <li data-percent="55"><span>Ruby on Rails</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="60"><span>VueJS</span>
+          <li data-percent="55"><span>VueJS</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="25"><span>jQuery</span>
+          <li data-percent="20"><span>jQuery</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="55"><span>Express</span>
+          <li data-percent="50"><span>Express</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
