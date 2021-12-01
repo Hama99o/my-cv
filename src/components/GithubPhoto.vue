@@ -9,7 +9,7 @@
       </b-img-lazy>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
-      <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Khan</code>
+      <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Safi</code>
     </h4>
   </div>
 </template>
