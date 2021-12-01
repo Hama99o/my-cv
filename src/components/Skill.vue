@@ -14,16 +14,6 @@
               <div class="bar"></div>
             </div>
           </li>
-          <li data-percent="60"><span>HTML5</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
-          <li data-percent="50"><span>CSS3 & SASS</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
           <li data-percent="55"><span>Ruby on Rails</span>
             <div class="skills-bar">
               <div class="bar"></div>
@@ -40,6 +30,16 @@
             </div>
           </li>
           <li data-percent="50"><span>Express</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="60"><span>HTML5 & CSS3(SASS)</span>
+            <div class="skills-bar">
+              <div class="bar"></div>
+            </div>
+          </li>
+          <li data-percent="45"><span>PostgreSQL</span>
             <div class="skills-bar">
               <div class="bar"></div>
             </div>
