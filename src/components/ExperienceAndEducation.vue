@@ -11,7 +11,12 @@
           <li>
             <span>
               {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
+              <p v-if="jamHistory">{{exAndEduText.jamText3}}</p>
             </span>
+            <small>
+               <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less">{{options.seeMore}}</a>
+               <a v-if="jamHistory" @click="toggleJamHistory" href="#show-less">{{options.seeLess}}</a>
+             </small>
             <small>
               {{exAndEduLocation.jamLocation}}
             </small><small>
@@ -100,11 +105,15 @@ export default {
   name: 'ExperienceAndEducation',
   data () {
     return {
+      jamHistory: false
     }
   },
   computed: {
-    exAndEduText() {
+    exAndEduText () {
       return this.$t('message.experienceAndEducation.text');
+    },
+    options () {
+      return this.$t('message.experienceAndEducation.options');
     },
     exAndEduLocation () {
       return this.$t('message.experienceAndEducation.location');
@@ -116,6 +125,9 @@ export default {
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
   methods: {
+    toggleJamHistory () {
+      this.jamHistory = !this.jamHistory
+    }
   }
 }
 </script>
