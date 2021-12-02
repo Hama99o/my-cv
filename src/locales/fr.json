@@ -73,7 +73,7 @@
     },
     "skills":  {
       "heading": {
-        "programminSkill": "Compétences en Programmation",
+        "programmingSkill": "Compétences en Programmation",
         "interests": "intérêts"
       },
       "interests": {
