@@ -1,13 +1,8 @@
 <template>
-  <div class="">
-    <a href="https://www.codewars.com/users/Hama99o" target="_blank" class="d-flex justify-content-center my-3">
-      <img src="https://www.codewars.com/users/Hama99o/badges/large" class="img-responsive"/>
+  <div class="d-flex justify-content-center my-3">
+    <a @click="RedirectToGithub" class="btn">
+      <img :src="toggleChart()" class="img-responsive"/>
     </a>
-    <div class="d-flex justify-content-center my-3">
-      <a @click="RedirectToGithub" class="btn">
-        <img :src="toggleChart()" class="img-responsive"/>
-      </a>
-    </div>
   </div>
 </template>
 

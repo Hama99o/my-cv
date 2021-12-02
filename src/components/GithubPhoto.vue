@@ -11,6 +11,9 @@
     <h4 class="d-flex justify-content-center text-align-center my-3">
       <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Safi</code>
     </h4>
+    <a href="https://www.codewars.com/users/Hama99o" target="_blank" class="d-flex justify-content-center text-align-center">
+      <img src="https://www.codewars.com/users/Hama99o/badges/micro" class="img-responsive"/>
+    </a>
   </div>
 </template>
 
@@ -47,6 +50,10 @@ export default {
     max-width: 70%;
   }
 
+  .img-responsive {
+    height: 20px !important;
+  }
+
 }
 
 @media only screen and (max-width: 566px) {
@@ -56,6 +63,10 @@ export default {
   .name-title {
     font-size: 15px;
   }
+}
 
+.img-responsive {
+  width: auto;
+  height: 30px;
 }
 </style>
