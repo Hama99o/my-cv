@@ -1,12 +1,14 @@
 <template>
-  <div class="zoom-effect-container">
-    <div class="image-card d-flex justify-content-center">
-      <b-img-lazy
-        rounded="circle"
-        class="brightness"
-        src="hama_round.png"
-        alt="github-photo">
-      </b-img-lazy>
+  <div class="">
+    <div class="zoom-effect-container">
+      <div class="zoom-effect-container image-card d-flex justify-content-center">
+        <b-img-lazy
+          rounded="circle"
+          class="brightness"
+          src="hama_round.png"
+          alt="github-photo">
+        </b-img-lazy>
+      </div>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
       <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Safi</code>
