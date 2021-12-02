@@ -2,7 +2,7 @@
   <div class="skill-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func">
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
+        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programmingSkill')}}</h3>
         <ul :class="toggleWhiteTextColorForNightMood">
           <li>
             <span>Programing languages:</span><span class="mx-3">Ruby, Javascript, Bash</span>
@@ -25,6 +25,25 @@
           <hr class="my-1" />
           <li>
             <span>DataBase:</span><span class="mx-3">PostgreSQL</span>
+          </li>
+          <hr class="my-1" />
+        </ul>
+      </div>
+      <div class="skills-prog">
+        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fas fa-tasks":class="toggleWhitebgAndDarkTextClass"></i>My Project</h3>
+        <ul :class="toggleWhiteTextColorForNightMood">
+          <li>
+            <span>
+              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Qoute Api </a> and
+            </span>
+            <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
+          </li>
+          <hr class="my-1" />
+          <li>
+            <span>
+              <a class="project-link" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> and
+            </span>
+            <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
           <hr class="my-1" />
         </ul>
@@ -175,5 +194,8 @@ h3 {
 
 .ruby-on-rails {
   display: none;
+}
+.project-link {
+  text-decoration: none;
 }
 </style>
