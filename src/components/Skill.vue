@@ -3,7 +3,7 @@
     <div class="func">
       <div class="skills-prog">
         <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
-        <ul  :class="toggleWhiteTextColorForNightMood">
+        <ul :class="toggleWhiteTextColorForNightMood">
           <li>
             <span>Programing languages:</span><span class="mx-3">Ruby, Javascript, Bash</span>
           </li>
@@ -13,11 +13,13 @@
           </li>
           <hr class="my-1" />
           <li>
-            <span>Framworks: </span><span class="mx-3">Ruby on Rails, Vuejs, Boostrap</span>
+            <span>Framworks: </span><span class="mx-3 toggle-ruby-on-rails">Ruby on Rails,</span>Vuejs, Boostrap</span>
           </li>
+            <small>
+              <code  :class="toggleWhiteTextColorForNightMood" class="ruby-on-rails">"Ruby on Rails": RSpec Rails, Devise, Sidekiq, Kaminari</code>
+            </small>
           <hr class="my-1" />
           <li>
-          <hr class="my-1" />
             <span>Other Web Tolls:</span><span class="mx-3">Git, Github, Heroku, Linux</span>
           </li>
           <hr class="my-1" />
@@ -54,8 +56,13 @@ export default {
   computed: {
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
+  methods: {
+  },
   mounted () {
     this.$nextTick(() => {
+      $(".toggle-ruby-on-rails").click(function(){
+        $(".ruby-on-rails").toggle()
+      })
     })
   }
 }
@@ -77,11 +84,6 @@ h3 {
   display: flex;
 }
 
-.skill-container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 
 .skill-container .func {
   width: 645px;
@@ -92,9 +94,6 @@ h3 {
   transform: scale(1.2);
 }
 
-.skill-container .func h3 {
-  transition-duration: 0.3s;
-}
 .skill-container .func h3 i {
   width: 42px;
   height: 42px;
@@ -106,15 +105,11 @@ h3 {
   margin-right: 15px;
   transition-duration: 0.3s;
 }
-.skill-container .func .skills-prog {
-  clear: both;
-}
 
 .skill-container .func .skills-prog ul li {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
-  transition-duration: 0.3s;
 }
 
 .skill-container .func .interests-items {
@@ -178,4 +173,7 @@ h3 {
   }
 }
 
+.ruby-on-rails {
+  display: none;
+}
 </style>
