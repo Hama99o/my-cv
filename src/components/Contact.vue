@@ -16,15 +16,15 @@
           <a  href="https://www.linkedin.com/in/hammayoun-safi-2916581bb" target="_blank">
             <i class="fab fa-linkedin-in" :class="toggleWhitebgAndDarkTextClass"></i>
           </a>
-          <a href="https://www.facebook.com/Hmmshl" target="_blank">
+          <!-- <a href="https://www.facebook.com/Hmmshl" target="_blank">
             <i class="fa fa-facebook bg-dark" :class="toggleWhitebgAndDarkTextClass"></i>
-          </a>
+          </a> -->
           <a  href="https://www.instagram.com/hama99o" target="_blank">
           <i class="fab fa-instagram" :class="toggleWhitebgAndDarkTextClass"></i>
           </a>
-          <a  href="https://twitter.com/hama99o1" target="_blank">
+          <!-- <a  href="https://twitter.com/hama99o1" target="_blank">
             <i class="fa fa-twitter" :class="toggleWhitebgAndDarkTextClass"></i>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
