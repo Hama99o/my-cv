@@ -5,43 +5,43 @@
         <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programmingSkill')}}</h3>
         <ul :class="toggleWhiteTextColorForNightMood">
           <li>
-            <span>Programing languages:</span><span class="mx-3">Ruby, Javascript, Bash</span>
+            <span>{{programmingSkill.programmingLanguages}}:</span><span class="mx-3">Ruby, Javascript, Bash</span>
           </li>
           <hr class="my-1" />
           <li>
-            <span>Web Technologies: </span><span class="mx-3">HTML5 , CSS(SCSS)</span>
+            <span>{{programmingSkill.webTechnologies}}: </span><span class="mx-3">HTML5 , CSS(SCSS)</span>
           </li>
           <hr class="my-1" />
           <li>
-            <span>Framworks: </span><span class="mx-3 toggle-ruby-on-rails">Ruby on Rails,</span>Vuejs, Boostrap</span>
+            <span>{{programmingSkill.frameworks}}: </span><span class="mx-3 toggle-ruby-on-rails">Ruby on Rails,</span>Vuejs, Boostrap</span>
           </li>
             <small>
               <code  :class="toggleWhiteTextColorForNightMood" class="ruby-on-rails">"Ruby on Rails": RSpec Rails, Devise, Sidekiq, Kaminari</code>
             </small>
           <hr class="my-1" />
           <li>
-            <span>Other Web Tolls:</span><span class="mx-3">Git, Github, Heroku, Linux</span>
+            <span>{{programmingSkill.otherDevTool}}:</span><span class="mx-3">Git, Github, Heroku, Linux</span>
           </li>
           <hr class="my-1" />
           <li>
-            <span>DataBase:</span><span class="mx-3">PostgreSQL</span>
+            <span>{{programmingSkill.databaseServer}}:</span><span class="mx-3">PostgreSQL</span>
           </li>
           <hr class="my-1" />
         </ul>
       </div>
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fas fa-tasks":class="toggleWhitebgAndDarkTextClass"></i>My Project</h3>
+        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fas fa-tasks":class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.myProjects')}}</h3>
         <ul :class="toggleWhiteTextColorForNightMood">
           <li>
             <span>
-              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Qoute Api </a> and
+              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Qoute Api </a> {{$t('message.skills.myProjects.and')}}
             </span>
             <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
           <hr class="my-1" />
           <li>
             <span>
-              <a class="project-link" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> and
+              <a class="project-link" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> {{$t('message.skills.myProjects.and')}}
             </span>
             <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
@@ -73,6 +73,9 @@ export default {
     }
   },
   computed: {
+    programmingSkill () {
+       return this.$t('message.skills.programmingSkill')
+    },
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
   methods: {

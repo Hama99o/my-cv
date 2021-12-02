@@ -74,6 +74,7 @@
     "skills":  {
       "heading": {
         "programmingSkill": "Compétences en Programmation",
+        "myProjects": "Mes Projets",
         "interests": "intérêts"
       },
       "interests": {
@@ -83,6 +84,16 @@
         "game": "jouer",
         "chess": "Échecs",
         "snowboard": "Snowboard"
+      },
+      "myProjects": {
+        "and": "et"
+      },
+      "programmingSkill": {
+        "programmingLanguages": "Langages De Programmation",
+        "databaseServer": "Serveur De Base Dedonnées",
+        "webTechnologies": "Technologies Web",
+        "frameworks": "Frameworks",
+        "otherDevTool": "Autre Outil De Développement"
       }
     }
   }

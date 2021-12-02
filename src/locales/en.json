@@ -74,6 +74,7 @@
     "skills":  {
       "heading": {
         "programmingSkill": "Programming Skill",
+        "myProjects": "My Projects",
         "interests": "Interests"
       },
       "interests": {
@@ -83,6 +84,16 @@
         "game": "Game",
         "chess": "Chess",
         "snowboard": "Snowboard"
+      },
+      "myProjects": {
+        "and": "and"
+      },
+      "programmingSkill": {
+        "programmingLanguages": "Programming Languages",
+        "databaseServer": "Database Server",
+        "webTechnologies": "Web Technologies",
+        "frameworks": "Frameworks",
+        "otherDevTool": "Other Dev Tool"
       }
     }
   }
