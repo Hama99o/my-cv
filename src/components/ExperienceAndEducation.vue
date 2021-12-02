@@ -1,6 +1,10 @@
 <template>
   <div class="exp-and-edu-container" :class="togglebgWithOpacity">
     <div class="func" :class="toggleWhiteTextColorForNightMood">
+      <div>
+        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" target="_blank">My CV</router-link>
+        <hr class="my-1" />
+      </div>
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
