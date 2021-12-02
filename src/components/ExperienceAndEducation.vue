@@ -4,18 +4,85 @@
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
-          <li><span>{{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}</span><small>{{exAndEduLocation.jamLocation}}</small><small>{{exAndEduYear.jamYear}}</small></li>
-          <li><span>{{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>{{exAndEduText.scarabeeText2}}</span><small>{{exAndEduLocation.scarabeeLocation}}</small><small>{{exAndEduYear.scarabeeYear}}</small></li>
-          <li><span>{{exAndEduText.alvkungenText1}}  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}} </span><small>{{exAndEduLocation.alvkungenLocation}}</small><small>{{exAndEduYear.alvkungenYear}}</small></li>
-          <li><span>{{exAndEduText.honeySellerText}}</span><small>{{exAndEduLocation.honeySellerLocation}}</small><small>{{exAndEduYear.honeySellerYear}}</small></li>
+          <li>
+            <span>
+              {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
+            </span>
+            <small>
+              {{exAndEduLocation.jamLocation}}
+            </small><small>
+              {{exAndEduYear.jamYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
+            </span>
+            <small>
+              {{exAndEduLocation.scarabeeLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.scarabeeYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}}
+            </span>
+            <small>
+              {{exAndEduLocation.alvkungenLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.alvkungenYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.honeySellerText}}
+            </span>
+            <small>
+              {{exAndEduLocation.honeySellerLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.honeySellerYear}}
+            </small>
+          </li>
         </ul>
       </div>
       <div class="edu">
         <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
-          <li><span>{{exAndEduText.konexioText}}</span><small>{{exAndEduLocation.konexioLocation}}</small><small>{{exAndEduYear.konexioYear}}</small></li>
-          <li><span>{{exAndEduText.balderText}}</span><small>{{exAndEduLocation.balderLocation}}</small><small>{{exAndEduYear.balderYear}}</small></li>
-          <li><span>{{exAndEduText.milatSchoolText}}</span><small>{{exAndEduLocation.milatSchoolLocation}}</small><small>{{exAndEduYear.milatSchoolYear}}</small></li>
+          <li>
+            <span>
+              {{exAndEduText.konexioText}}
+            </span>
+            <small>
+              {{exAndEduLocation.konexioLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.konexioYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.balderText}}
+            </span><small>
+              {{exAndEduLocation.balderLocation}}
+            </small>
+            <small>{{exAndEduYear.balderYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.milatSchoolText}}
+            </span>
+            <small>
+              {{exAndEduLocation.milatSchoolLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.milatSchoolYear}}
+            </small>
+          </li>
         </ul>
       </div>
     </div>
