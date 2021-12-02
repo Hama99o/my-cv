@@ -2,13 +2,13 @@
   <div class="contact-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func py-5">
       <div class="contact" :class="toggleWhiteTextColorForNightMood">
-        <h3 :class="toggleWhiteTextColorForNightMood">Contact</h3>
-        <div class="call my-2"><i class="fa fa-phone"></i><span> +33 7 66 66 62 33</span></div>
+        <h3 :class="toggleWhiteTextColorForNightMood" class="my-3">Contact</h3>
+        <!-- <div class="call my-2"><i class="fa fa-phone"></i><span> +33 7 66 66 62 33</span></div> -->
         <div class="address my-2"><i class="fa fa-map-marker"></i><span> Malakoff, France</span></div>
         <div class="email my-2"><i class="fa fa-envelope"></i> <a href="mailto:hmmshl@gmail.com" target="_blank"> <span> hmmshl@gmail.com</span></a></div>
       </div>
       <div class="follow py-3">
-        <h3 :class="toggleWhiteTextColorForNightMood">Follow</h3>
+        <h3 :class="toggleWhiteTextColorForNightMood" class="my-3">Follow</h3>
         <div class="box">
           <a  href="https://github.com/Hama99o" target="_blank">
             <i class="fab fa-github" :class="toggleWhitebgAndDarkTextClass"></i>
@@ -67,6 +67,7 @@ export default {
 .follow .box {
   text-align: center;
   vertical-align: middle;
+  margin-left: -10px;
 }
 
 .follow .box a:hover i {

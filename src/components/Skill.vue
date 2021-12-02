@@ -2,52 +2,54 @@
   <div class="skill-container d-flex justify-content-center" :class="togglebgWithOpacity">
     <div class="func">
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood" class="my-3"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programminSkill')}}</h3>
-        <ul  :class="toggleWhiteTextColorForNightMood">
-          <li data-percent="55"><span>Ruby</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programmingSkill')}}</h3>
+        <ul :class="toggleWhiteTextColorForNightMood">
+          <li>
+            <span>{{programmingSkill.programmingLanguages}}:</span><span class="mx-3">Ruby, Javascript, Bash</span>
           </li>
-          <li data-percent="55"><span>JavaScript</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+          <hr class="my-1" />
+          <li>
+            <span>{{programmingSkill.webTechnologies}}: </span><span class="mx-3">HTML5 , CSS(SCSS)</span>
           </li>
-          <li data-percent="55"><span>Ruby on Rails</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+          <hr class="my-1" />
+          <li>
+            <span>{{programmingSkill.frameworks}}: </span><span class="mx-3 toggle-ruby-on-rails">Ruby on Rails,</span>Vuejs, Boostrap</span>
           </li>
-          <li data-percent="55"><span>VueJS</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+            <small>
+              <code  :class="toggleWhiteTextColorForNightMood" class="ruby-on-rails">"Ruby on Rails": RSpec Rails, Devise, Sidekiq, Kaminari</code>
+            </small>
+          <hr class="my-1" />
+          <li>
+            <span>{{programmingSkill.otherDevTool}}:</span><span class="mx-3">Git, Github, Heroku, Linux</span>
           </li>
-          <li data-percent="20"><span>jQuery</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+          <hr class="my-1" />
+          <li>
+            <span>{{programmingSkill.databaseServer}}:</span><span class="mx-3">PostgreSQL</span>
           </li>
-          <li data-percent="50"><span>Express</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+          <hr class="my-1" />
+        </ul>
+      </div>
+      <div class="skills-prog">
+        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fas fa-tasks":class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.myProjects')}}</h3>
+        <ul :class="toggleWhiteTextColorForNightMood">
+          <li>
+            <span>
+              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Qoute Api </a> {{$t('message.skills.myProjects.and')}}
+            </span>
+            <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
-          <li data-percent="60"><span>HTML5 & CSS3(SASS)</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
+          <hr class="my-1" />
+          <li>
+            <span>
+              <a class="project-link" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> {{$t('message.skills.myProjects.and')}}
+            </span>
+            <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
-          <li data-percent="45"><span>PostgreSQL</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
+          <hr class="my-1" />
         </ul>
       </div>
       <div class="interests" :class="toggleWhiteTextColorForNightMood">
-        <h3><i class="fa fa-star" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.interests')}}</h3>
+        <h3><i class="fa fa-star mt-3" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.interests')}}</h3>
         <div class="interests-items">
           <div class="mountain"><i class="fas fa-mountain" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.travel')}}</span></div>
             <div class="bicycle"><i class="fas fa-bicycle" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.cycle')}}</span></div>
@@ -71,21 +73,18 @@ export default {
     }
   },
   computed: {
+    programmingSkill () {
+       return this.$t('message.skills.programmingSkill')
+    },
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
+  },
+  methods: {
   },
   mounted () {
     this.$nextTick(() => {
-      (function() {
-        $('.skills-prog li').find('.skills-bar').each(function(i) {
-          $(this).find('.bar').delay(i * 150).animate({
-            width: $(this).parents().attr('data-percent') + '%'
-          }, 1000, 'linear', function() {
-            return $(this).css({
-              'transition-duration': '.5s'
-            })
-          })
-        })
-      }).call(this)
+      $(".toggle-ruby-on-rails").click(function(){
+        $(".ruby-on-rails").toggle()
+      })
     })
   }
 }
@@ -107,32 +106,16 @@ h3 {
   display: flex;
 }
 
-.skill-container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 
 .skill-container .func {
   width: 645px;
   padding: 30px 25px;
 }
-.skill-container .func:hover > div {
-  transition-duration: 0.3s;
-}
-.skill-container .func:hover > div:hover h3 {
-  letter-spacing: 1.6px;
-}
+
 .skill-container .func:hover > div:hover h3 i {
   transform: scale(1.2);
 }
-.skill-container .func:hover > div:not(:hover) {
-  opacity: 0.5;
-}
-.skill-container .func h3 {
-  transition-duration: 0.3s;
-  margin-left: 25px;
-}
+
 .skill-container .func h3 i {
   width: 42px;
   height: 42px;
@@ -141,44 +124,14 @@ h3 {
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
-  margin-right: 8px;
+  margin-right: 15px;
   transition-duration: 0.3s;
-}
-.skill-container .func .skills-prog {
-  clear: both;
 }
 
 .skill-container .func .skills-prog ul li {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
-  transition-duration: 0.3s;
-}
-.skill-container .func .skills-prog ul li:hover {
-  color: #e07a5f;
-}
-.skill-container .func .skills-prog ul li:hover .skills-bar .bar {
-  background: #e07a5f;
-  box-shadow: 0 0 0 1px #e07a5f;
-}
-.skill-container .func .skills-prog ul li span {
-  display: block;
-  width: 120px;
-}
-.skill-container .func .skills-prog ul li .skills-bar {
-  background: #cdcdcd;
-  height: 2px;
-  width: 50%;
-  position: relative;
-  border-radius: 2px;
-}
-.skill-container .func .skills-prog ul li .skills-bar .bar {
-  position: absolute;
-  top: -1px;
-  height: 4px;
-  background: green;
-  box-shadow: 0 0 0 #8d9e78;
-  border-radius: 5px;
 }
 
 .skill-container .func .interests-items {
@@ -198,10 +151,7 @@ h3 {
 .skill-container .func .interests-items div:hover i {
   transform: scale(1.2);
 }
-.skill-container .func .interests-items div:hover span {
-  color: #e07a5f;
-  transition-duration: 0.3s;
-}
+
 .skill-container .func .interests-items div i {
   font-size: 45px;
   width: 60px;
@@ -245,4 +195,10 @@ h3 {
   }
 }
 
+.ruby-on-rails {
+  display: none;
+}
+.project-link {
+  text-decoration: none;
+}
 </style>

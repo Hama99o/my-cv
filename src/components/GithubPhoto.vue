@@ -1,16 +1,21 @@
 <template>
-  <div class="zoom-effect-container">
-    <div class="image-card d-flex justify-content-center">
-      <b-img-lazy
-        rounded="circle"
-        class="brightness"
-        src="hama_round.png"
-        alt="github-photo">
-      </b-img-lazy>
+  <div class="">
+    <div class="zoom-effect-container">
+      <div class="zoom-effect-container image-card d-flex justify-content-center">
+        <b-img-lazy
+          rounded="circle"
+          class="brightness"
+          src="hama_round.png"
+          alt="github-photo">
+        </b-img-lazy>
+      </div>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
       <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Safi</code>
     </h4>
+    <a href="https://www.codewars.com/users/Hama99o" target="_blank" class="d-flex justify-content-center text-align-center">
+      <img src="https://www.codewars.com/users/Hama99o/badges/micro" class="img-responsive"/>
+    </a>
   </div>
 </template>
 
@@ -47,6 +52,10 @@ export default {
     max-width: 70%;
   }
 
+  .img-responsive {
+    height: 20px !important;
+  }
+
 }
 
 @media only screen and (max-width: 566px) {
@@ -56,6 +65,10 @@ export default {
   .name-title {
     font-size: 15px;
   }
+}
 
+.img-responsive {
+  width: auto;
+  height: 30px;
 }
 </style>

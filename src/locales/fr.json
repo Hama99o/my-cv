@@ -61,6 +61,7 @@
       "text": {
         "jamText1": "Travaille à",
         "jamText2": "en tant que développeur junior",
+        "jamText3": "J'ai désigné et développé de nouvelles fonctionnalités dans le système de restitution de données multi-bot et l'outil de rédaction pour les rédacteurs de contenu de chatbot.",
         "scarabeeText1": "Interprète bénévole à lae",
         "scarabeeText2": "association. (À temps partiel)",
         "alvkungenText1": "Guide touristique en",
@@ -69,11 +70,16 @@
         "konexioText": "Préparation au Delf B1 (diplôme d'études de langue française) et développement Web chez Konexio Digistart.",
         "balderText": "Apprendre le suédois et le développement web au lycée Balder",
         "milatSchoolText": "Baccalauréat de l'école Milat"
+      },
+      "options": {
+        "seeMore": "Voir Plus",
+        "seeLess": "Voir Moins"
       }
     },
     "skills":  {
       "heading": {
-        "programminSkill": "Compétences en Programmation",
+        "programmingSkill": "Compétences en Programmation",
+        "myProjects": "Mes Projets",
         "interests": "intérêts"
       },
       "interests": {
@@ -83,6 +89,16 @@
         "game": "jouer",
         "chess": "Échecs",
         "snowboard": "Snowboard"
+      },
+      "myProjects": {
+        "and": "et"
+      },
+      "programmingSkill": {
+        "programmingLanguages": "Langages De Programmation",
+        "databaseServer": "Serveur De Base Dedonnées",
+        "webTechnologies": "Technologies Web",
+        "frameworks": "Frameworks",
+        "otherDevTool": "Autre Outil De Développement"
       }
     }
   }

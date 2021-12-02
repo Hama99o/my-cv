@@ -1,21 +1,97 @@
 <template>
   <div class="exp-and-edu-container" :class="togglebgWithOpacity">
     <div class="func" :class="toggleWhiteTextColorForNightMood">
+      <div>
+        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" target="_blank">My CV</router-link>
+        <hr class="my-1" />
+      </div>
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
-          <li><span>{{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}</span><small>{{exAndEduLocation.jamLocation}}</small><small>{{exAndEduYear.jamYear}}</small></li>
-          <li><span>{{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée  </a>{{exAndEduText.scarabeeText2}}</span><small>{{exAndEduLocation.scarabeeLocation}}</small><small>{{exAndEduYear.scarabeeYear}}</small></li>
-          <li><span>{{exAndEduText.alvkungenText1}}  <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}} </span><small>{{exAndEduLocation.alvkungenLocation}}</small><small>{{exAndEduYear.alvkungenYear}}</small></li>
-          <li><span>{{exAndEduText.honeySellerText}}</span><small>{{exAndEduLocation.honeySellerLocation}}</small><small>{{exAndEduYear.honeySellerYear}}</small></li>
+          <li>
+            <span>
+              {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
+              <p v-if="jamHistory">{{exAndEduText.jamText3}}</p>
+            </span>
+            <small>
+               <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less">{{options.seeMore}}</a>
+               <a v-if="jamHistory" @click="toggleJamHistory" href="#show-less">{{options.seeLess}}</a>
+             </small>
+            <small>
+              {{exAndEduLocation.jamLocation}}
+            </small><small>
+              {{exAndEduYear.jamYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
+            </span>
+            <small>
+              {{exAndEduLocation.scarabeeLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.scarabeeYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}}
+            </span>
+            <small>
+              {{exAndEduLocation.alvkungenLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.alvkungenYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.honeySellerText}}
+            </span>
+            <small>
+              {{exAndEduLocation.honeySellerLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.honeySellerYear}}
+            </small>
+          </li>
         </ul>
       </div>
       <div class="edu">
         <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass"></i></h3>
         <ul>
-          <li><span>{{exAndEduText.konexioText}}</span><small>{{exAndEduLocation.konexioLocation}}</small><small>{{exAndEduYear.konexioYear}}</small></li>
-          <li><span>{{exAndEduText.balderText}}</span><small>{{exAndEduLocation.balderLocation}}</small><small>{{exAndEduYear.balderYear}}</small></li>
-          <li><span>{{exAndEduText.milatSchoolText}}</span><small>{{exAndEduLocation.milatSchoolLocation}}</small><small>{{exAndEduYear.milatSchoolYear}}</small></li>
+          <li>
+            <span>
+              {{exAndEduText.konexioText}}
+            </span>
+            <small>
+              {{exAndEduLocation.konexioLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.konexioYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.balderText}}
+            </span><small>
+              {{exAndEduLocation.balderLocation}}
+            </small>
+            <small>{{exAndEduYear.balderYear}}
+            </small>
+          </li>
+          <li>
+            <span>
+              {{exAndEduText.milatSchoolText}}
+            </span>
+            <small>
+              {{exAndEduLocation.milatSchoolLocation}}
+            </small>
+            <small>
+              {{exAndEduYear.milatSchoolYear}}
+            </small>
+          </li>
         </ul>
       </div>
     </div>
@@ -29,11 +105,15 @@ export default {
   name: 'ExperienceAndEducation',
   data () {
     return {
+      jamHistory: false
     }
   },
   computed: {
-    exAndEduText() {
+    exAndEduText () {
       return this.$t('message.experienceAndEducation.text');
+    },
+    options () {
+      return this.$t('message.experienceAndEducation.options');
     },
     exAndEduLocation () {
       return this.$t('message.experienceAndEducation.location');
@@ -45,6 +125,9 @@ export default {
     ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
   },
   methods: {
+    toggleJamHistory () {
+      this.jamHistory = !this.jamHistory
+    }
   }
 }
 </script>
