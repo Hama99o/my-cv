@@ -24,6 +24,9 @@ export default {
     }
   },
   computed: {
+    selectedLang () {
+      localStorage.locale = this.$i18n.locale
+    },
     ...mapGetters(['bgDarkIfHasNightMood'])
   }
 }
