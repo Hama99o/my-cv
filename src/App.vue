@@ -16,19 +16,6 @@ export default {
 
 <style>
 
-#app {
-  height: 100%;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: black;
-}
-
-.portfolio-container {
-  position: relative;
-  min-height: 100vh;
-}
-
 .nightmode {
   background: #292b2c;
   color: #eee;
@@ -37,4 +24,5 @@ export default {
 * {
   position: relative;
 }
+
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="background-animation">
     <div class="cloud"></div>
-    <div class="mountain fixed" :class="toggleBorderBottomBgColor"></div>
-    <div class="ground fixed" :class="groundBgClass"></div>
+    <div class="mountain fixed" :class="getClass('whiteBorderBottomInDark')"></div>
+    <div class="ground fixed" :class="getClass('whiteBgInDark')"></div>
   </div>
 </template>
 
@@ -13,13 +13,16 @@ export default {
   name: 'BackgroundAnimation',
   data () {
     return {
+      getClass(attribute) {
+        return this.lightDarkClasses[attribute][this.getTheme]
+      }
     }
   },
   methods: {
   },
   computed: {
-    ...mapGetters(['groundBgClass', 'toggleWhitebgAndDarkTextClass', 'toggleBorderBottomBgColor']),
-    ...mapState(['hasNightMood'])
+    ...mapState(['lightDarkClasses']),
+    ...mapGetters(['getTheme' ])
   }
 }
 </script>
@@ -97,6 +100,7 @@ export default {
 .ground {
   height: 4vh;
   width: 100vw;
+  z-index: -99;
 }
 
 @keyframes slide {

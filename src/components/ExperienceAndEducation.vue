@@ -1,21 +1,21 @@
 <template>
-  <div class="exp-and-edu-container" :class="togglebgWithOpacity">
-    <div class="func" :class="toggleWhiteTextColorForNightMood">
+  <div class="exp-and-edu-container" :class="getClass('whiteBgWithOpacityInDark')">
+    <div class="func" :class="getClass('whitetextColorInDark')">
       <div>
-        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" target="_blank">My CV</router-link>
+        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" :class="getClass('lightBlueLinkInDark')" target="_blank">My CV</router-link>
         <hr class="my-1" />
       </div>
       <div class="work">
-        <h3><i class="fa fa-briefcase" :class="toggleWhitebgAndDarkTextClass"></i></h3>
+        <h3><i class="fa fa-briefcase" :class="getClass('whitebgWithDarkTextInDark')"></i></h3>
         <ul>
           <li>
             <span>
-              {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
+              {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
               <p v-if="jamHistory">{{exAndEduText.jamText3}}</p>
             </span>
             <small>
-               <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less">{{options.seeMore}}</a>
-               <a v-if="jamHistory" @click="toggleJamHistory" href="#show-less">{{options.seeLess}}</a>
+               <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeMore}}</a>
+               <a v-if="jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeLess}}</a>
              </small>
             <small>
               {{exAndEduLocation.jamLocation}}
@@ -25,7 +25,7 @@
           </li>
           <li>
             <span>
-              {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
+              {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
             </span>
             <small>
               {{exAndEduLocation.scarabeeLocation}}
@@ -36,7 +36,7 @@
           </li>
           <li>
             <span>
-              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}}
+              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" :class="getClass('lightBlueLinkInDark')" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}}
             </span>
             <small>
               {{exAndEduLocation.alvkungenLocation}}
@@ -59,7 +59,7 @@
         </ul>
       </div>
       <div class="edu">
-        <h3><i class="fa fa-graduation-cap" :class="toggleWhitebgAndDarkTextClass"></i></h3>
+        <h3><i class="fa fa-graduation-cap" :class="getClass('whitebgWithDarkTextInDark')"></i></h3>
         <ul>
           <li>
             <span>
@@ -121,12 +121,15 @@ export default {
     exAndEduYear () {
       return this.$t('message.experienceAndEducation.year');
     },
-    ...mapState(['hasNightMood']),
-    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
+    ...mapState(['lightDarkClasses']),
+    ...mapGetters(['getTheme'])
   },
   methods: {
     toggleJamHistory () {
       this.jamHistory = !this.jamHistory
+    },
+    getClass(attribute) {
+      return this.lightDarkClasses[attribute][this.getTheme]
     }
   }
 }
@@ -288,14 +291,6 @@ h3 {
 
 .exp-and-edu-container .func .work ul li span, .exp-and-edu-container .func .edu ul li span {
   transition-duration: 0.3s;
-}
-
-.bg-white-with-opacity  {
-  background-color: rgba(#292b2c, 0.8);
-}
-
-.bg-black-with-opacity  {
-  background-color: rgba(#f7f7f7, 0.8);
 }
 
 @media (min-width: 500px) {
