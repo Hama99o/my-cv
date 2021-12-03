@@ -38,7 +38,7 @@ export default {
 @media (max-width: 768px) {
   .img-responsive {
     width: 100%;
-    height: 80px;
+    height: 70px;
   }
 }
 </style>
