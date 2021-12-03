@@ -15,7 +15,8 @@ const state = {
     whiteBgWithWhiteTextInDark: { dark: 'bg-white text-white', light: 'bg-dark text-dark' },
     whiteBorderBottomInDark: { dark: 'white-bottom-border', light: 'dark-bottom-border' },
     whiteBgInDark: { dark: 'bg-white', light: 'bg-dark' },
-    darkBgInDark: { dark: 'bg-white', light: 'bg-dark' }
+    darkBgInDark: { dark: 'bg-white', light: 'bg-dark' },
+    lightBlueLinkInDark: { dark: 'light-blue', light: 'blue' }
   }
 }
 
@@ -43,6 +44,9 @@ const getters = {
   },
   bgDarkIfHasNightMood () {
     return state.hasNightMood ? 'bg-dark' : 'bg-white'
+  },
+  getTheme () {
+    return state.hasNightMood ? 'dark' : 'light'
   }
 }
 
