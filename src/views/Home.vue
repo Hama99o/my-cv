@@ -78,7 +78,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       const body = document.querySelector('body')
-      if (JSON.parse(localStorage.hasNightMood)) {
+      if (localStorage.hasNightMood) {
         body.classList.add('nightmode')
         this.$store.state.hasNightMood = JSON.parse(localStorage.hasNightMood)
       }
