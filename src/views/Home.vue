@@ -8,7 +8,7 @@
       </b-row>
       <b-row align-h="center">
         <b-col cols="6" md="2" class="my-4">
-          <github-photo/>
+          <my-photo/>
         </b-col>
         <b-col cols="12" md="10">
           <div class="mb-4">
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import GithubPhoto from '@/components/GithubPhoto'
+import MyPhoto from '@/components/MyPhoto'
 import MoonOrSunMenu from '@/components/MoonOrSunMenu'
 
 export default {
   name: 'Home',
-  components: { GithubPhoto, MoonOrSunMenu },
+  components: { MyPhoto, MoonOrSunMenu },
   data () {
     return {
       menuList: {

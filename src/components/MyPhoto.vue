@@ -6,7 +6,7 @@
           rounded="circle"
           class="brightness"
           src="hama_round.png"
-          alt="github-photo">
+          alt="my-photo">
         </b-img-lazy>
       </div>
     </div>
@@ -23,7 +23,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'GithubPhoto',
+  name: 'MyPhoto',
   methods: {
   },
   computed: {
