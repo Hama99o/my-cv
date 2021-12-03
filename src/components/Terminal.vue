@@ -92,6 +92,8 @@ export default {
         this.$router.push({name: 'Skill'})
       } else if (this.terminalInput == '2') {
         this.$router.push({name: 'Contact'})
+      } else if (this.terminalInput == 'exit') {
+        this.closeTerminal()
       } else {
         this.IsWrong = true
         setTimeout(() => this.IsWrong = false, 1000);
