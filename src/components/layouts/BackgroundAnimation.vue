@@ -16,11 +16,6 @@ export default {
     }
   },
   methods: {
-    theme () {
-      const body = document.querySelector('body')
-      body.classList.toggle('nightmode')
-      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
-    }
   },
   computed: {
     ...mapGetters(['groundBgClass', 'toggleWhitebgAndDarkTextClass', 'toggleBorderBottomBgColor']),
@@ -42,7 +37,7 @@ export default {
 
 .cloud {
 	width: 350px; height: 120px;
-  animation:slide ease-in 100s infinite;
+  animation:slide ease-in 70s infinite;
 
 	background: #d0cccc;
 	border-radius: 100px;
@@ -109,7 +104,7 @@ export default {
     transform: translateX(15vw);
   }
   50% {
-    transform: translateX(70vw);
+    transform: translateX(50vw);
   }
   100% {
     transform: translateX(15vw);

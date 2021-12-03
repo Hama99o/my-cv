@@ -31,7 +31,14 @@ export default {
 
 <style scoped>
 .img-responsive {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 110px;
+}
+
+@media (max-width: 768px) {
+  .img-responsive {
+    width: 100%;
+    height: 70px;
+  }
 }
 </style>

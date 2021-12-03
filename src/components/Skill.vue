@@ -34,7 +34,7 @@
         <ul :class="toggleWhiteTextColorForNightMood">
           <li>
             <span>
-              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Qoute Api </a> {{$t('message.skills.myProjects.and')}}
+              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Quote Api </a> {{$t('message.skills.myProjects.and')}}
             </span>
             <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
@@ -49,7 +49,7 @@
         </ul>
       </div>
       <div class="interests" :class="toggleWhiteTextColorForNightMood">
-        <h3><i class="fa fa-star mt-3" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.interests')}}</h3>
+        <h3 class="mt-3"><i class="fa fa-star" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.interests')}}</h3>
         <div class="interests-items">
           <div class="mountain"><i class="fas fa-mountain" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.travel')}}</span></div>
             <div class="bicycle"><i class="fas fa-bicycle" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.cycle')}}</span></div>

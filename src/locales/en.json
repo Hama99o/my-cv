@@ -6,7 +6,7 @@
       "Skill": "Skill",
       "Contact": "Contact"
     },
-    "console": {
+    "terminal": {
       "questions": {
         "myNameAndAGe": "my_name, my_age",
         "from": "from",
@@ -35,8 +35,10 @@
       },
       "phrase":  {
         "exit": "exit",
-        "cv": "You can also take a look at my",
-        "consoleHeading":  "Hama99o - Web developer"
+        "cv": "You can take a look at my",
+        "terminalHeading":  "Hama99o - Web developer",
+        "chosePage": "You can alse write the chosen page number to change a page: { experience_and_education: 1, skill: 2, contact: 3 }",
+        "errorMessage":  "Page number did not exist"
       }
     },
     "experienceAndEducation": {
@@ -95,7 +97,7 @@
       },
       "programmingSkill": {
         "programmingLanguages": "Programming Languages",
-        "databaseServer": "Database Server",
+        "databaseServer": "Database",
         "webTechnologies": "Web Technologies",
         "frameworks": "Frameworks",
         "otherDevTool": "Other Dev Tool"

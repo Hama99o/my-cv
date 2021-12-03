@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-container container">
+  <div class="portfolio-container">
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">
@@ -63,6 +63,7 @@ export default {
       const body = document.querySelector('body')
       body.classList.toggle('nightmode')
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
+      localStorage.hasNightMood = this.$store.state.hasNightMood
     },
     linkClassForTabs (idx) {
       const linkClass = []
@@ -73,6 +74,15 @@ export default {
       }
       return linkClass
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      const body = document.querySelector('body')
+      if (localStorage.hasNightMood  && JSON.parse(localStorage.hasNightMood)) {
+        body.classList.add('nightmode')
+        this.$store.state.hasNightMood = true
+      }
+    })
   }
 }
 </script>
@@ -100,6 +110,12 @@ a {
 @media (max-width: 768px) {
   .nav-link {
     font-size: 12px;
+  }
+  .nav-item {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>
