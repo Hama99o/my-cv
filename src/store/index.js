@@ -15,36 +15,12 @@ const state = {
     whiteBgWithWhiteTextInDark: { dark: 'bg-white text-white', light: 'bg-dark text-dark' },
     whiteBorderBottomInDark: { dark: 'white-bottom-border', light: 'dark-bottom-border' },
     whiteBgInDark: { dark: 'bg-white', light: 'bg-dark' },
-    darkBgInDark: { dark: 'bg-white', light: 'bg-dark' },
+    darkBgInDark: { dark: 'bg-dark', light: 'bg-white' },
     lightBlueLinkInDark: { dark: 'light-blue', light: 'blue' }
   }
 }
 
 const getters = {
-  toggleWhiteTextColorForNightMood () {
-    return state.hasNightMood ? 'text-white' : 'text-dark'
-  },
-  togglebgWithOpacity () {
-    return state.hasNightMood ? 'bg-white-with-opacity' : 'bg-black-with-opacity'
-  },
-  toggleWhitebgAndDarkTextClass () {
-    return state.hasNightMood ? 'bg-white  text-dark' : 'bg-dark text-white'
-  },
-  toggleDarkTextColorForNightMood () {
-    return state.hasNightMood ? 'text-dark' : 'text-white'
-  },
-  toggleSameTextColorAndBgClass () {
-    return state.hasNightMood ? 'bg-white text-white' : 'bg-dark text-dark'
-  },
-  toggleBorderBottomBgColor () {
-    return state.hasNightMood ? 'white-bottom-border' : 'dark-bottom-border'
-  },
-  groundBgClass () {
-    return state.hasNightMood ? 'bg-white' : 'bg-dark'
-  },
-  bgDarkIfHasNightMood () {
-    return state.hasNightMood ? 'bg-dark' : 'bg-white'
-  },
   getTheme () {
     return state.hasNightMood ? 'dark' : 'light'
   }
