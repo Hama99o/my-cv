@@ -12,7 +12,6 @@ const state = {
     whiteBgWithOpacityInDark: { dark: 'bg-white-with-opacity', light: 'bg-black-with-opacity' },
     whitebgWithDarkTextInDark: { dark: 'bg-white  text-dark', light: 'bg-dark text-white' },
     darkTextInDark: { dark: 'text-dark', light: 'text-white' },
-    whiteBgWithWhiteTextInDark: { dark: 'bg-white text-white', light: 'bg-dark text-dark' },
     whiteBorderBottomInDark: { dark: 'white-bottom-border', light: 'dark-bottom-border' },
     whiteBgInDark: { dark: 'bg-white', light: 'bg-dark' },
     darkBgInDark: { dark: 'bg-dark', light: 'bg-white' },
