@@ -1,9 +1,9 @@
 <template>
-  <div class="skill-container d-flex justify-content-center" :class="togglebgWithOpacity">
+  <div class="skill-container d-flex justify-content-center" :class="getClass('whiteBgWithOpacityInDark')">
     <div class="func">
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programmingSkill')}}</h3>
-        <ul :class="toggleWhiteTextColorForNightMood">
+        <h3 :class="getClass('whitetextColorInDark')"><i class="fa fa-code" :class="getClass('whitebgWithDarkTextInDark')"></i>{{$t('message.skills.heading.programmingSkill')}}</h3>
+        <ul :class="getClass('whitetextColorInDark')">
           <li>
             {{programmingSkill.programmingLanguages}}:<span class="mx-2">Ruby, Javascript, Bash</span>
           </li>
@@ -16,7 +16,7 @@
             {{programmingSkill.frameworks}}: <span class="mx-2"> <span class="toggle-ruby-on-rails"> Ruby on Rails,</span> Vuejs(Vuex), Boostrap</span>
           </li>
             <small>
-              <code  :class="toggleWhiteTextColorForNightMood" class="ruby-on-rails">"Ruby on Rails": RSpec, Devise, Sidekiq, Kaminari</code>
+              <code  :class="getClass('whitetextColorInDark')" class="ruby-on-rails">"Ruby on Rails": RSpec, Devise, Sidekiq, Kaminari</code>
             </small>
           <hr class="my-1" />
           <li>
@@ -30,8 +30,8 @@
         </ul>
       </div>
       <div class="skills-prog">
-        <h3 :class="toggleWhiteTextColorForNightMood"><i class="fas fa-tasks":class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.myProjects')}}</h3>
-        <ul :class="toggleWhiteTextColorForNightMood">
+        <h3 :class="getClass('whitetextColorInDark')"><i class="fas fa-tasks" :class="getClass('whitebgWithDarkTextInDark')"></i>{{$t('message.skills.heading.myProjects')}}</h3>
+        <ul :class="getClass('whitetextColorInDark')">
           <li>
             <span>
               <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Quote Api </a> {{$t('message.skills.myProjects.and')}}
@@ -48,15 +48,15 @@
           <hr class="my-1" />
         </ul>
       </div>
-      <div class="interests" :class="toggleWhiteTextColorForNightMood">
-        <h3 class="mt-3"><i class="fa fa-star" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.interests')}}</h3>
+      <div class="interests" :class="getClass('whitetextColorInDark')">
+        <h3 class="mt-3"><i class="fa fa-star" :class="getClass('whitebgWithDarkTextInDark')"></i>{{$t('message.skills.heading.interests')}}</h3>
         <div class="interests-items">
-          <div class="mountain"><i class="fas fa-mountain" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.travel')}}</span></div>
-            <div class="bicycle"><i class="fas fa-bicycle" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.cycle')}}</span></div>
-            <div class="music"><i class="fa fa-headphones" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.music')}}</span></div>
-            <div class="game"><i class="fa fa-gamepad" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.game')}}</span></div>
-            <div class="chess"><i class="fas fa-chess" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.chess')}}</span></div>
-            <div class="snowboarding"><i class="fas fa-snowboarding" :class="toggleWhiteTextColorForNightMood"></i><span>{{$t('message.skills.interests.snowboard')}}</span></div>
+          <div class="mountain"><i class="fas fa-mountain" :class="getClass('whitetextColorInDark')"></i><span>{{$t('message.skills.interests.travel')}}</span></div>
+            <div class="bicycle"><i class="fas fa-bicycle" :class="getClass('whitetextColorInDark')"></i><span>{{$t('message.skills.interests.cycle')}}</span></div>
+            <div class="music"><i class="fa fa-headphones" :class="getClass('whitetextColorInDark')"></i><span>{{$t('message.skills.interests.music')}}</span></div>
+            <div class="game"><i class="fa fa-gamepad" :class="getClass('whitetextColorInDark')"></i><span>{{$t('message.skills.interests.game')}}</span></div>
+            <div class="chess"><i class="fas fa-chess" :class="getClass('whitetextColorInDark')"></i><span>{{$t('message.skills.interests.chess')}}</span></div>
+            <div class="snowboarding"><i class="fas fa-snowboarding" :class="getClass('whitetextColorInDark')"></i><span>{{$t('message.skills.interests.snowboard')}}</span></div>
           </div>
         </div>
     </div>
@@ -76,9 +76,13 @@ export default {
     programmingSkill () {
        return this.$t('message.skills.programmingSkill')
     },
-    ...mapGetters(['toggleWhitebgAndDarkTextClass', 'toggleWhiteTextColorForNightMood', 'togglebgWithOpacity'])
+    ...mapState(['lightDarkClasses']),
+    ...mapGetters(['getTheme'])
   },
   methods: {
+    getClass(attribute) {
+      return this.lightDarkClasses[attribute][this.getTheme]
+    }
   },
   mounted () {
     this.$nextTick(() => {
