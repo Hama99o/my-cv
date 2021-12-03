@@ -52,10 +52,6 @@ export default {
     max-width: 70%;
   }
 
-  .img-responsive {
-    height: 20px !important;
-  }
-
 }
 
 @media only screen and (max-width: 566px) {
@@ -70,5 +66,12 @@ export default {
 .img-responsive {
   width: auto;
   height: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .img-responsive {
+    width: auto;
+    height: 22px;
+  }
 }
 </style>
