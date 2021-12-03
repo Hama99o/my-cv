@@ -54,6 +54,20 @@ export default {
       isFullScreen: false
     }
   },
+  computed: {
+    terminalQuestions () {
+       return this.$t('message.terminal.questions')
+    },
+    terminalAnswers () {
+       return this.$t('message.terminal.answers')
+    },
+    myAge () {
+      return Math.abs(new Date(Date.now()).getUTCFullYear() - 1995)
+    },
+    terminalInputLowerCase() {
+      return this.terminalInput.toLowerCase()
+    }
+  },
   methods: {
     minimizeTerminal () {
       if (this.open) {
@@ -99,20 +113,6 @@ export default {
         setTimeout(() => this.IsWrong = false, 2000);
       }
       this.terminalInput = ''
-    }
-  },
-  computed: {
-    terminalQuestions () {
-       return this.$t('message.terminal.questions')
-    },
-    terminalAnswers () {
-       return this.$t('message.terminal.answers')
-    },
-    myAge () {
-      return Math.abs(new Date(Date.now()).getUTCFullYear() - 1995)
-    },
-    terminalInputLowerCase() {
-      return this.terminalInput.toLowerCase()
     }
   }
 }
