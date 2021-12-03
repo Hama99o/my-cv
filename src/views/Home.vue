@@ -63,6 +63,7 @@ export default {
       const body = document.querySelector('body')
       body.classList.toggle('nightmode')
       this.$store.state.hasNightMood = !this.$store.state.hasNightMood
+      localStorage.hasNightMood = this.$store.state.hasNightMood
     },
     linkClassForTabs (idx) {
       const linkClass = []
@@ -73,6 +74,15 @@ export default {
       }
       return linkClass
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      const body = document.querySelector('body')
+      if (JSON.parse(localStorage.hasNightMood)) {
+        body.classList.add('nightmode')
+        this.$store.state.hasNightMood = JSON.parse(localStorage.hasNightMood)
+      }
+    })
   }
 }
 </script>
