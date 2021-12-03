@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select v-model="$i18n.locale" @change="getLang($event)" :class="bgDarkIfHasNightMood">
+    <select v-model="$i18n.locale" @change="getLang($event)" :class="getClass('darkBgInDark')">
       <option
         v-for="(langAndFlag, i) in langsAndFlags"
         :key="`lang-${i}`"
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'SelectLocale',
@@ -25,11 +25,15 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['bgDarkIfHasNightMood'])
+    ...mapState(['lightDarkClasses']),
+    ...mapGetters([ 'getTheme'])
   },
   methods: {
     getLang (lang) {
       localStorage.locale = lang.target.value
+    },
+    getClass(attribute) {
+      return this.lightDarkClasses[attribute][this.getTheme]
     }
   }
 }
