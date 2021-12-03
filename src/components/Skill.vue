@@ -34,7 +34,7 @@
         <ul :class="toggleWhiteTextColorForNightMood">
           <li>
             <span>
-              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Qoute Api </a> {{$t('message.skills.myProjects.and')}}
+              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Quote Api </a> {{$t('message.skills.myProjects.and')}}
             </span>
             <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>

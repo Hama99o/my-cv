@@ -8,7 +8,7 @@
     },
     "console": {
       "questions": {
-        "myNameAndAGe": "mon_nom, mon_âge",
+        "myNameAndAGe": "mon_nom, mon_age",
         "from": "de",
         "lived": "vivait",
         "living": "vie",
@@ -34,7 +34,7 @@
         "otherDevTool": "['Git','Github','Heroku','Linux']"
       },
       "phrase":  {
-        "exit": "sortir",
+        "exit": "exit",
         "cv": "Vous pouvez également consulter mon",
         "consoleHeading":  "Hama99o - développeur web"
       }
@@ -94,11 +94,11 @@
         "and": "et"
       },
       "programmingSkill": {
-        "programmingLanguages": "Langages De Programmation",
-        "databaseServer": "Serveur De Base Dedonnées",
+        "programmingLanguages": "Langages des programmations",
+        "databaseServer": "Base de données",
         "webTechnologies": "Technologies Web",
         "frameworks": "Frameworks",
-        "otherDevTool": "Autre Outil De Développement"
+        "otherDevTool": "Autres outils de développement"
       }
     }
   }
