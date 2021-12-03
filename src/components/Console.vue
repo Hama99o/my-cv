@@ -106,12 +106,11 @@ export default {
   background-color: #02072F;
   border:0;
   outline: none;
-  max-width: 100%;
+  width: 70%;
 }
 
 @media (max-width: 360px) {
   .console {
-    margin: 0.5rem;
     .top {
       font-size: 10px;
       .options {
@@ -120,6 +119,9 @@ export default {
     }
     .text {
       font-size: 10px;
+    }
+    .console-input {
+      width: 40%;
     }
   }
 }
@@ -135,6 +137,9 @@ export default {
     }
     .text {
       font-size: 10px;
+    }
+    .console-input {
+      width: 50%;
     }
   }
 }
