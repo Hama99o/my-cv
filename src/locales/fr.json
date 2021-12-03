@@ -35,8 +35,10 @@
       },
       "phrase":  {
         "exit": "exit",
-        "cv": "Vous pouvez également consulter mon",
-        "consoleHeading":  "Hama99o - développeur web"
+        "cv": "Vous pouvez jeter un oeil à mon",
+        "consoleHeading":  "Hama99o - développeur web",
+        "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 }",
+        "errorMessage":  "Le numéro de page n'existait pas"
       }
     },
     "experienceAndEducation": {

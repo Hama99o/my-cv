@@ -17,6 +17,8 @@
       <br> 2.5.7 :011 > <span class="text-success">{{consoleQuestions.otherDevTool}}</span><span class="text-primary">= </span> <span class="orange">{{consoleAnswers.otherDevTool}}</span>
       <br> 2.5.7 :012 > <span class="text-success">{{$t('message.console.phrase.exit')}}</span>
       <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.console.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficv' }" target="_blank">CV</router-link>
+      <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.console.phrase.chosePage')}}</span>
+      <span v-if="IsWrong"> <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.console.phrase.errorMessage')}}</span></span>
       <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="consoleInput" class="text-success console-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
     </div>
   </div>
@@ -33,7 +35,8 @@ export default {
   data () {
     return {
       open: true,
-      consoleInput: ''
+      consoleInput: '',
+      IsWrong: false
     }
   },
   methods: {
@@ -45,13 +48,20 @@ export default {
       }
     },
     emptyTheInput () {
+      if (this.consoleInput == '0') {
+         this.$router.push({name: 'ExperienceAndEducation'})
+      } else if (this.consoleInput == '1') {
+        this.$router.push({name: 'Skill'})
+      } else if (this.consoleInput == '2') {
+        this.$router.push({name: 'Contact'})
+      } else {
+        this.IsWrong = true
+        setTimeout(() => this.IsWrong = false, 1000);
+      }
       this.consoleInput = ''
     }
   },
   computed: {
-    rootText () {
-      return `root@hama99o:~$`
-    },
     consoleQuestions () {
        return this.$t('message.console.questions')
     },
