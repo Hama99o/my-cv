@@ -16,11 +16,6 @@ export default {
     }
   },
   methods: {
-    theme () {
-      const body = document.querySelector('body')
-      body.classList.toggle('nightmode')
-      this.$store.state.hasNightMood = !this.$store.state.hasNightMood
-    }
   },
   computed: {
     ...mapGetters(['groundBgClass', 'toggleWhitebgAndDarkTextClass', 'toggleBorderBottomBgColor']),
