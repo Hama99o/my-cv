@@ -4,15 +4,14 @@
       <div class="terminal-icon d-flex" v-if ="!isTerminalClosed" @click="closeTerminal()"></div>
     </span>
     <div v-if ="isTerminalClosed" class="terminal element" id="element">
-      <div class="top" @click.self="toggleTerminal" title="Minimize">
+      <div class="top" @dblclick.self="fullScreen">
         <span class="options d-flex">
           <span @click="closeTerminal()" title="Close">
             <i class="fas fa-times d-flex"></i>
           </span>
-          <i v-if="!isFullScreen" class="far fa-square mx-2" @click="fullScreen()"></i>
-          <i v-if="isFullScreen" class="fas fa-clone mx-2" @click="cancellFullScreen()"></i>
-          <i @click.self="toggleTerminal" class="fa fa-window-minimize" aria-hidden="true">
-          </i>
+          <i v-if="!isFullScreen" class="far fa-square mx-2" @click="fullScreen()" title="Fullscreen"></i>
+          <i v-if="isFullScreen" class="fas fa-clone mx-2" @click="cancellFullScreen()" title="Fullscreen"></i>
+          <i @click.self="toggleTerminal" class="fa fa-window-minimize" aria-hidden="true" title="Minimize"></i>
         </span>
         <span class="title">{{ $t('message.terminal.phrase.terminalHeading') }}</span>
       </div>
