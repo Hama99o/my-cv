@@ -1,15 +1,15 @@
 <template>
   <div>
-    <console/>
+    <terminal/>
   </div>
 </template>
 
 <script>
-import Console from './Console'
+import Terminal from './Terminal'
 
 export default {
   name: 'PersonalProfile',
-  components: { Console },
+  components: { Terminal },
   methods: {
   }
 }

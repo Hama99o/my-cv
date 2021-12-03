@@ -6,7 +6,7 @@
       "Skill": "Compétence",
       "Contact": "Contact"
     },
-    "console": {
+    "terminal": {
       "questions": {
         "myNameAndAGe": "mon_nom, mon_age",
         "from": "de",
@@ -36,7 +36,7 @@
       "phrase":  {
         "exit": "exit",
         "cv": "Vous pouvez jeter un oeil à mon",
-        "consoleHeading":  "Hama99o - développeur web",
+        "terminalHeading":  "Hama99o - développeur web",
         "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 }",
         "errorMessage":  "Le numéro de page n'existait pas"
       }
