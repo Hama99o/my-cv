@@ -111,5 +111,11 @@ a {
   .nav-link {
     font-size: 12px;
   }
+  .nav-item {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>
