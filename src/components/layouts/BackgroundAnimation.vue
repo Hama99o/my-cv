@@ -37,7 +37,7 @@ export default {
 
 .cloud {
 	width: 350px; height: 120px;
-  animation:slide ease-in 10s infinite;
+  animation:slide ease-in 70s infinite;
 
 	background: #d0cccc;
 	border-radius: 100px;
