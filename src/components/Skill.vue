@@ -34,16 +34,16 @@
         <ul :class="getClass('whitetextColorInDark')">
           <li>
             <span>
-              <a class="project-link" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Quote Api </a> {{$t('message.skills.myProjects.and')}}
+              <a class="project-link" :class="getClass('lightBlueLinkInDark')" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Quote Api </a> {{$t('message.skills.myProjects.and')}}
             </span>
-            <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
+            <a class="mx-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
           <hr class="my-1" />
           <li>
             <span>
-              <a class="project-link" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> {{$t('message.skills.myProjects.and')}}
+              <a class="project-link" :class="getClass('lightBlueLinkInDark')" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> {{$t('message.skills.myProjects.and')}}
             </span>
-            <a class="mx-2 project-link" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
+            <a class="mx-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
           <hr class="my-1" />
         </ul>
@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 h3 {
   margin: 10px 0;
@@ -167,14 +167,6 @@ h3 {
 
 .skill-container .func .interests-items div span {
   display: block;
-}
-
-.bg-white-with-opacity  {
-  background-color: rgba(41, 43, 44, 0.8)
-}
-
-.bg-black-with-opacity  {
-  background-color: rgb(247, 247, 247,  0.8)
 }
 
 @media (max-width: 768px) {
