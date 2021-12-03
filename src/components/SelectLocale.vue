@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select v-model="$i18n.locale" :class="bgDarkIfHasNightMood">
+    <select v-model="$i18n.locale" @change="getLang($event)" :class="bgDarkIfHasNightMood">
       <option
         v-for="(langAndFlag, i) in langsAndFlags"
         :key="`lang-${i}`"
@@ -17,17 +17,30 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'SelectLocale',
   data() {
-    return { langsAndFlags: [
-      { lang: 'en', flag: '🇺🇸'},
-      { lang: 'fr', flag:  '🇫🇷'}
+    return {
+      langsAndFlags: [
+        { lang: 'en', flag: '🇺🇸'},
+        { lang: 'fr', flag:  '🇫🇷'}
       ]
     }
   },
   computed: {
-    selectedLang () {
-      localStorage.locale = this.$i18n.locale
-    },
     ...mapGetters(['bgDarkIfHasNightMood'])
+  },
+  methods: {
+    getLang (lang) {
+      localStorage.locale = lang.target.value
+    }
   }
 }
 </script>
+
+<style scoped>
+  select:focus {
+    outline: none;
+  }
+
+  select {
+    border: 0;
+  }
+</style>
