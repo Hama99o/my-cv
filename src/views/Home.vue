@@ -80,7 +80,7 @@ export default {
       const body = document.querySelector('body')
       if (localStorage.hasNightMood) {
         body.classList.add('nightmode')
-        this.$store.state.hasNightMood = JSON.parse(localStorage.hasNightMood)
+        this.$store.state.hasNightMood = true
       }
     })
   }
