@@ -31,7 +31,7 @@
         "databaseServer": "['PostgreSQL']",
         "webTechnologies": "['HTML','CSS']",
         "frameworks": "['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']",
-        "otherDevTool": "['Git','Github','Heroku','Linux']"
+        "otherDevTool": "['Git','Github','Heroku','Linux', 'Postman']"
       },
       "phrase":  {
         "exit": "exit",

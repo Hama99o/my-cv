@@ -5,26 +5,26 @@
         <h3 :class="toggleWhiteTextColorForNightMood"><i class="fa fa-code" :class="toggleWhitebgAndDarkTextClass"></i>{{$t('message.skills.heading.programmingSkill')}}</h3>
         <ul :class="toggleWhiteTextColorForNightMood">
           <li>
-            <span>{{programmingSkill.programmingLanguages}}:</span><span class="mx-3">Ruby, Javascript, Bash</span>
+            {{programmingSkill.programmingLanguages}}:<span class="mx-2">Ruby, Javascript, Bash</span>
           </li>
           <hr class="my-1" />
           <li>
-            <span>{{programmingSkill.webTechnologies}}: </span><span class="mx-3">HTML5 , CSS(SCSS)</span>
+            {{programmingSkill.webTechnologies}}:<span class="mx-2">HTML5, CSS(SCSS)</span>
           </li>
           <hr class="my-1" />
           <li>
-            <span>{{programmingSkill.frameworks}}: </span><span class="mx-3 toggle-ruby-on-rails">Ruby on Rails,</span>Vuejs, Boostrap</span>
+            {{programmingSkill.frameworks}}: <span class="mx-2"> <span class="toggle-ruby-on-rails"> Ruby on Rails,</span> Vuejs(Vuex), Boostrap</span>
           </li>
             <small>
-              <code  :class="toggleWhiteTextColorForNightMood" class="ruby-on-rails">"Ruby on Rails": RSpec Rails, Devise, Sidekiq, Kaminari</code>
+              <code  :class="toggleWhiteTextColorForNightMood" class="ruby-on-rails">"Ruby on Rails": RSpec, Devise, Sidekiq, Kaminari</code>
             </small>
           <hr class="my-1" />
           <li>
-            <span>{{programmingSkill.otherDevTool}}:</span><span class="mx-3">Git, Github, Heroku, Linux</span>
+            {{programmingSkill.otherDevTool}}:<span class="mx-2">Git, Github, Heroku, Linux, Postman</span>
           </li>
           <hr class="my-1" />
           <li>
-            <span>{{programmingSkill.databaseServer}}:</span><span class="mx-3">PostgreSQL</span>
+            {{programmingSkill.databaseServer}}:<span class="mx-2">PostgreSQL</span>
           </li>
           <hr class="my-1" />
         </ul>
