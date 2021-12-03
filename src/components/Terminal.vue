@@ -86,17 +86,17 @@ export default {
       cancellFullScreen.call(document)
     },
     emptyTheInput () {
-      if (this.terminalInput == '0') {
+      if (this.terminalInputLowerCase == '0') {
          this.$router.push({name: 'ExperienceAndEducation'})
-      } else if (this.terminalInput == '1') {
+      } else if (this.terminalInputLowerCase == '1') {
         this.$router.push({name: 'Skill'})
-      } else if (this.terminalInput == '2') {
+      } else if (this.terminalInputLowerCase == '2') {
         this.$router.push({name: 'Contact'})
-      } else if (this.terminalInput == 'exit') {
+      } else if (this.terminalInputLowerCase.toLowerCase() == 'exit') {
         this.closeTerminal()
       } else {
         this.IsWrong = true
-        setTimeout(() => this.IsWrong = false, 1000);
+        setTimeout(() => this.IsWrong = false, 2000);
       }
       this.terminalInput = ''
     }
@@ -110,6 +110,9 @@ export default {
     },
     myAge () {
       return Math.abs(new Date(Date.now()).getUTCFullYear() - 1995)
+    },
+    terminalInputLowerCase() {
+      return this.terminalInput.toLowerCase()
     }
   }
 }
