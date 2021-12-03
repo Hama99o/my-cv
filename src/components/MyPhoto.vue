@@ -11,7 +11,7 @@
       </div>
     </div>
     <h4 class="d-flex justify-content-center text-align-center my-3">
-      <code :class="toggleWhiteTextColorForNightMood" class="name-title">Hammayoun Safi</code>
+      <code :class="getClass('whitetextColorInDark')" class="name-title">Hammayoun Safi</code>
     </h4>
     <a href="https://www.codewars.com/users/Hama99o" target="_blank" class="d-flex justify-content-center text-align-center">
       <img src="https://www.codewars.com/users/Hama99o/badges/micro" class="img-responsive"/>
@@ -20,14 +20,18 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'MyPhoto',
   methods: {
+    getClass(attribute) {
+      return this.lightDarkClasses[attribute][this.getTheme]
+    }
   },
   computed: {
-    ...mapGetters(['toggleWhiteTextColorForNightMood'])
+    ...mapState(['lightDarkClasses']),
+    ...mapGetters(['getTheme'])
   }
 }
 </script>
