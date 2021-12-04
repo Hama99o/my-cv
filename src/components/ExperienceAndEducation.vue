@@ -5,13 +5,37 @@
         <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" :class="getClass('lightBlueLinkInDark')" target="_blank">My CV</router-link>
         <hr class="my-1" />
       </div>
+      <div>
+        <h4>About recent job:</h4>
+        <br/>
+        <p>Enterprise: Jam, Jam is a conversational media on Messenger which listens and engages 15-25 people every day.</p>
+        <p>
+          My Work:
+          <br/>* Designed the client management system in Jam Trends
+          <br/>* Build an API and create an interface for the referral message in redaction tool for the chatbot
+          <br/>* Designed and developed several small features in in multi-bot data recovery system
+        </p>
+        <hr class="my-1" />
+      </div>
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="getClass('whitebgWithDarkTextInDark')"></i></h3>
         <ul>
           <li>
             <span>
               {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
-              <p v-if="jamHistory">{{exAndEduText.jamText3}}</p>
+              <p v-if="jamHistory" class="see-more-text mt-3">
+                * Designed the client management system on ruby on rails in Jam Trends which shares surveys and studies on 15-25, whenever we needed to add a new subscriber we needed a developer because the customer management system only had a backend, so I built an interface using that backend.
+                <br/>* build an API in rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.
+                <br/>
+                </br>My work in multi-bot data recovery system:
+                <br/>* Added qualification columns for the panel and the report which helps our colleague to create a report on a specific gender, age or city.
+                <br/>* Improved tagging system to answers in open question
+                <br/>* Improved quick report chart
+                <br/>* Designed static filter by tags to answers in open question
+                <br/>* Optimized the creation of panels and reports
+                <br/>* Isolated Trend reports from bot databases
+                <br/>* Added the estimate of the INSEE(The national institute of statistics and economic studies) population of 2020 for creation of a panel and a report.
+              </p>
             </span>
             <small>
                <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeMore}}</a>
@@ -300,5 +324,11 @@ h3 {
   .exp-and-edu-container .func .edu {
     width: 50%;
   }
+}
+
+.see-more-text {
+  padding: 15px;
+  background-color: rgb(247, 150, 207,  0.4);
+  border-radius: 20px;
 }
 </style>
