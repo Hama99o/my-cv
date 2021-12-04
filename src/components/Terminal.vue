@@ -31,8 +31,8 @@
         <br> 2.5.7 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficv' }" target="_blank">CV</router-link>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage')}}</span>
-        <span v-if="IsWrong"> <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.errorMessage')}}</span></span>
-        <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="terminalInput" class="text-success terminal-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
+        <span v-if="IsWrong"> <br> <span class="pink">root@hama99o:~$ </span>{{rendomPhrase}}</span></span>
+        <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="terminalInput" @change="getRendomPhrase($event)" class="text-success terminal-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
       </div>
     </div>
     <github-chart/>
@@ -51,7 +51,9 @@ export default {
       terminalInput: '',
       IsWrong: false,
       isTerminalClosed: true,
-      isFullScreen: false
+      isFullScreen: false,
+      rendomPhrase: '?',
+      clearTime: null
     }
   },
   computed: {
@@ -103,19 +105,26 @@ export default {
       cancellFullScreen.call(document)
     },
     emptyTheInput () {
-      if (this.terminalInputLowerCase == '0') {
-         this.$router.push({name: 'ExperienceAndEducation'})
-      } else if (this.terminalInputLowerCase == '1') {
-        this.$router.push({name: 'Skill'})
-      } else if (this.terminalInputLowerCase == '2') {
-        this.$router.push({name: 'Contact'})
-      } else if (this.terminalInputLowerCase.toLowerCase() == 'exit') {
-        this.closeTerminal()
-      } else {
-        this.IsWrong = true
-        setTimeout(() => this.IsWrong = false, 2000)
+      if (this.terminalInputLowerCase) {
+        clearTimeout(this.clearTime);
+        if (this.terminalInputLowerCase == '0') {
+           this.$router.push({name: 'ExperienceAndEducation'})
+        } else if (this.terminalInputLowerCase == '1') {
+          this.$router.push({name: 'Skill'})
+        } else if (this.terminalInputLowerCase == '2') {
+          this.$router.push({name: 'Contact'})
+        } else if (this.terminalInputLowerCase.toLowerCase() == 'exit') {
+          this.closeTerminal()
+        } else {
+          this.IsWrong = this.terminalInput ? true : false
+        }
+        this.terminalInput = ''
+        this.clearTime = setTimeout(() => this.IsWrong = false, 5000)
       }
-      this.terminalInput = ''
+    },
+    getRendomPhrase () {
+      const allPhrase = this.$t('message.terminal.phrase.errorMessage')
+      this.rendomPhrase = allPhrase[Date.now()%allPhrase.length]
     }
   }
 }

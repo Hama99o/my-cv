@@ -38,7 +38,33 @@
         "cv": "Vous pouvez jeter un oeil à mon",
         "terminalHeading":  "Hama99o - développeur web",
         "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 }",
-        "errorMessage":  "je n'ai pas compris"
+        "errorMessage":  [
+          "Je sais cela.",
+          "Quelque part entre le meilleur et le meilleur.",
+          "Je ne peux pas me plaindre. Personne n'écoute de toute façon.",
+          "Jusqu'ici tout va bien!",
+          "Peut-être qu'un jour tu auras la chance de le découvrir.",
+          "Dois-je répondre ?",
+          "Pourquoi demandez-vous ? Êtes-vous médecin ?",
+          "Je ne sais pas. C'est encore vendredi ?",
+          "Comment pensez-vous que je suis ?",
+          "Putain de merde, tu peux me voir ?! (Cela ne manque jamais de faire rire.)",
+          "Question suivante, s'il vous plaît",
+          "Vivre le rêve!",
+          "Pas aujourd'hui, Satan!",
+          "Je suis toujours en train d'aspirer de l'air.",
+          "Fais-moi juste un câlin et n'en parlons plus.",
+          "Parce que personne de digne ne m'a encore battu dans un combat de cartes !",
+          "C'est parce que je mange de la pizza avec une fourchette.",
+          "Deux mots : problèmes de confiance !",
+          "Attendez, laissez-moi sortir ma liste.",
+          "Ça va  ?",
+          "Tu sais quoi ? Je t'aime bien.",
+          "Merci, mais ce n'est pas à vendre!",
+          "Arrête ça avant que je ne tombe amoureux de toi.",
+          "Qui t'a dit de me dire ça ?",
+          "Je ne pourrais pas être plus d'accord!"
+        ]
       }
     },
     "experienceAndEducation": {
