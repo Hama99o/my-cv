@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-content-center my-3">
-    <iframe src="./test.pdf"  frameborder="0" allowfullscreen></iframe>
+    <iframe src="./my_cv_in_en.pdf"  frameborder="0" allowfullscreen></iframe>
   </div>
 </template>
 
