@@ -37,8 +37,34 @@
         "exit": "exit",
         "cv": "Vous pouvez jeter un oeil à mon",
         "terminalHeading":  "Hama99o - développeur web",
-        "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 }",
-        "errorMessage":  "Le numéro de page n'existait pas"
+        "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 } ou tu veux discuter avec moi ?",
+        "errorMessage":  [
+          "Je sais cela.",
+          "Quelque part entre le meilleur et le meilleur.",
+          "Je ne peux pas me plaindre. Personne n'écoute de toute façon.",
+          "Jusqu'ici tout va bien!",
+          "Peut-être qu'un jour tu auras la chance de le découvrir.",
+          "Dois-je répondre ?",
+          "Pourquoi demandez-vous ? Êtes-vous médecin ?",
+          "Je ne sais pas. C'est encore vendredi ?",
+          "Comment pensez-vous que je suis ?",
+          "Putain de merde, tu peux me voir ?! (Cela ne manque jamais de faire rire.)",
+          "Question suivante, s'il vous plaît",
+          "Vivre le rêve!",
+          "Pas aujourd'hui, Satan!",
+          "Je suis toujours en train d'aspirer de l'air.",
+          "Fais-moi juste un câlin et n'en parlons plus.",
+          "Parce que personne de digne ne m'a encore battu dans un combat de cartes !",
+          "C'est parce que je mange de la pizza avec une fourchette.",
+          "Deux mots : problèmes de confiance !",
+          "Attendez, laissez-moi sortir ma liste.",
+          "Ça va  ?",
+          "Tu sais quoi ? Je t'aime bien.",
+          "Merci, mais ce n'est pas à vendre!",
+          "Arrête ça avant que je ne tombe amoureux de toi.",
+          "Qui t'a dit de me dire ça ?",
+          "Je ne pourrais pas être plus d'accord!"
+        ]
       }
     },
     "experienceAndEducation": {
@@ -58,24 +84,47 @@
         "honeySellerYear": "2013 - 2015",
         "konexioYear": "2019 - 2020",
         "balderYear": "2015 - 2019",
-        "milatSchoolYear": "2012 - 2014"
+        "milatSchoolYear": "2013 - 2015",
+        "drZareefYear": "2010-2013"
       },
       "text": {
         "jamText1": "Travaille à",
         "jamText2": "en tant que développeur junior",
         "jamText3": "J'ai désigné et développé de nouvelles fonctionnalités dans le système de restitution de données multi-bot et l'outil de rédaction pour les rédacteurs de contenu de chatbot.",
+        "jamText4": "Jam est un média conversationnel, un robot dans Facebook Messenger, qui a pour objectif d'inspirer les jeunes dans leur quotidien en leur proposant un sujet sur lequel ils peuvent donner leur avis au quotidien.",
+        "jamText5": "designé, le système de gestion des clients dans",
+        "jamText6": "Construire une API et créer une interface pour le message de référence dans l'outil de rédaction pour le chatbot",
+        "jamText7": "Conçu et développé plusieurs petites fonctionnalités dans un système de récupération de données multi-bot",
+        "jamText8": "Conçu le système de gestion des clients sur ruby on rails dans Jam Trends qui partage des sondages et des études sur 15-25 chaque fois que nous devions ajouter un nouvel abonné, nous avions besoin d'un développeur car le système de gestion des clients n'avait qu'un backend, j'ai donc construit une interface en utilisant ce backend.",
+        "jamText9": "Construire une API dans rails et Express et conçu une interface dans Vue Js pour les messages de référence qui nous aident à trouver une conversation spécifique sur Facebook Messenger du chatbot.",
+        "jamText10": "Ajout de colonnes de qualification pour le panel et le rapport qui aident notre collègue à créer un rapport sur un sexe, un âge ou une ville spécifique.",
+        "jamText11": "Système de marquage amélioré pour répondre à une question ouverte",
+        "jamText12": "Graphique de rapport rapide amélioré",
+        "jamText13": "Filtre statique conçu par tag pour répondre aux questions ouvertes",
+        "jamText14": "Optimisé la création de panneaux et de rapports",
+        "jamText15": "Isolé Trend Reports à partir de bases de données de bots",
+        "jamText16": "Ajout de l'estimation de la population INSEE (Institut national de la statistique et des études économiques) 2020 pour la création d'un panel et d'un rapport",
         "scarabeeText1": "Interprète bénévole à lae",
-        "scarabeeText2": "association. (À temps partiel)",
+        "scarabeeText2": "association.",
+        "scarabeeText3": "Aidé les nouveaux réfugiés en situation difficile et ceux qui ne comprennent pas le français. par exemple. obtenir des rendez-vous avec le médecin ou le bureau administratif ou obtenir un avocat. (À temps partiel)",
         "alvkungenText1": "Guide touristique en",
         "alvkungenText2": "Bateau de tourisme : accueil de groupes touristiques, guide et pilotage du bateau. (À temps partiel)",
-        "honeySellerText": "Vendeur auprès d'un producteur de miel artisanal (distribution internationale) Vente aux commerçants et aux particuliers.",
+        "honeySellerText1": "Vendeur en magasin de miel à Al Mashrik .",
+        "honeySellerText2": "Vendeur auprès d'un producteur de miel artisanal (distribution internationale) Vente aux commerçants et aux particuliers.",
         "konexioText": "Préparation au Delf B1 (diplôme d'études de langue française) et développement Web chez Konexio Digistart.",
         "balderText": "Apprendre le suédois et le développement web au lycée Balder",
-        "milatSchoolText": "Baccalauréat de l'école Milat"
+        "milatSchoolText": "Baccalauréat de l'école Milat",
+        "drZareefText": "École secondaire de Dr zareef Memorial school"
       },
       "options": {
         "seeMore": "Voir Plus",
-        "seeLess": "Voir Moins"
+        "seeLess": "Voir Moins",
+        "abouRecentJob": "À propos de mon emploi récent",
+        "enterprise": "Entreprise",
+        "myWork": "Mon travail",
+        "myCv": "Mon CV",
+        "MyWorkInMultiBot": "Mon travail dans le système de récupération de données multi-bot"
+
       }
     },
     "skills":  {
@@ -100,7 +149,13 @@
         "databaseServer": "Base de données",
         "webTechnologies": "Technologies Web",
         "frameworks": "Frameworks",
-        "otherDevTool": "Autres outils de développement"
+        "otherDevTool": "Autres outils de développement",
+        "famousLibraries": "Bibliothèques célèbres"
+      }
+    },
+    "contact": {
+      "heading": {
+        "follow": "Suivre"
       }
     }
   }

@@ -7,7 +7,8 @@ import router from './router'
 import i18n from './i18n'
 import jQuery from 'jquery'
 global.$ = jQuery
-
+// Importing the global css file
+import "@/styles/variablesAndGlobal.scss"
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 

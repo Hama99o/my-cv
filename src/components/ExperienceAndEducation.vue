@@ -2,7 +2,19 @@
   <div class="exp-and-edu-container" :class="getClass('whiteBgWithOpacityInDark')">
     <div class="func" :class="getClass('whitetextColorInDark')">
       <div>
-        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" :class="getClass('lightBlueLinkInDark')" target="_blank">My CV</router-link>
+        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" :class="getClass('lightBlueLinkInDark')" target="_blank">{{options.myCv}}</router-link>
+        <hr class="my-1" />
+      </div>
+      <div>
+        <h4>{{options.abouRecentJob}}:</h4>
+        <br/>
+        <p>{{options.enterprise}}: <a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a>, {{exAndEduText.jamText4}} </p>
+        <p>
+          {{options.myWork}}:
+          <br/>* {{exAndEduText.jamText5}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam Trends</a>
+          <br/>* {{exAndEduText.jamText6}}
+          <br/>* {{exAndEduText.jamText7}}
+        </p>
         <hr class="my-1" />
       </div>
       <div class="work">
@@ -11,12 +23,21 @@
           <li>
             <span>
               {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
-              <p v-if="jamHistory">{{exAndEduText.jamText3}}</p>
+              <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
+                * {{exAndEduText.jamText8}}
+                <br/>* {{exAndEduText.jamText9}}
+                <br/>
+                <br/> {{options.MyWorkInMultiBot}}:
+                <br/>* {{exAndEduText.jamText10}}
+                <br/>* {{exAndEduText.jamText11}}
+                <br/>* {{exAndEduText.jamText12}}
+                <br/>* {{exAndEduText.jamText13}}
+                <br/>* {{exAndEduText.jamText14}}
+                <br/>* {{exAndEduText.jamText15}}
+                <br/>* {{exAndEduText.jamText16}}
+              </p>
             </span>
-            <small>
-               <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeMore}}</a>
-               <a v-if="jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeLess}}</a>
-             </small>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('jamHistory')" />
             <small>
               {{exAndEduLocation.jamLocation}}
             </small><small>
@@ -27,6 +48,11 @@
             <span>
               {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
             </span>
+            <p v-if="allSeeMore.scarabeeHistory.seeMore" class="see-more-text mt-3">
+              {{exAndEduText.scarabeeText3}}
+            </p>
+          </span>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('scarabeeHistory')" />
             <small>
               {{exAndEduLocation.scarabeeLocation}}
             </small>
@@ -36,8 +62,13 @@
           </li>
           <li>
             <span>
-              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" :class="getClass('lightBlueLinkInDark')" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}}
+              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" :class="getClass('lightBlueLinkInDark')" target="_blank"> Älvkungen </a>
             </span>
+            <p v-if="allSeeMore.alvKungenHistory.seeMore" class="see-more-text mt-3">
+              {{exAndEduText.alvkungenText2}}
+            </p>
+          </span>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.alvKungenHistory.seeMore" @toggleHistory="toggleHistory('alvKungenHistory')" />
             <small>
               {{exAndEduLocation.alvkungenLocation}}
             </small>
@@ -47,8 +78,13 @@
           </li>
           <li>
             <span>
-              {{exAndEduText.honeySellerText}}
+              {{exAndEduText.honeySellerText1}}
             </span>
+            <p v-if="allSeeMore.honySellerHistory.seeMore" class="see-more-text mt-3">
+              {{exAndEduText.honeySellerText2}}
+            </p>
+          </span>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.honySellerHistory.seeMore" @toggleHistory="toggleHistory('honySellerHistory')" />
             <small>
               {{exAndEduLocation.honeySellerLocation}}
             </small>
@@ -92,6 +128,17 @@
               {{exAndEduYear.milatSchoolYear}}
             </small>
           </li>
+          <li>
+            <span>
+            {{exAndEduText.drZareefText}}
+            </span>
+            <small>
+              {{exAndEduLocation.milatSchoolLocation}}
+            </small>
+            <small>
+              2010-2013
+            </small>
+          </li>
         </ul>
       </div>
     </div>
@@ -100,12 +147,21 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
+import SeeMoreOrSeeLess from './layouts/SeeMoreOrSeeLess'
 
 export default {
   name: 'ExperienceAndEducation',
+  components: { SeeMoreOrSeeLess },
   data () {
     return {
-      jamHistory: false
+      allSeeMore: {
+        jamHistory: {seeMore: false},
+        scarabeeHistory: {seeMore: false},
+        alvKungenHistory: {seeMore: false},
+        honySellerHistory: {seeMore: false},
+        swedenHistory: {seeMore: false},
+        highSchoolHistory: {seeMore: false}
+      }
     }
   },
   computed: {
@@ -125,8 +181,8 @@ export default {
     ...mapGetters(['getTheme'])
   },
   methods: {
-    toggleJamHistory () {
-      this.jamHistory = !this.jamHistory
+    toggleHistory (seeMore) {
+      this.allSeeMore[seeMore].seeMore = !this.allSeeMore[seeMore].seeMore
     },
     getClass(attribute) {
       return this.lightDarkClasses[attribute][this.getTheme]
@@ -300,5 +356,11 @@ h3 {
   .exp-and-edu-container .func .edu {
     width: 50%;
   }
+}
+
+.see-more-text {
+  padding: 15px;
+  background-color: rgb(247, 150, 207,  0.4);
+  border-radius: 20px;
 }
 </style>

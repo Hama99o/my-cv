@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-container">
+  <div class="portfolio-container container">
     <b-container fluid>
       <b-row>
         <b-col offset-md="2">

@@ -37,8 +37,35 @@
         "exit": "exit",
         "cv": "You can take a look at my",
         "terminalHeading":  "Hama99o - Web developer",
-        "chosePage": "You can alse write the chosen page number to change a page: { experience_and_education: 1, skill: 2, contact: 3 }",
-        "errorMessage":  "Page number did not exist"
+        "chosePage": "You can alse write the chosen page number to change a page: { experience_and_education: 1, skill: 2, contact: 3 } or you want to chat with me?",
+        "errorMessage":  [
+          "I know it.",
+          "Somewhere between better and best.",
+          "Can't complain. Nobody listens anyway.",
+          "So far, so good!",
+          "Maybe one day you'll be lucky enough to find out.",
+          "Do I have to answer?",
+          "Why do you ask? Are you a doctor?",
+          "I dunno. Is it Friday yet?",
+          "How do you think I am?",
+          "Holy sh*t, you can see me?! (This never fails in bringing on the chuckles.)",
+          "Next question, please",
+          "Living the dream!",
+          "Not today, Satan!",
+          "I'm still sucking air.",
+          "Just hug me and leave it at that.",
+          "Because no one worthy has beaten me yet in a card fight!",
+          "That’s because I eat pizza with a fork.",
+          "Two words: Trust issues!",
+          "Wait, let me pull out my list.",
+          "Are you ok  ?",
+          "You know what? I like you.",
+          "Thanks, but it's not for sale!",
+          "Stop it before I fall in love with you.",
+          "Who told you to tell me that?",
+          "I couldn’t agree more!",
+          "Are you a spy? Who sent you? (Feeling a little paranoid, huh?)"
+        ]
       }
     },
     "experienceAndEducation": {
@@ -58,24 +85,46 @@
         "honeySellerYear": "2013 - 2015",
         "konexioYear": "2019 - 2020",
         "balderYear": "2015 - 2019",
-        "milatSchoolYear": "2012 - 2014"
+        "milatSchoolYear": "2013 - 2015",
+        "drZareefYear": "2010-2013"
       },
       "text": {
         "jamText1": "Work at",
         "jamText2": "as a junior developer",
         "jamText3": "I designed and developed new features in the multi-bot data restitution system and the redaction tool for the chatbot content writers.",
+        "jamText4": "Jam is a conversational media, a robot in Facebook Messenger, which aims to inspire young people in their daily life by offering them a subject on which they can give their opinion every day.",
+        "jamText5": "Designed the client management system in",
+        "jamText6": "Build an API and create an interface for the referral message in redaction tool for the chatbot",
+        "jamText7": "Designed and developed several small features in in multi-bot data recovery system",
+        "jamText8": "Designed the client management system on ruby on rails in Jam Trends which shares surveys and studies on 15-25, whenever we needed to add a new subscriber we needed a developer because the customer management system only had a backend, so I built an interface using that backend.",
+        "jamText9": "Build an API in rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.",
+        "jamText10": "Added qualification columns for the panel and the report which helps our colleague to create a report on a specific gender, age or city.",
+        "jamText11": "Improved tagging system to answer in open question",
+        "jamText12": "Improved quick report chart",
+        "jamText13": "Designed static filter by tag to answers in open question",
+        "jamText14": "Optimized the creation of panels and reports",
+        "jamText15": "Isolated Trend reports from bot databases",
+        "jamText16": "Added the estimate of the INSEE(The national institute of statistics and economic studies) population of 2020 for creation of a panel and a report.",
         "scarabeeText1": "Volunteer interpreter at the",
-        "scarabeeText2": "association. (Part-time)",
+        "scarabeeText2": "association.",
+        "scarabeeText3": "Helped new refugees en situation difficile and those who do not understand French. e.g. getting appointments with the doctor or administrative office or getting a lawyer. (Part-time)",
         "alvkungenText1": "Tourist guide in",
         "alvkungenText2": "Tourist boat: reception of tourist groups, guide and piloting of the boat. (Part-time)",
-        "honeySellerText": "Seller with an artisanal honey producer (international distribution) Sale to traders and individuals.",
+        "honeySellerText1": "Seller in honey store at Al Mashrik.",
+        "honeySellerText2": "Seller with an artisanal honey producer (international distribution) Sale to traders and individuals.",
         "konexioText": "Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.",
         "balderText": "Learning Swedish and web development at balder high school",
-        "milatSchoolText": "High school diploma from Milat school"
+        "milatSchoolText": "High school diploma from Milat school",
+        "drZareefText": "Secondary school from Dr zareef memorial school peshawar"
       },
       "options": {
         "seeMore": "See more",
-        "seeLess": "See Less"
+        "seeLess": "See Less",
+        "abouRecentJob": "About my recent job",
+        "enterprise": "Enterprise",
+        "myWork": "My Work",
+        "myCv": "My CV",
+        "MyWorkInMultiBot": "My work in multi-bot data recovery system"
       }
     },
     "skills":  {
@@ -100,7 +149,13 @@
         "databaseServer": "Database",
         "webTechnologies": "Web Technologies",
         "frameworks": "Frameworks",
-        "otherDevTool": "Other Dev Tool"
+        "otherDevTool": "Other Dev Tool",
+        "famousLibraries": "Famous libraries"
+      }
+    },
+    "contact": {
+      "heading": {
+        "follow": "Follow"
       }
     }
   }
