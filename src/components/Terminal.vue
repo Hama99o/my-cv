@@ -31,7 +31,7 @@
         <br> 2.5.7 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficv' }" target="_blank">CV</router-link>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage')}}</span>
-        <span v-if="IsWrong"> <br> <span class="pink">root@hama99o:~$ </span>{{rendomPhrase}}</span></span>
+        <span v-if="shouldReply"> <br> <span class="pink">root@hama99o:~$ </span>{{rendomPhrase}}</span></span>
         <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="terminalInput" @change="getRendomPhrase($event)" class="text-success terminal-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
       </div>
     </div>
@@ -49,7 +49,7 @@ export default {
     return {
       open: true,
       terminalInput: '',
-      IsWrong: false,
+      shouldReply: false,
       isTerminalClosed: true,
       isFullScreen: false,
       rendomPhrase: '?',
@@ -116,10 +116,10 @@ export default {
         } else if (this.terminalInputLowerCase.toLowerCase() == 'exit') {
           this.closeTerminal()
         } else {
-          this.IsWrong = this.terminalInput ? true : false
+          this.shouldReply = this.terminalInput ? true : false
         }
         this.terminalInput = ''
-        this.clearTime = setTimeout(() => this.IsWrong = false, 5000)
+        this.clearTime = setTimeout(() => this.shouldReply = false, 5000)
       }
     },
     getRendomPhrase () {
