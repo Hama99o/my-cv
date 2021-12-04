@@ -86,6 +86,9 @@ export default {
     },
     closeTerminal () {
       this.isTerminalClosed = !this.isTerminalClosed
+      if (this.isTerminalClosed) {
+        this.open = true
+      }
     },
     fullScreen () {
       this.open = true
