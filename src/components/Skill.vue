@@ -27,6 +27,10 @@
             {{programmingSkill.databaseServer}}:<span class="mx-2">PostgreSQL</span>
           </li>
           <hr class="my-1" />
+          <li>
+            Famous libraries:<span class="mx-2">Jquery, Express - Node.js</span>
+          </li>
+          <hr class="my-1" />
         </ul>
       </div>
       <div class="skills-prog">
@@ -88,6 +92,7 @@ export default {
     this.$nextTick(() => {
       $(".toggle-ruby-on-rails").click(function(){
         $(".ruby-on-rails").toggle()
+        setTimeout(() => $(".ruby-on-rails").toggle(), 5000)
       })
     })
   }
@@ -194,7 +199,12 @@ h3 {
 .ruby-on-rails {
   display: none;
 }
+
 .project-link {
   text-decoration: none;
+}
+
+.toggle-ruby-on-rails {
+ cursor: pointer;
 }
 </style>

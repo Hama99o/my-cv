@@ -110,7 +110,7 @@ export default {
         this.closeTerminal()
       } else {
         this.IsWrong = true
-        setTimeout(() => this.IsWrong = false, 2000);
+        setTimeout(() => this.IsWrong = false, 2000)
       }
       this.terminalInput = ''
     }
