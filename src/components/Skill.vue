@@ -24,11 +24,11 @@
           </li>
           <hr class="my-1" />
           <li>
-            {{programmingSkill.databaseServer}}:<span class="mx-2">PostgreSQL</span>
+            {{programmingSkill.famousLibraries}}:<span class="mx-2">Jquery, Express - Node.js</span>
           </li>
           <hr class="my-1" />
           <li>
-            Famous libraries:<span class="mx-2">Jquery, Express - Node.js</span>
+            {{programmingSkill.databaseServer}}:<span class="mx-2">PostgreSQL</span>
           </li>
           <hr class="my-1" />
         </ul>

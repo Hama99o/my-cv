@@ -122,7 +122,8 @@
         "databaseServer": "Database",
         "webTechnologies": "Web Technologies",
         "frameworks": "Frameworks",
-        "otherDevTool": "Other Dev Tool"
+        "otherDevTool": "Other Dev Tool",
+        "famousLibraries": "Famous libraries"
       }
     },
     "contact": {
