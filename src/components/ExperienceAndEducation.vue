@@ -2,18 +2,18 @@
   <div class="exp-and-edu-container" :class="getClass('whiteBgWithOpacityInDark')">
     <div class="func" :class="getClass('whitetextColorInDark')">
       <div>
-        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" :class="getClass('lightBlueLinkInDark')" target="_blank">My CV</router-link>
+        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficv' }" :class="getClass('lightBlueLinkInDark')" target="_blank">{{options.myCv}}</router-link>
         <hr class="my-1" />
       </div>
       <div>
-        <h4>About recent job:</h4>
+        <h4>{{options.abouRecentJob}}:</h4>
         <br/>
-        <p>Enterprise: Jam, Jam is a conversational media on Messenger which listens and engages 15-25 people every day.</p>
+        <p>{{options.enterprise}}: <a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a>, {{exAndEduText.jamText4}} </p>
         <p>
-          My Work:
-          <br/>* Designed the client management system in Jam Trends
-          <br/>* Build an API and create an interface for the referral message in redaction tool for the chatbot
-          <br/>* Designed and developed several small features in in multi-bot data recovery system
+          {{options.myWork}}:
+          <br/>* {{exAndEduText.jamText5}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam Trends</a>
+          <br/>* {{exAndEduText.jamText6}}
+          <br/>* {{exAndEduText.jamText7}}
         </p>
         <hr class="my-1" />
       </div>
@@ -24,17 +24,17 @@
             <span>
               {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
               <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
-                * Designed the client management system on ruby on rails in Jam Trends which shares surveys and studies on 15-25, whenever we needed to add a new subscriber we needed a developer because the customer management system only had a backend, so I built an interface using that backend.
-                <br/>* build an API in rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.
+                * {{exAndEduText.jamText8}}
+                <br/>* {{exAndEduText.jamText9}}
                 <br/>
-                </br>My work in multi-bot data recovery system:
-                <br/>* Added qualification columns for the panel and the report which helps our colleague to create a report on a specific gender, age or city.
-                <br/>* Improved tagging system to answers in open question
-                <br/>* Improved quick report chart
-                <br/>* Designed static filter by tags to answers in open question
-                <br/>* Optimized the creation of panels and reports
-                <br/>* Isolated Trend reports from bot databases
-                <br/>* Added the estimate of the INSEE(The national institute of statistics and economic studies) population of 2020 for creation of a panel and a report.
+                <br/> {{options.MyWorkInMultiBot}}:
+                <br/>* {{exAndEduText.jamText10}}
+                <br/>* {{exAndEduText.jamText11}}
+                <br/>* {{exAndEduText.jamText12}}
+                <br/>* {{exAndEduText.jamText13}}
+                <br/>* {{exAndEduText.jamText14}}
+                <br/>* {{exAndEduText.jamText15}}
+                <br/>* {{exAndEduText.jamText16}}
               </p>
             </span>
             <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('jamHistory')" />
@@ -49,7 +49,7 @@
               {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
             </span>
             <p v-if="allSeeMore.scarabeeHistory.seeMore" class="see-more-text mt-3">
-              Helped new refugees en situation difficile and those who do not understand French. e.g. getting appointments with the doctor or administrative office or getting a lawyer. (Part-time)
+              {{exAndEduText.scarabeeText3}}
             </p>
           </span>
             <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('scarabeeHistory')" />
@@ -78,10 +78,10 @@
           </li>
           <li>
             <span>
-              Seller at Al MashriK honey store
+              {{exAndEduText.honeySellerText1}}
             </span>
             <p v-if="allSeeMore.honySellerHistory.seeMore" class="see-more-text mt-3">
-              {{exAndEduText.honeySellerText}}
+              {{exAndEduText.honeySellerText2}}
             </p>
           </span>
             <SeeMoreOrSeeLess :seeHistory="allSeeMore.honySellerHistory.seeMore" @toggleHistory="toggleHistory('honySellerHistory')" />
@@ -130,7 +130,7 @@
           </li>
           <li>
             <span>
-              Secondary school from Dr zareef memorial school peshawar
+            {{exAndEduText.drZareefText}}
             </span>
             <small>
               {{exAndEduLocation.milatSchoolLocation}}
