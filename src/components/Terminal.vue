@@ -123,8 +123,13 @@ export default {
       }
     },
     getRendomPhrase () {
-      const allPhrase = this.$t('message.terminal.phrase.errorMessage')
-      this.rendomPhrase = allPhrase[Date.now()%allPhrase.length]
+      const hiHelloArray = ['hi', 'hello', 'salut', 'caio']
+      if (hiHelloArray.some((e) => this.terminalInputLowerCase.includes(e))) {
+        this.rendomPhrase = 'hi buddy'
+      } else {
+        const allPhrase = this.$t('message.terminal.phrase.errorMessage')
+        this.rendomPhrase = allPhrase[Date.now()%allPhrase.length]
+      }
     }
   }
 }
