@@ -8,7 +8,7 @@
         <div class="email my-2"><i class="fa fa-envelope"></i> <a :class="getClass('lightBlueLinkInDark')" href="mailto:hmmshl@gmail.com" target="_blank"> <span> hmmshl@gmail.com</span></a></div>
       </div>
       <div class="follow py-3">
-        <h3 :class="getClass('whitetextColorInDark')" class="my-3">Follow</h3>
+        <h3 :class="getClass('whitetextColorInDark')" class="my-3">{{heading.follow}}</h3>
         <div class="box">
           <a  href="https://github.com/Hama99o" target="_blank">
             <i class="fab fa-github" :class="getClass('whitebgWithDarkTextInDark')"></i>
@@ -41,6 +41,9 @@ export default {
     }
   },
   computed: {
+    heading () {
+      return this.$t('message.contact.heading');
+    },
     ...mapState(['lightDarkClasses']),
     ...mapGetters([ 'getTheme'])
   },

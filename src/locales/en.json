@@ -124,6 +124,11 @@
         "frameworks": "Frameworks",
         "otherDevTool": "Other Dev Tool"
       }
+    },
+    "contact": {
+      "heading": {
+        "follow": "Follow"
+      }
     }
   }
 }
