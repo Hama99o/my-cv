@@ -23,7 +23,7 @@
           <li>
             <span>
               {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
-              <p v-if="jamHistory" class="see-more-text mt-3">
+              <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
                 * Designed the client management system on ruby on rails in Jam Trends which shares surveys and studies on 15-25, whenever we needed to add a new subscriber we needed a developer because the customer management system only had a backend, so I built an interface using that backend.
                 <br/>* build an API in rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.
                 <br/>
@@ -37,10 +37,7 @@
                 <br/>* Added the estimate of the INSEE(The national institute of statistics and economic studies) population of 2020 for creation of a panel and a report.
               </p>
             </span>
-            <small>
-               <a v-if="!jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeMore}}</a>
-               <a v-if="jamHistory" @click="toggleJamHistory" href="#show-less" :class="getClass('lightBlueLinkInDark')">{{options.seeLess}}</a>
-             </small>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('jamHistory')" />
             <small>
               {{exAndEduLocation.jamLocation}}
             </small><small>
@@ -51,6 +48,11 @@
             <span>
               {{exAndEduText.scarabeeText1}} <a href="https://scarabee-malakoff.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Scarabée </a>{{exAndEduText.scarabeeText2}}
             </span>
+            <p v-if="allSeeMore.scarabeeHistory.seeMore" class="see-more-text mt-3">
+              Helped new refugees en situation difficile and those who do not understand French. e.g. getting appointments with the doctor or administrative office or getting a lawyer. (Part-time)
+            </p>
+          </span>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('scarabeeHistory')" />
             <small>
               {{exAndEduLocation.scarabeeLocation}}
             </small>
@@ -60,8 +62,13 @@
           </li>
           <li>
             <span>
-              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" :class="getClass('lightBlueLinkInDark')" target="_blank"> Älvkungen </a> {{exAndEduText.alvkungenText2}}
+              {{exAndEduText.alvkungenText1}} <a href="https://www.facebook.com/Alvkungen" :class="getClass('lightBlueLinkInDark')" target="_blank"> Älvkungen </a>
             </span>
+            <p v-if="allSeeMore.alvKungenHistory.seeMore" class="see-more-text mt-3">
+              {{exAndEduText.alvkungenText2}}
+            </p>
+          </span>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.alvKungenHistory.seeMore" @toggleHistory="toggleHistory('alvKungenHistory')" />
             <small>
               {{exAndEduLocation.alvkungenLocation}}
             </small>
@@ -71,8 +78,13 @@
           </li>
           <li>
             <span>
-              {{exAndEduText.honeySellerText}}
+              Seller at Al MashriK honey store
             </span>
+            <p v-if="allSeeMore.honySellerHistory.seeMore" class="see-more-text mt-3">
+              {{exAndEduText.honeySellerText}}
+            </p>
+          </span>
+            <SeeMoreOrSeeLess :seeHistory="allSeeMore.honySellerHistory.seeMore" @toggleHistory="toggleHistory('honySellerHistory')" />
             <small>
               {{exAndEduLocation.honeySellerLocation}}
             </small>
@@ -116,6 +128,17 @@
               {{exAndEduYear.milatSchoolYear}}
             </small>
           </li>
+          <li>
+            <span>
+              Secondary school from Dr zareef memorial school peshawar
+            </span>
+            <small>
+              {{exAndEduLocation.milatSchoolLocation}}
+            </small>
+            <small>
+              2010-2013
+            </small>
+          </li>
         </ul>
       </div>
     </div>
@@ -124,12 +147,21 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
+import SeeMoreOrSeeLess from './layouts/SeeMoreOrSeeLess'
 
 export default {
   name: 'ExperienceAndEducation',
+  components: { SeeMoreOrSeeLess },
   data () {
     return {
-      jamHistory: false
+      allSeeMore: {
+        jamHistory: {seeMore: false},
+        scarabeeHistory: {seeMore: false},
+        alvKungenHistory: {seeMore: false},
+        honySellerHistory: {seeMore: false},
+        swedenHistory: {seeMore: false},
+        highSchoolHistory: {seeMore: false}
+      }
     }
   },
   computed: {
@@ -149,8 +181,8 @@ export default {
     ...mapGetters(['getTheme'])
   },
   methods: {
-    toggleJamHistory () {
-      this.jamHistory = !this.jamHistory
+    toggleHistory (seeMore) {
+      this.allSeeMore[seeMore].seeMore = !this.allSeeMore[seeMore].seeMore
     },
     getClass(attribute) {
       return this.lightDarkClasses[attribute][this.getTheme]
