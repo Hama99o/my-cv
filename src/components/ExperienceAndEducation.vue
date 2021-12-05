@@ -22,7 +22,7 @@
         <ul>
           <li>
             <span>
-              {{exAndEduText.jamText1}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> {{exAndEduText.jamText2}}
+              {{exAndEduText.jamText2}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a> 
               <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
                 * {{exAndEduText.jamText8}}
                 <br/>* {{exAndEduText.jamText9}}

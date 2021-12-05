@@ -73,7 +73,7 @@
         "jamLocation": "location: France",
         "scarabeeLocation": "location: France",
         "alvkungenLocation": "location: Sweden",
-        "honeySellerLocation": "location: Pakistan",
+        "honeySellerLocation": "location: Afghanistan/Pakistan",
         "konexioLocation": "location: France",
         "balderLocation": "location: Sweden",
         "milatSchoolLocation": "location: Pakistan"
@@ -89,15 +89,14 @@
         "drZareefYear": "2010-2013"
       },
       "text": {
-        "jamText1": "Work at",
-        "jamText2": "as a junior developer",
+        "jamText2": "Junior developer for",
         "jamText3": "I designed and developed new features in the multi-bot data restitution system and the redaction tool for the chatbot content writers.",
         "jamText4": "Jam is a conversational media, a robot in Facebook Messenger, which aims to inspire young people in their daily life by offering them a subject on which they can give their opinion every day.",
         "jamText5": "Designed the client management system in",
-        "jamText6": "Build an API and create an interface for the referral message in redaction tool for the chatbot",
+        "jamText6": "Built an API and create an interface for the referral message in redaction tool for the chatbot",
         "jamText7": "Designed and developed several small features in in multi-bot data recovery system",
         "jamText8": "Designed the client management system on ruby on rails in Jam Trends which shares surveys and studies on 15-25, whenever we needed to add a new subscriber we needed a developer because the customer management system only had a backend, so I built an interface using that backend.",
-        "jamText9": "Build an API in rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.",
+        "jamText9": "Built an API with rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.",
         "jamText10": "Added qualification columns for the panel and the report which helps our colleague to create a report on a specific gender, age or city.",
         "jamText11": "Improved tagging system to answer in open question",
         "jamText12": "Improved quick report chart",
@@ -113,9 +112,9 @@
         "honeySellerText1": "Seller in honey store at Al Mashrik.",
         "honeySellerText2": "Seller with an artisanal honey producer (international distribution) Sale to traders and individuals.",
         "konexioText": "Preparation for Delf B1 (French language studies diploma) and Web development at Konexio Digistart.",
-        "balderText": "Learning Swedish and web development at balder high school",
+        "balderText": "Learned Swedish and web development at balder high school",
         "milatSchoolText": "High school diploma from Milat school",
-        "drZareefText": "Secondary school from Dr zareef memorial school peshawar"
+        "drZareefText": "Secondary school from Dr zareef memorial school"
       },
       "options": {
         "seeMore": "See more",
