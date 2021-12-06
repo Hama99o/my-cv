@@ -32,7 +32,7 @@
             <span>
               {{exAndEduText.jamText2}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a>
               <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
-                <br/>* {{exAndEduText.jamText5}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam Trends</a>
+                * {{exAndEduText.jamText5}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam Trends</a>
                 <br/>* {{exAndEduText.jamText6}}
                 <br/>* {{exAndEduText.jamText7}}
               </p>
