@@ -2,7 +2,7 @@
   <div class="exp-and-edu-container" :class="getClass('whiteBgWithOpacityInDark')">
     <div class="func" :class="getClass('whitetextColorInDark')">
       <div>
-        <router-link class="d-flex justify-content-end" :to="{ name: 'HammayounSaficvEn' }" :class="getClass('lightBlueLinkInDark')" target="_blank">{{options.myCv}}</router-link>
+        <router-link class="d-flex justify-content-end" :to="{ name: $t('message.HammayounSaficvEn') }" :class="getClass('lightBlueLinkInDark')" target="_blank">{{options.myCv}}</router-link>
         <hr class="my-1" />
       </div>
       <div>
