@@ -13,11 +13,8 @@
           </li>
           <hr class="my-1" />
           <li>
-            {{programmingSkill.frameworks}}: <span class="mx-2"> <span class="toggle-ruby-on-rails"> Ruby on Rails,</span> Vuejs(Vuex), Boostrap</span>
+            {{programmingSkill.frameworks}}: <span class="mx-2"> <span> Ruby on Rails,</span> Vuejs(Vuex), Boostrap</span>
           </li>
-            <small>
-              <code  :class="getClass('whitetextColorInDark')" class="ruby-on-rails">"Ruby on Rails": RSpec, Devise, Sidekiq, Kaminari</code>
-            </small>
           <hr class="my-1" />
           <li>
             {{programmingSkill.otherDevTool}}:<span class="mx-2">Git, Github, Heroku, Linux, Postman</span>
@@ -87,14 +84,6 @@ export default {
     getClass(attribute) {
       return this.lightDarkClasses[attribute][this.getTheme]
     }
-  },
-  mounted () {
-    this.$nextTick(() => {
-      $(".toggle-ruby-on-rails").click(function(){
-        $(".ruby-on-rails").toggle()
-        setTimeout(() => $(".ruby-on-rails").toggle(), 5000)
-      })
-    })
   }
 }
 </script>
@@ -195,16 +184,8 @@ h3 {
     font-size: 10px;
   }
 }
-
-.ruby-on-rails {
-  display: none;
-}
-
 .project-link {
   text-decoration: none;
 }
 
-.toggle-ruby-on-rails {
- cursor: pointer;
-}
 </style>
