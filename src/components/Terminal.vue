@@ -26,8 +26,8 @@
         <br> 2.5.7 :007 > <span class="text-success">{{terminalQuestions.programmingLanguages}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.programmingLanguages}}</span>
         <br> 2.5.7 :008 > <span class="text-success">{{terminalQuestions.databaseServer}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.databaseServer}}</span>
         <br> 2.5.7 :009 > <span class="text-success">{{terminalQuestions.webTechnologies}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.webTechnologies}}</span>
-        <br> 2.5.7 :010 > <span class="text-success">{{terminalQuestions.frameworks}}</span><span class="text-primary">= </span> <span class="orange">{{terminalAnswers.frameworks}}</span>
-        <br> 2.5.7 :011 > <span class="text-success">{{terminalQuestions.otherDevTool}}</span><span class="text-primary">= </span> <span class="orange">{{terminalAnswers.otherDevTool}}</span>
+        <br> 2.5.7 :010 > <span class="text-success">{{terminalQuestions.frameworks}}</span><span class="text-primary"> = </span> <span class="orange">{{terminalAnswers.frameworks}}</span>
+        <br> 2.5.7 :011 > <span class="text-success">{{terminalQuestions.otherDevTool}}</span><span class="text-primary"> = </span> <span class="orange">{{terminalAnswers.otherDevTool}}</span>
         <br> 2.5.7 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: $t('message.HammayounSaficvEn') }" target="_blank">CV</router-link>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage1')}}</span>
