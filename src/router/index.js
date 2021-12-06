@@ -1,7 +1,8 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import Home from '@/views/Home.vue'
-import HammayounSaficv from '@/views/HammayounSaficv.vue'
+import HammayounSaficvEn from '@/views/myCV/HammayounSaficvEn.vue'
+import HammayounSaficvFr from '@/views/myCV/HammayounSaficvFr.vue'
 import PersonalProfile from '@/components/PersonalProfile'
 import ExperienceAndEducation from '@/components/ExperienceAndEducation'
 import Contact from '@/components/Contact'
@@ -37,9 +38,14 @@ const routes = [
     ]
   },
   {
-    path: '/hammayoun-safi-cv',
-    name: 'HammayounSaficv',
-    component: HammayounSaficv
+    path: '/hammayoun-safi-cv-en',
+    name: 'HammayounSaficvEn',
+    component: HammayounSaficvEn
+  },
+  {
+    path: '/hammayoun-safi-cv-fr',
+    name: 'HammayounSaficvFr',
+    component: HammayounSaficvFr
   }
 ]
 

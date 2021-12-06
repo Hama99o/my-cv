@@ -1,5 +1,6 @@
 {
   "message": {
+    "HammayounSaficvEn": "HammayounSaficvFr",
     "heading": {
       "PersonalProfile" : "Profil Personnel",
       "ExperienceAndEducation": "Expérience && Éducation",
@@ -21,7 +22,7 @@
         "otherDevTool": "autre_outil_de_développement"
       },
       "answers": {
-        "myNameAndAGe": "'Hammayoun Safi(Hama)'",
+        "myNameAndAGe": "'Hammayoun Safi (Hama)'",
         "from": "Afghanistan",
         "lived": "['Suède','Italie']",
         "living": "'Malakoff, France'",
@@ -35,9 +36,10 @@
       },
       "phrase":  {
         "exit": "exit",
-        "cv": "Vous pouvez jeter un oeil à mon",
+        "cv": "Tu peux jeter un oeil à mon",
         "terminalHeading":  "Hama99o - développeur web",
-        "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 } ou tu veux discuter avec moi ?",
+        "chosePage1": "Tu peux écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 }",
+        "chosePage2": "discutons",
         "errorMessage":  [
           "Je sais cela.",
           "Quelque part entre le meilleur et le meilleur.",
@@ -94,7 +96,7 @@
         "jamText5": "designé, le système de gestion des clients dans",
         "jamText6": "Construit une API et créer une interface pour le message de référence dans l'outil de rédaction pour le chatbot",
         "jamText7": "Conçu et développé plusieurs petites fonctionnalités dans un système de récupération de données multi-bot",
-        "jamText8": "Conçu le système de gestion des clients sur ruby on rails dans Jam Trends qui partage des sondages et des études sur 15-25 chaque fois que nous devions ajouter un nouvel abonné, nous avions besoin d'un développeur car le système de gestion des clients n'avait qu'un backend, j'ai donc construit une interface en utilisant ce backend.",
+        "jamText8": "Conçu le système de gestion des clients avec ruby on rails dans Jam Trends, Jam Trends partage des sondages et des études sur 15-25 chaque fois que nous devions ajouter un nouvel abonné dans site Jam Trends, nous avions besoin d'un développeur car le système de gestion des clients n'avait qu'un backend, j'ai donc construit une interface en utilisant ce backend.",
         "jamText9": "Construit une API avec rails et Express et conçu une interface dans Vue Js pour les messages de référence qui nous aident à trouver une conversation spécifique sur Facebook Messenger du chatbot.",
         "jamText10": "Ajout de colonnes de qualification pour le panel et le rapport qui aident notre collègue à créer un rapport sur un sexe, un âge ou une ville spécifique.",
         "jamText11": "Système de marquage amélioré pour répondre à une question ouverte",
@@ -102,7 +104,7 @@
         "jamText13": "Filtre statique conçu par tag pour répondre aux questions ouvertes",
         "jamText14": "Optimisé la création de panneaux et de rapports",
         "jamText15": "Isolé Trend Reports à partir de bases de données de bots",
-        "jamText16": "Ajout de l'estimation de la population INSEE (Institut national de la statistique et des études économiques) 2020 pour la création d'un panel et d'un rapport",
+        "jamText16": "Ajout de l'estimation de la population INSEE (Institut national de la statistique et des études économiques) 2020 pour la création des panneaux et des rapports",
         "scarabeeText1": "Interprète bénévole à lae",
         "scarabeeText2": "association.",
         "scarabeeText3": "Aidé les nouveaux réfugiés en situation difficile et ceux qui ne comprennent pas le français. par exemple. obtenir des rendez-vous avec le médecin ou le bureau administratif ou obtenir un avocat. (À temps partiel)",

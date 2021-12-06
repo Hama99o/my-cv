@@ -1,5 +1,6 @@
 {
   "message": {
+    "HammayounSaficvEn": "HammayounSaficvEn",
     "heading": {
       "PersonalProfile": "Personal Profile",
       "ExperienceAndEducation": " Experience && Education ",
@@ -21,7 +22,7 @@
         "otherDevTool": "other_dev_tool"
       },
       "answers": {
-        "myNameAndAGe": "'Hammayoun Safi(Hama)'",
+        "myNameAndAGe": "'Hammayoun Safi (Hama)'",
         "from": "Afghanistan",
         "lived": "['Sweden','Italy']",
         "living": "'Malakoff, France'",
@@ -37,7 +38,8 @@
         "exit": "exit",
         "cv": "You can take a look at my",
         "terminalHeading":  "Hama99o - Web developer",
-        "chosePage": "You can alse write the chosen page number to change a page: { experience_and_education: 1, skill: 2, contact: 3 } or you want to chat with me?",
+        "chosePage1": "You can write the chosen page number to change a page: { experience_and_education: 0, skill: 1, contact: 2 }",
+        "chosePage2": "let's chat",
         "errorMessage":  [
           "I know it.",
           "Somewhere between better and best.",
@@ -95,7 +97,7 @@
         "jamText5": "Designed the client management system in",
         "jamText6": "Built an API and create an interface for the referral message in redaction tool for the chatbot",
         "jamText7": "Designed and developed several small features in in multi-bot data recovery system",
-        "jamText8": "Designed the client management system on ruby on rails in Jam Trends which shares surveys and studies on 15-25, whenever we needed to add a new subscriber we needed a developer because the customer management system only had a backend, so I built an interface using that backend.",
+        "jamText8": "Designed the client management system with ruby on rails in Jam Trends, Jam Trends shares surveys and studies on 15-25, whenever we needed to add a new subscriber to Jam Trends website, we needed a developer because the customer management system only had a backend, so I built an interface using that backend.",
         "jamText9": "Built an API with rails and Express and designed an interface in Vue Js for referral messages that help us find a specific conversation on chatbot's Facebook Messenger.",
         "jamText10": "Added qualification columns for the panel and the report which helps our colleague to create a report on a specific gender, age or city.",
         "jamText11": "Improved tagging system to answer in open question",
@@ -103,7 +105,7 @@
         "jamText13": "Designed static filter by tag to answers in open question",
         "jamText14": "Optimized the creation of panels and reports",
         "jamText15": "Isolated Trend reports from bot databases",
-        "jamText16": "Added the estimate of the INSEE(The national institute of statistics and economic studies) population of 2020 for creation of a panel and a report.",
+        "jamText16": "Added the estimate of the INSEE(The national institute of statistics and economic studies) population of 2020 for creation of a panels and a reports.",
         "scarabeeText1": "Volunteer interpreter at the",
         "scarabeeText2": "association.",
         "scarabeeText3": "Helped new refugees en situation difficile and those who do not understand French. e.g. getting appointments with the doctor or administrative office or getting a lawyer. (Part-time)",
