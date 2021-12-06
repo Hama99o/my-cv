@@ -35,9 +35,10 @@
       },
       "phrase":  {
         "exit": "exit",
-        "cv": "Vous pouvez jeter un oeil à mon",
+        "cv": "Tu peux jeter un oeil à mon",
         "terminalHeading":  "Hama99o - développeur web",
-        "chosePage": "Vous pouvez également écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 } ou tu veux discuter avec moi ?",
+        "chosePage1": "Tu peux écrire le numéro de page pour changer de page : { experience_et_education : 0, competence : 1, contact : 2 }",
+        "chosePage2": "Tu veux discuter avec moi ?",
         "errorMessage":  [
           "Je sais cela.",
           "Quelque part entre le meilleur et le meilleur.",

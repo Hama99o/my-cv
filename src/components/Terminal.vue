@@ -30,7 +30,8 @@
         <br> 2.5.7 :011 > <span class="text-success">{{terminalQuestions.otherDevTool}}</span><span class="text-primary">= </span> <span class="orange">{{terminalAnswers.otherDevTool}}</span>
         <br> 2.5.7 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficv' }" target="_blank">CV</router-link>
-        <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage')}}</span>
+        <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage1')}}</span>
+        <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage2')}}</span>
         <span v-if="shouldReply"> <br> <span class="pink">root@hama99o:~$ </span>{{rendomPhrase}}</span></span>
         <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="terminalInput" @change="getRendomPhrase($event)" class="text-success terminal-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
       </div>

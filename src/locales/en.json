@@ -37,7 +37,8 @@
         "exit": "exit",
         "cv": "You can take a look at my",
         "terminalHeading":  "Hama99o - Web developer",
-        "chosePage": "You can alse write the chosen page number to change a page: { experience_and_education: 1, skill: 2, contact: 3 } or you want to chat with me?",
+        "chosePage1": "You can write the chosen page number to change a page: { experience_and_education: 0, skill: 1, contact: 2 }",
+        "chosePage2": "You want to chat with me?",
         "errorMessage":  [
           "I know it.",
           "Somewhere between better and best.",
