@@ -29,7 +29,7 @@
         <br> 2.5.7 :010 > <span class="text-success">{{terminalQuestions.frameworks}}</span><span class="text-primary">= </span> <span class="orange">{{terminalAnswers.frameworks}}</span>
         <br> 2.5.7 :011 > <span class="text-success">{{terminalQuestions.otherDevTool}}</span><span class="text-primary">= </span> <span class="orange">{{terminalAnswers.otherDevTool}}</span>
         <br> 2.5.7 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
-        <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficv' }" target="_blank">CV</router-link>
+        <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: 'HammayounSaficvEn' }" target="_blank">CV</router-link>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage1')}}</span>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage2')}}</span>
         <span v-if="shouldReply"> <br> <span class="pink">root@hama99o:~$ </span>{{rendomPhrase}}</span></span>
