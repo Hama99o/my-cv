@@ -155,12 +155,12 @@ export default {
   data () {
     return {
       allSeeMore: {
-        jamHistory: {seeMore: false},
-        scarabeeHistory: {seeMore: false},
-        alvKungenHistory: {seeMore: false},
-        honySellerHistory: {seeMore: false},
-        swedenHistory: {seeMore: false},
-        highSchoolHistory: {seeMore: false}
+        jamHistory: { seeMore: false },
+        scarabeeHistory: { seeMore: false },
+        alvKungenHistory: { seeMore: false },
+        honySellerHistory: { seeMore: false },
+        swedenHistory: { seeMore: false },
+        highSchoolHistory: { seeMore: false }
       }
     }
   },
@@ -183,10 +183,20 @@ export default {
   methods: {
     toggleHistory (seeMore) {
       this.allSeeMore[seeMore].seeMore = !this.allSeeMore[seeMore].seeMore
+      localStorage[seeMore] = this.allSeeMore[seeMore].seeMore
     },
     getClass(attribute) {
       return this.lightDarkClasses[attribute][this.getTheme]
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      for (const [key, value] of Object.entries(this.allSeeMore)) {
+        if (localStorage[key] && JSON.parse(localStorage[key])) {
+          this.allSeeMore[key].seeMore = true
+        }
+      }
+    })
   }
 }
 </script>
