@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div class="d-flex justify-content-between text-align-center">
       <span @click="theme">
         <span v-if="!hasNightMood" class="btn moon-or-sun">🌙</span>
