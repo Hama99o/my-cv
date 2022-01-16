@@ -65,7 +65,10 @@ export default {
        return this.$t('message.terminal.answers')
     },
     myAge () {
-      return Math.abs(new Date(Date.now()).getUTCFullYear() - 1995)
+      var _birth = parseInt("" + 1995 + this.affixZero(1) + this.affixZero(17));
+      var  today = new Date();
+      var _today = parseInt("" + today.getFullYear() + this.affixZero(today.getMonth() + 1) + this.affixZero(today.getDate()));
+      return parseInt((_today - _birth) / 10000);
     },
     terminalInputLowerCase() {
       return this.terminalInput.toLowerCase()
@@ -131,6 +134,10 @@ export default {
         const allPhrase = this.$t('message.terminal.phrase.errorMessage')
         this.rendomPhrase = allPhrase[Date.now()%allPhrase.length]
       }
+    },
+    affixZero (int) {
+      if (int < 10) int = "0" + int;
+      return "" + int;
     }
   }
 }
