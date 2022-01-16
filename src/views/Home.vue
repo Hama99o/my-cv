@@ -13,7 +13,7 @@
         <b-col cols="12" md="10">
           <div class="mb-4">
             <ul class="nav nav-pills">
-              <li class="nav-item" v-for="(text, routeName, index) in  $t('message.heading')" >
+              <li class="nav-item m-1" v-for="(text, routeName, index) in  $t('message.heading')" >
                 <router-link class="nav-link" :class="linkClassForTabs(index)" :to="{ name: routeName }">
                   <code @click="clickOnMenu(index)">{{text}}</code>
                 </router-link>
