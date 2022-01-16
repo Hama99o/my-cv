@@ -93,7 +93,7 @@
       "text": {
         "jamText2": "Junior developer for",
         "jamText3": "",
-        "jamText4": "Jam is a conversational media, a robot in Facebook Messenger, which aims to inspire young people in their daily life by offering them a subject on which they can give their opinion.",
+        "jamText4": "is a conversational media, a robot in Facebook Messenger, which aims to inspire young people in their daily life by offering them a subject on which they can give their opinion.",
         "jamText5": "Design a client management system for",
         "jamText6": "Construction and creation of an API and an interface for the reference message in the authoring site for the chatbot",
         "jamText7": "Design and development of several features in a multi-bot data recovery system",
@@ -124,7 +124,6 @@
         "seeMore": "See more",
         "seeLess": "See Less",
         "abouRecentJob": "About my recent job",
-        "enterprise": "Enterprise",
         "myWork": "My Work",
         "myCv": "My CV",
         "MyWorkInMultiBot": "My work in multi-bot data recovery system"

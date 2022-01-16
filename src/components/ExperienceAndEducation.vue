@@ -8,11 +8,12 @@
       <div>
         <h4>{{options.abouRecentJob}}:</h4>
         <br/>
-        <p>{{options.enterprise}}: <a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a>, {{exAndEduText.jamText4}} </p>
+        <p><a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a> {{exAndEduText.jamText4}} </p>
         <p>
           {{options.myWork}}:
           <br/>* {{exAndEduText.jamText8}}
           <br/>* {{exAndEduText.jamText9}}
+          <br/>* {{exAndEduText.jamText18}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank">Hello Jam</a>
           <br/>
           <br/> {{options.MyWorkInMultiBot}}:
           <br/>* {{exAndEduText.jamText10}}
@@ -23,7 +24,6 @@
           <br/>* {{exAndEduText.jamText15}}
           <br/>* {{exAndEduText.jamText16}}
           <br/>* {{exAndEduText.jamText17}}
-          <br/>* {{exAndEduText.jamText18}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank">Hello Jam</a>
         </p>
         <hr class="my-1" />
       </div>
