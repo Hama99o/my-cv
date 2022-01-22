@@ -184,6 +184,7 @@ h3 {
     font-size: 10px;
   }
 }
+
 .project-link {
   text-decoration: none;
 }

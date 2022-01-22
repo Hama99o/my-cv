@@ -147,12 +147,15 @@ export default {
 .blue {
   color: #53d9d1;
 }
+
 .pink {
   color: #f27b9b;
 }
+
 .orange {
   color: #eb7132;
 }
+
 .terminal {
   border: 1px solid #444;
   border-radius: 3px;
@@ -203,6 +206,7 @@ export default {
     }
   }
 }
+
 @media only screen and (max-width: 768px) and (min-width: 360px) {
   .terminal {
     margin: 0;
@@ -221,11 +225,13 @@ export default {
     }
   }
 }
+
 .terminal-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .terminal-icon {
   cursor: pointer;
   position: relative;
@@ -236,6 +242,7 @@ export default {
   border: 7px solid #000;
   border-radius: 3px;
 }
+
 .terminal-icon::before {
   content: "";
   position: absolute;
@@ -250,6 +257,7 @@ export default {
   border-radius: 3px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
+
 .terminal-icon::after {
   content: ">_";
   position: absolute;

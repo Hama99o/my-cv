@@ -17,12 +17,7 @@ import SelectLocale from '@/components/SelectLocale.vue'
 export default {
   name: 'MoonOrSunMenu',
   props: ['theme', 'hasNightMood'],
-  components: { SelectLocale },
-  data() {
-    return {
-
-    }
-  }
+  components: { SelectLocale }
 }
 </script>
 

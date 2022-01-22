@@ -9,9 +9,7 @@ import Terminal from './Terminal'
 
 export default {
   name: 'PersonalProfile',
-  components: { Terminal },
-  methods: {
-  }
+  components: { Terminal }
 }
 </script>
 

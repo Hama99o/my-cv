@@ -18,8 +18,6 @@ export default {
       }
     }
   },
-  methods: {
-  },
   computed: {
     ...mapState(['lightDarkClasses']),
     ...mapGetters(['getTheme' ])

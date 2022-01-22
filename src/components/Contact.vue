@@ -67,6 +67,7 @@ export default {
 .contact-container .func {
   padding: 30px 25px;
 }
+
 .contact div:hover i {
   color: grey;
 }
@@ -82,9 +83,11 @@ export default {
   border-radius: 5px;
   transform: rotate(45deg) scale(0.8);
 }
+
 .follow .box a:hover i::before {
   transform: rotate(-45deg) scale(1.5);
 }
+
 .follow .box i {
   display: inline-block;
   font-size: 30px;
@@ -97,6 +100,7 @@ export default {
   margin: 0 10px 10px 10px;
   transition-duration: 0.3s;
 }
+
 .follow .box i::before {
   transition-duration: 0.3s;
 }
