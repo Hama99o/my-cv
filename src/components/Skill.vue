@@ -13,11 +13,11 @@
           </li>
           <hr class="my-1" />
           <li>
-            {{programmingSkill.frameworks}}: <span class="mx-2"> <span> Ruby on Rails,</span> Vuejs(Vuex), Boostrap</span>
+            {{programmingSkill.frameworks}}: <span class="mx-2">Ruby on Rails, Vuejs(Vuex), Boostrap</span>
           </li>
           <hr class="my-1" />
           <li>
-            {{programmingSkill.otherDevTool}}:<span class="mx-2">Git, Github, Heroku, Linux, Postman</span>
+            {{programmingSkill.otherDevTool}}:<span class="mx-2">Git, Github, Heroku, Linux, Postman, MongoDB Compass</span>
           </li>
           <hr class="my-1" />
           <li>
@@ -36,15 +36,15 @@
           <li>
             <span>
               <a class="project-link" :class="getClass('lightBlueLinkInDark')" href="https://quotes-from-all-over-the-world.herokuapp.com/api/v1/quotes" target="_blank"> Quote Api </a> {{$t('message.skills.myProjects.and')}}
+              <a class="my-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
             </span>
-            <a class="mx-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
           <hr class="my-1" />
           <li>
             <span>
               <a class="project-link" :class="getClass('lightBlueLinkInDark')" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> {{$t('message.skills.myProjects.and')}}
+              <a class="my-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
             </span>
-            <a class="mx-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
           </li>
           <hr class="my-1" />
         </ul>
@@ -128,7 +128,7 @@ h3 {
 
 .skill-container .func .skills-prog ul li {
   margin-bottom: 8px;
-  display: flex;
+  list-style-type: none;
   align-items: center;
 }
 
