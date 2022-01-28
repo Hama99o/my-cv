@@ -5,28 +5,6 @@
         <router-link class="d-flex justify-content-end" :to="{ name: $t('message.HammayounSaficvEn') }" :class="getClass('lightBlueLinkInDark')" target="_blank">{{options.myCv}}</router-link>
         <hr class="my-1" />
       </div>
-      <div>
-        <h4>{{options.abouRecentJob}}:</h4>
-        <br/>
-        <p><a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a> {{exAndEduText.jamText4}} </p>
-        <p>
-          {{options.myWork}}:
-          <br/>* {{exAndEduText.jamText8}}
-          <br/>* {{exAndEduText.jamText9}}
-          <br/>* {{exAndEduText.jamText18}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank">Hello Jam</a>
-          <br/>
-          <br/> {{options.MyWorkInMultiBot}}:
-          <br/>* {{exAndEduText.jamText10}}
-          <br/>* {{exAndEduText.jamText11}}
-          <br/>* {{exAndEduText.jamText12}}
-          <br/>* {{exAndEduText.jamText13}}
-          <br/>* {{exAndEduText.jamText14}}
-          <br/>* {{exAndEduText.jamText15}}
-          <br/>* {{exAndEduText.jamText16}}
-          <br/>* {{exAndEduText.jamText17}}
-        </p>
-        <hr class="my-1" />
-      </div>
       <div class="work">
         <h3><i class="fa fa-briefcase" :class="getClass('whitebgWithDarkTextInDark')"></i></h3>
         <ul>
@@ -34,9 +12,21 @@
             <span>
               {{exAndEduText.jamText2}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a>
               <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
-                * {{exAndEduText.jamText5}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam Trends</a>
-                <br/>* {{exAndEduText.jamText6}}
-                <br/>* {{exAndEduText.jamText7}}
+                <a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a> {{exAndEduText.jamText4}}
+                <br/> {{options.myWork}}:
+                <br/>* {{exAndEduText.jamText8}}
+                <br/>* {{exAndEduText.jamText9}}
+                <br/>* {{exAndEduText.jamText18}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank">Hello Jam</a>
+                <br/>
+                <br/> {{options.MyWorkInMultiBot}}:
+                <br/>* {{exAndEduText.jamText10}}
+                <br/>* {{exAndEduText.jamText11}}
+                <br/>* {{exAndEduText.jamText12}}
+                <br/>* {{exAndEduText.jamText13}}
+                <br/>* {{exAndEduText.jamText14}}
+                <br/>* {{exAndEduText.jamText15}}
+                <br/>* {{exAndEduText.jamText16}}
+                <br/>* {{exAndEduText.jamText17}}
               </p>
             </span>
             <SeeMoreOrSeeLess :seeHistory="allSeeMore.jamHistory.seeMore" @toggleHistory="toggleHistory('jamHistory')" />
