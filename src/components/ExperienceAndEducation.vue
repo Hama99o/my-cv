@@ -12,11 +12,16 @@
             <span>
               {{exAndEduText.jamText2}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam </a>
               <p v-if="allSeeMore.jamHistory.seeMore" class="see-more-text mt-3">
-                <a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank"> Jam</a> {{exAndEduText.jamText4}}
+                <a href="https://www.linkedin.com/company/hellojam/mycompany/" :class="getClass('lightBlueLinkInDark')" target="_blank">
+                   Jam
+                </a> {{exAndEduText.jamText4}}
                 <br/> {{options.myWork}}:
                 <br/>* {{exAndEduText.jamText8}}
                 <br/>* {{exAndEduText.jamText9}}
-                <br/>* {{exAndEduText.jamText18}} <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank">Hello Jam</a>
+                <br/>* {{exAndEduText.jamText18}}
+                <a href="https://www.hellojam.fr/" :class="getClass('lightBlueLinkInDark')" target="_blank">
+                  Hello Jam
+                </a>
                 <br/>
                 <br/> {{options.MyWorkInMultiBot}}:
                 <br/>* {{exAndEduText.jamText10}}
