@@ -104,7 +104,6 @@ h3 {
   display: flex;
 }
 
-
 .skill-container .func {
   width: 645px;
   padding: 30px 25px;
