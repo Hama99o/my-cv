@@ -104,5 +104,4 @@ export default {
 .follow .box i::before {
   transition-duration: 0.3s;
 }
-
 </style>
