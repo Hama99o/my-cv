@@ -210,7 +210,6 @@ export default {
 @media only screen and (max-width: 768px) and (min-width: 360px) {
   .terminal {
     margin: 0;
-
     .top {
       font-size: 10px;
       .options {

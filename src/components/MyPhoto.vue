@@ -55,7 +55,6 @@ export default {
   .image-card img {
     max-width: 70%;
   }
-
 }
 
 @media only screen and (max-width: 566px) {
