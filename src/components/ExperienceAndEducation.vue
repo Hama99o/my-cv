@@ -349,7 +349,7 @@ h3 {
   height: 100%;
   background: #3d405b;
   left: 5px;
-  top: 0;
+  top: 0;*
 }
 
 .exp-and-edu-container .func .work ul li span, .exp-and-edu-container .func .edu ul li span {
