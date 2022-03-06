@@ -6,7 +6,7 @@ import { store } from './store/index'
 import router from './router'
 import i18n from './i18n'
 import jQuery from 'jquery'
-// Importing the global css file
+
 import "@/styles/variablesAndGlobal.scss"
 
 global.$ = jQuery
