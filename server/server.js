@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 const port = isDev ? 8081 : process.env.PORT
 
-// Redirect to https in production, for auth0 callbacks
+// Redirect to https in production
 app.use(function (request, response, next) {
   if (isProd && !(request.headers['x-forwarded-proto'] === 'https' || request.secure)) {
     const newUrl = 'https://' + request.headers.host + request.url
