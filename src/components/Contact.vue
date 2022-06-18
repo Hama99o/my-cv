@@ -16,7 +16,7 @@
           <a  href="https://www.linkedin.com/in/hammayoun-safi-2916581bb" target="_blank">
             <i class="fab fa-linkedin-in" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
-          <a href="https://www.facebook.com/hama99o" target="_blank">
+          <a href="https://www.facebook.com/ham99o" target="_blank">
             <i class="fa fa-facebook bg-dark" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
           <a  href="https://www.instagram.com/hama99o" target="_blank">
