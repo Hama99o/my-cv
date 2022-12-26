@@ -24,15 +24,15 @@
       "answers": {
         "myNameAndAGe": "'Hammayoun Safi (Hama)'",
         "from": "Afghanistan",
-        "lived": "['Suède','Italie', 'Pakistan']",
+        "lived": "['Afghanistan', 'Pakistan', 'Suède', 'Italie']",
         "living": "'Malakoff, France'",
-        "myHobbies": "['développement','voyage', 'randonnée','snowboard','natation','vélo']",
+        "myHobbies": "['développement', 'voyage', 'randonnée', 'snowboard', 'natation', 'vélo']",
         "languages": "['Pachto','Français', 'Anglais', 'Suédois', 'Ourdou', 'Hindi', 'Persan']",
-        "programmingLanguages": "['Javascript','Ruby','Bash']",
+        "programmingLanguages": "['Javascript', 'Ruby', 'Bash']",
         "databaseServer": "['PostgreSQL']",
-        "webTechnologies": "['HTML','CSS']",
-        "frameworks": "['Ruby on Rails','VueJS','NodeJS(express)','Bootstrap']",
-        "otherDevTool": "['Git','Github','Heroku','Linux', 'Postman']"
+        "webTechnologies": "['HTML', 'CSS']",
+        "frameworks": "['Ruby on Rails', 'VueJS', 'NodeJS(express)', 'Bootstrap']",
+        "otherDevTool": "['Git', 'Github', 'Heroku', 'Linux', 'Postman']"
       },
       "phrase":  {
         "exit": "exit",
