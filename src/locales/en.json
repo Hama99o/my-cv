@@ -24,7 +24,7 @@
       "answers": {
         "myNameAndAGe": "'Hammayoun Safi (Hama)'",
         "from": "Afghanistan",
-        "lived": "['Sweden','Italy', 'Pakistan']",
+        "lived": "['Afghanistan', 'Pakistan', 'Sweden','Italy']",
         "living": "'Malakoff, France'",
         "myHobbies": "['development','travel', 'hiking','snowboarding','swimming','cycling']",
         "languages": "['Pashto','French', 'English','Swedish', 'Urdu','Hindi','Persian']",
