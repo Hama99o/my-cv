@@ -182,6 +182,7 @@ export default {
       this.allSeeMore[seeMore].seeMore = !this.allSeeMore[seeMore].seeMore
       localStorage[seeMore] = this.allSeeMore[seeMore].seeMore
     },
+
     getClass(attribute) {
       return this.lightDarkClasses[attribute][this.getTheme]
     }

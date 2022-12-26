@@ -32,6 +32,7 @@ export default {
     getLang (lang) {
       localStorage.locale = lang.target.value
     },
+
     getClass(attribute) {
       return this.lightDarkClasses[attribute][this.getTheme]
     }

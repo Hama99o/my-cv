@@ -77,6 +77,7 @@ export default {
     programmingSkill () {
        return this.$t('message.skills.programmingSkill')
     },
+
     ...mapState(['lightDarkClasses']),
     ...mapGetters(['getTheme'])
   },

@@ -7,21 +7,26 @@
         <div class="address my-2"><i class="fa fa-map-marker"></i><span> Malakoff, France</span></div>
         <div class="email my-2"><i class="fa fa-envelope"></i> <a :class="getClass('lightBlueLinkInDark')" href="mailto:hmmshl@gmail.com" target="_blank"> <span> hmmshl@gmail.com</span></a></div>
       </div>
+
       <div class="follow py-3">
         <h3 :class="getClass('whitetextColorInDark')" class="my-3">{{heading.follow}}</h3>
         <div class="box">
           <a  href="https://github.com/Hama99o" target="_blank">
             <i class="fab fa-github" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
+
           <a  href="https://www.linkedin.com/in/hammayoun-safi-2916581bb" target="_blank">
             <i class="fab fa-linkedin-in" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
+
           <a href="https://www.facebook.com/hama99oo" target="_blank">
             <i class="fa fa-facebook bg-dark" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
+
           <a  href="https://www.instagram.com/hama99o" target="_blank">
-          <i class="fab fa-instagram" :class="getClass('whitebgWithDarkTextInDark')"></i>
+            <i class="fab fa-instagram" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
+
           <a  href="https://twitter.com/hama99o1" target="_blank">
             <i class="fa fa-twitter" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
