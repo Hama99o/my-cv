@@ -1,39 +1,45 @@
 <template>
-  <div class="">
+  <div>
     <span class="terminal-container">
       <div class="terminal-icon d-flex" v-if ="!isTerminalClosed" @click="closeTerminal()"></div>
     </span>
+
     <div v-if ="isTerminalClosed" class="terminal element" id="element">
       <div class="top" @dblclick.self="toggleTerminalScreen()">
-        <span class="options d-flex">
-          <span @click="closeTerminal()" title="Close">
-            <i class="fas fa-times d-flex"></i>
-          </span>
-          <i v-if="!isFullScreen" class="far fa-square mx-2" @click="fullScreen()" title="Fullscreen"></i>
-          <i v-if="isFullScreen" class="fas fa-clone mx-2" @click="cancellFullScreen()" title="Fullscreen"></i>
-          <i @click.self="minimizeTerminal()" class="fa fa-window-minimize" aria-hidden="true" title="Minimize"></i>
+        <span class="tap-buttons d-flex justify-content-end">
+          <i @click.self="minimizeTerminal()" class="fa fa-minus" aria-hidden="true" title="Minimize"></i>
+          <i v-if="isFullScreen" class="fas fa-clone mx-3" @click="cancelFullScreen()" title="Fullscreen"></i>
+          <i v-if="!isFullScreen" class="far fa-square mx-3" @click="fullScreen()" title="Fullscreen"></i>
+          <i @click="closeTerminal()" title="Close" class="fas fa-times d-flex"></i>
         </span>
-        <span class="title">{{ $t('message.terminal.phrase.terminalHeading') }}</span>
+
+        <span class="title">
+          {{ $t('message.terminal.phrase.terminalHeading') }}
+        </span>
       </div>
+
       <div v-if="open" class="text">
         <span class="pink">root@hama99o:~$ </span> rails c
-        <br> 2.5.7 :001 > <span class="text-success">{{terminalQuestions.myNameAndAGe}} </span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.myNameAndAGe}},</span> <span class="text-warning">{{myAge}}</span>
-        <br> 2.5.7 :002 > <span class="text-success">{{terminalQuestions.from}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.from}}</span>
-        <br> 2.5.7 :003 > <span class="text-success">{{terminalQuestions.lived}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.lived}}</span>
-        <br> 2.5.7 :004 > <span class="text-success">{{terminalQuestions.living}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.living}}</span>
-        <br> 2.5.7 :005 > <span class="text-success">{{terminalQuestions.myHobbies}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.myHobbies}}</span>
-        <br> 2.5.7 :006 > <span class="text-success">{{terminalQuestions.languages}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.languages}}</span>
-        <br> 2.5.7 :007 > <span class="text-success">{{terminalQuestions.programmingLanguages}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.programmingLanguages}}</span>
-        <br> 2.5.7 :008 > <span class="text-success">{{terminalQuestions.databaseServer}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.databaseServer}}</span>
-        <br> 2.5.7 :009 > <span class="text-success">{{terminalQuestions.webTechnologies}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.webTechnologies}}</span>
-        <br> 2.5.7 :010 > <span class="text-success">{{terminalQuestions.frameworks}}</span><span class="text-primary"> = </span> <span class="orange">{{terminalAnswers.frameworks}}</span>
-        <br> 2.5.7 :011 > <span class="text-success">{{terminalQuestions.otherDevTool}}</span><span class="text-primary"> = </span> <span class="orange">{{terminalAnswers.otherDevTool}}</span>
-        <br> 2.5.7 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
+        <br> 3.1.0 :001 > <span class="text-success">{{terminalQuestions.myNameAndAGe}} </span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.myNameAndAGe}},</span> <span class="text-warning">{{myAge}}</span>
+        <br> 3.1.0 :002 > <span class="text-success">{{terminalQuestions.from}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.from}}</span>
+        <br> 3.1.0 :003 > <span class="text-success">{{terminalQuestions.lived}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.lived}}</span>
+        <br> 3.1.0 :004 > <span class="text-success">{{terminalQuestions.living}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.living}}</span>
+        <br> 3.1.0 :005 > <span class="text-success">{{terminalQuestions.myHobbies}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.myHobbies}}</span>
+        <br> 3.1.0 :006 > <span class="text-success">{{terminalQuestions.languages}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.languages}}</span>
+        <br> 3.1.0 :007 > <span class="text-success">{{terminalQuestions.programmingLanguages}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.programmingLanguages}}</span>
+        <br> 3.1.0 :008 > <span class="text-success">{{terminalQuestions.databaseServer}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.databaseServer}}</span>
+        <br> 3.1.0 :009 > <span class="text-success">{{terminalQuestions.webTechnologies}}</span> <span class="text-primary">= </span> <span class="orange">{{terminalAnswers.webTechnologies}}</span>
+        <br> 3.1.0 :010 > <span class="text-success">{{terminalQuestions.frameworks}}</span><span class="text-primary"> = </span> <span class="orange">{{terminalAnswers.frameworks}}</span>
+        <br> 3.1.0 :011 > <span class="text-success">{{terminalQuestions.otherDevTool}}</span><span class="text-primary"> = </span> <span class="orange">{{terminalAnswers.otherDevTool}}</span>
+        <br> 3.1.0 :012 > <span class="text-success">{{$t('message.terminal.phrase.exit')}}</span>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.cv')}} <router-link :to="{ name: $t('message.HammayounSaficvEn') }" target="_blank">CV</router-link>
         <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage1')}}</span>
         <!-- <br> <span class="pink">root@hama99o:~$ </span>{{$t('message.terminal.phrase.chosePage2')}}</span> -->
-        <span v-if="shouldReply"> <br> <span class="pink">root@hama99o:~$ </span>{{rendomPhrase}}</span></span>
-        <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="terminalInput" @change="getRendomPhrase($event)" class="text-success terminal-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
+        <span v-if="shouldReply">
+          <br>
+          <span class="pink">root@hama99o:~$ </span>{{randomPhrase}}</span>
+        </span>
+        <br> <span class="pink">root@hama99o:~$ </span> <input type="text" v-model="terminalInput" @change="getRandomPhrase($event)" class="text-success terminal-input w-80" v-on:keyup.enter="emptyTheInput" autofocus>
       </div>
     </div>
     <github-chart/>
@@ -53,7 +59,7 @@ export default {
       shouldReply: false,
       isTerminalClosed: true,
       isFullScreen: false,
-      rendomPhrase: '?',
+      randomPhrase: '?',
       clearTime: null
     }
   },
@@ -61,15 +67,18 @@ export default {
     terminalQuestions () {
        return this.$t('message.terminal.questions')
     },
+
     terminalAnswers () {
        return this.$t('message.terminal.answers')
     },
+
     myAge () {
       var _birth = parseInt("" + 1995 + this.affixZero(1) + this.affixZero(17));
       var  today = new Date();
       var _today = parseInt("" + today.getFullYear() + this.affixZero(today.getMonth() + 1) + this.affixZero(today.getDate()));
       return parseInt((_today - _birth) / 10000);
     },
+
     terminalInputLowerCase() {
       return this.terminalInput.toLowerCase()
     }
@@ -78,24 +87,27 @@ export default {
     minimizeTerminal () {
       if (this.open) {
         this.open = false
-        this.cancellFullScreen()
+        this.cancelFullScreen()
       } else {
         this.open = true
       }
     },
+
     toggleTerminalScreen () {
       if (this.isFullScreen) {
-        this.cancellFullScreen()
+        this.cancelFullScreen()
       } else {
         this.fullScreen()
       }
     },
+
     closeTerminal () {
       this.isTerminalClosed = !this.isTerminalClosed
       if (this.isTerminalClosed) {
         this.open = true
       }
     },
+
     fullScreen () {
       this.open = true
       this.isFullScreen = true
@@ -103,11 +115,13 @@ export default {
       const requestFullScreen = element.requestFullscreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen
       requestFullScreen.call(element)
     },
-    cancellFullScreen () {
+
+    cancelFullScreen () {
       this.isFullScreen = false
-      const cancellFullScreen = document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen
-      cancellFullScreen.call(document)
+      const cancelFullScreen = document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen
+      cancelFullScreen.call(document)
     },
+
     emptyTheInput () {
       if (this.terminalInputLowerCase) {
         clearTimeout(this.clearTime);
@@ -126,15 +140,17 @@ export default {
         this.clearTime = setTimeout(() => this.shouldReply = false, 5000)
       }
     },
-    getRendomPhrase () {
+
+    getRandomPhrase () {
       const hiHelloArray = ['hi', 'hello', 'salut', 'caio']
       if (hiHelloArray.some((e) => this.terminalInputLowerCase.includes(e))) {
-        this.rendomPhrase = 'hi buddy'
+        this.randomPhrase = 'hi buddy'
       } else {
         const allPhrase = this.$t('message.terminal.phrase.errorMessage')
-        this.rendomPhrase = allPhrase[Date.now()%allPhrase.length]
+        this.randomPhrase = allPhrase[Date.now()%allPhrase.length]
       }
     },
+
     affixZero (int) {
       if (int < 10) int = "0" + int;
       return "" + int;
@@ -144,6 +160,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.tap-buttons {
+    font-size: 16px;
+    float: right;
+}
+
 .blue {
   color: #53d9d1;
 }
