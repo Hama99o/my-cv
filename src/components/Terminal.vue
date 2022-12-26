@@ -7,10 +7,10 @@
     <div v-if ="isTerminalClosed" class="terminal element" id="element">
       <div class="top" @dblclick.self="toggleTerminalScreen()">
         <span class="tap-buttons d-flex justify-content-end">
-          <i @click.self="minimizeTerminal()" class="fa fa-minus" aria-hidden="true" title="Minimize"></i>
-          <i v-if="isFullScreen" class="fas fa-clone mx-3" @click="cancelFullScreen()" title="Fullscreen"></i>
-          <i v-if="!isFullScreen" class="far fa-square mx-3" @click="fullScreen()" title="Fullscreen"></i>
-          <i @click="closeTerminal()" title="Close" class="fas fa-times d-flex"></i>
+          <i @click.self="minimizeTerminal()" class="fa fa-minus tap" aria-hidden="true" title="Minimize"></i>
+          <i v-if="isFullScreen" class="fas fa-clone mx-3 tap" @click="cancelFullScreen()" title="Fullscreen"></i>
+          <i v-if="!isFullScreen" class="far fa-square mx-3 tap" @click="fullScreen()" title="Fullscreen"></i>
+          <i @click="closeTerminal()" title="Close" class="fas fa-times d-flex tap"></i>
         </span>
 
         <span class="title">
@@ -160,6 +160,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.tap:hover {
+  border-radius: 25px;
+  background: #1b2709;
+}
+
 .tap-buttons {
     font-size: 16px;
     float: right;
