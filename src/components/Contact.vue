@@ -27,9 +27,9 @@
             <i class="fab fa-instagram" :class="getClass('whitebgWithDarkTextInDark')"></i>
           </a>
 
-          <a  href="https://twitter.com/hama99o1" target="_blank">
+          <!-- <a  href="https://twitter.com/hama99o1" target="_blank">
             <i class="fa fa-twitter" :class="getClass('whitebgWithDarkTextInDark')"></i>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
