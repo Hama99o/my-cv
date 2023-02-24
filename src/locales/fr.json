@@ -32,7 +32,7 @@
         "databaseServer": "['PostgreSQL']",
         "webTechnologies": "['HTML', 'CSS']",
         "frameworks": "['Ruby on Rails', 'VueJS', 'NodeJS(express)', 'Bootstrap']",
-        "otherDevTool": "['Git', 'Github', 'Heroku', 'Linux', 'Postman']"
+        "otherDevTool": "['Git', 'Github', 'Heroku', 'Linux', 'Postman', 'Algolia', 'Auth0/Device', 'Sentry/Rollbar', 'Sendgrid', 'Circleci', 'AWS']"
       },
       "phrase":  {
         "exit": "exit",

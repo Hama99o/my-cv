@@ -17,7 +17,7 @@
           </li>
           <hr class="my-1" />
           <li>
-            {{programmingSkill.otherDevTool}}:<span class="mx-2">Git, Github, Heroku, Linux, Postman, MongoDB Compass</span>
+            {{programmingSkill.otherDevTool}}:<span class="mx-2">Git, Github, Heroku, Linux, Postman, MongoDB Compass, Algolia, Auth0/Device, Sentry/Rollbar, Sendgrid, Circleci, AWS</span>
           </li>
           <hr class="my-1" />
           <li>
