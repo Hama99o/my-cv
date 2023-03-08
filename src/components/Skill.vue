@@ -43,7 +43,7 @@
           <li>
             <span>
               <a class="project-link" :class="getClass('lightBlueLinkInDark')" href="https://quote-guessing-game.herokuapp.com/" target="_blank"> Quote Guessing Game</a> {{$t('message.skills.myProjects.and')}}
-              <a class="my-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote_api" target="_blank"> Github Repository</a>
+              <a class="my-2 project-link" :class="getClass('lightBlueLinkInDark')" href="https://github.com/Hama99o/quote-gessing-game" target="_blank"> Github Repository</a>
             </span>
           </li>
           <hr class="my-1" />
